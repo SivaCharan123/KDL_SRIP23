@@ -26,16 +26,32 @@ This folder contains the following files and directories,
 
 * Upload a CSV file using the form and test!
 
+## Form metadata
+
+The form meta data is stored in the file `UNIXTIMESTAMP_filename.csv.meta`. It is in XML format with the following tags,
+
+- `<dataset> ... </dataset>`: Opening and closing.
+
+- `<name> ... </name>`: Name of the data set.
+
+- `<year> ... </year>`: Year corresponding to the data set.
+
+- `<desc> ... </desc>`: Description of the data set.
+
+- `<sdg> NUMBER </sdg>`: A bitwise encoding of the SDG goals relevant to the data set. Bits 0 - 16 stand for SDG goals 1-17 respectively as per UN. 
+
 ## TODO
 
-* Add SDG goals in the form.
+- [X] Add SDG goals in the form. 
 
-* Sanity checks in the form.
+- [X] Sanity checks in the form.
 
-* Data cleaning before ingestion.
+- [ ] Data cleaning before ingestion.
 
-* Implement XLSX/PDF formats.
+- [ ] Implement XLSX/PDF formats.
 
-* Append taluka codes for district based data.
+- [ ] Send form meta data to Druid.
 
-* Classification of dataset based on column labels.
+- [ ] Append taluka codes for district based data.
+
+- [ ] Classification of dataset based on column labels.

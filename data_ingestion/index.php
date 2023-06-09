@@ -9,7 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">    
         <link href="styles/google-font.css" rel="stylesheet" type="text/css" />
         <link href="styles/styles.css" rel="stylesheet" type="text/css" />
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     </head>
     <body>
         <div class='section'>
@@ -21,15 +21,21 @@
                             <form class="form-horizontal" action="upload.php" method="post" enctype="multipart/form-data">
                                 <div class="form-group row">
                                     <label for="csv_name" class="col-sm-2 col-form-label">Name</label>
-                                    <input type="text" id="csv_name" name="csv_name" placeholder="">
+                                    <input type="text" id="csv_name" name="csv_name" placeholder="KT_Health_Data">
                                 </div>
                                 <div class="form-group row">
                                     <label for="csv_year" class="col-sm-2 col-form-label">Year</label>
-                                    <input type="number" id="csv_year" name="csv_year" min="2000" max="2100">
+                                    <input type="number" id="csv_year" name="csv_year" min="2000" max="2100" placeholder="2023">
                                 </div>
                                 <div class="form-group row">
                                     <label for="csv_description" class="col-sm-2 col-form-label">Description</label>
-                                    <textarea name="csv_description" clas="form-control" cols="50" rows="10"></textarea>
+                                    <textarea name="csv_description" clas="form-control" placeholder="Enter a short description to help users and programs classify this dataset..." cols="50" rows="10"></textarea>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="sdg-checkboxes">
+                                    <label for="csv_sdg[]" class="col-sm-4 col-form-label">Select relevant SDGs</label>
+                                        <script src="js/generate-checkboxes.js"></script>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <br>
