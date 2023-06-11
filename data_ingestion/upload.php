@@ -110,5 +110,5 @@ else
 }
 
 echo "<h2><center>Redirecting to upload page in 10 seconds...</center></h2><br>";
-header('refresh:10;url=index.php');
+header('refresh:10;url=form-upload.php');
 ?>
