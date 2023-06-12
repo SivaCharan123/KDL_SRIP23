@@ -55,3 +55,11 @@ The form meta data is stored in the file `UNIXTIMESTAMP_filename.csv.meta`. It i
 - [ ] Append taluka codes for district based data.
 
 - [ ] Classification of dataset based on column labels.
+
+- [ ] Implement a metadata CSV file for easier access.
+
+- [ ] Implement a batch upload dump form.
+
+- [ ] Integrate with SSH.
+
+- [ ] Embed to WP.
