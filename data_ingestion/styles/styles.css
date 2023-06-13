@@ -5,40 +5,60 @@
     padding-left: 0;
 }
 
-p > code,
-li > code,
-dd > code,
-td > code {
-  background: #ffeff0;
-  word-wrap: break-word;
-  box-decoration-break: clone;
-  padding: .1rem .3rem .2rem;
-  border-radius: .2rem;
+p>code,
+li>code,
+dd>code,
+td>code {
+    background: #ffeff0;
+    word-wrap: break-word;
+    box-decoration-break: clone;
+    padding: .1rem .3rem .2rem;
+    border-radius: .2rem;
 }
 
-.error
-{
-  width: 50%;
-  display:block;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-  background-color:#770000;
-  color:#FFFFFF;
-  text-align: center;
-  margin: auto;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.error {
+    width: 50%;
+    display: block;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-color: #770000;
+    color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.notification {
+    width: 50%;
+    display: block;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-color: #2d3ab1;
+    color: #FFFFFF;
+    text-align: center;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 
-.notification
-{
-  width: 50%;
-  display:block;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-  background-color:#617202;
-  color:#FFFFFF;
-  text-align: center;
-  margin: auto;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.nav {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.btn-add {
+    height: 38px;
+}
+
+.btn-upload {
+    padding: 10px 10px -8px -8px;
+    margin-left: 10px;
+}
+
+.upload-input-group {
+    margin-bottom: 10px;
+}
+
+.input-group>.custom-select:not(:last-child),
+.input-group>.form-control:not(:last-child) {
+    height: 38px;
 }
