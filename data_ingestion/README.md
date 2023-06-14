@@ -56,7 +56,7 @@ The form meta data is stored in the file `UNIXTIMESTAMP_filename.csv.meta`. It i
 
 - [ ] Data cleaning before ingestion.
 
-- [ ] Implement XLSX/PDF formats.
+- [X] Implement XLSX/PDF formats.
 
 - [ ] Send form meta data to Druid.
 

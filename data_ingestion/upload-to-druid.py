@@ -19,7 +19,7 @@ def get_druid_json(file_name, file_path, json_file_name):
             -> JSON spec for Druid - JSON object
     '''
     # Reading the file and the columns
-    df = pd.read_csv(settings.DATASETS_DIR + "/" + file_name, encoding= 'unicode_escape')
+    df = pd.read_csv(settings.DATASETS_DIR + "/" + file_name)
     column_list = list(df.columns)
 
     # Initiating a dictionary in the format of an ingestion spec
@@ -64,7 +64,8 @@ if(len(sys.argv) < 2):
     print("[ERR]: Expected CSV file!")
     exit(-1)
 
-print("[LOG] Loading CSV...", sys.argv[1])
+print("[LOG] Loading CSV...\n", sys.argv[1])
 csv_file_name = sys.argv[1]
+print("[LOG] CSV File: ", sys.argv[1])
 json_object = get_druid_json(csv_file_name, os.getcwd() + "/" + settings.DATASETS_DIR, settings.DATASETS_DIR + "/" + csv_file_name + ".json")
 ingest_to_druid(json_object,f"{settings.DRUID_SERVERLOC}:{settings.DRUID_PORT}/druid/indexer/v1/task")

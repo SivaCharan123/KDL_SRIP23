@@ -73,9 +73,9 @@ if($FORM_SDG_FLAG == 0)
     $uploadOk = 0;
 }
 
-if($file_type != "csv")
+if($file_type != "csv" && $file_type != "xlsx" && $file_type != 'xls')
 {
-    echo "<div class=\"error\">Error: Sorry, only CSV files allowed!</div><br>";
+    echo "<div class=\"error\">Error: Sorry, only CSV/XLSX files allowed!</div><br>";
     $uploadOk = 0;
 }
 
@@ -87,7 +87,13 @@ else
 {
     if(move_uploaded_file($_FILES["csv_file"]["tmp_name"], $target_file))
     {
-        $metafilename = $target_dir . $timestamp . "_" . basename($FORM_FILE_NAME) . ".meta";
+        if($file_type == 'xlsx' || $file_type == 'xls')
+        {
+            shell_exec("/usr/bin/python3 xlsx-to-csv.py " . $target_file . " " . str_replace($file_type, "csv", $target_file));
+            $target_file = str_replace($file_type, "csv", $target_file);
+            $target_file_name = str_replace($file_type, "csv", $target_file_name);
+        }
+        $metafilename = $target_dir . $timestamp . "_" . substr(basename($FORM_FILE_NAME), 0 , (strrpos(basename($FORM_FILE_NAME), "."))) . ".meta";
         $metafile = fopen($metafilename, "w");
         fwrite($metafile, "<dataset filename=" . "\"" . $_FILES["csv_file"]["name"] . "\"" . ">\n");
         fwrite($metafile, "\t<name>" . $FORM_DATASET_NAME . "</name>\n");
