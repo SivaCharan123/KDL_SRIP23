@@ -102,11 +102,14 @@ else
         fwrite($metafile, "\t<sdg>" . $FORM_SDG_FLAG . "</sdg>\n");
         fwrite($metafile, "</dataset>");
         fclose($metafile);
+        shell_exec("/usr/bin/python3 csv-writer.py \"" . $FORM_DATASET_NAME . "\" \"" . $FORM_DATASET_YEAR  . "\" \"" .  $FORM_DATASET_DESC . "\" \"" . $FORM_SDG_FLAG . "\" \"" .  $_FILES["csv_file"]["name"] ."\"");
         echo "<h1><center>The file " . htmlspecialchars(basename($FORM_FILE_NAME)) . " has been uploaded!</center></h1><br>";
         $output = shell_exec("/usr/bin/python3 upload-to-druid.py " . $target_file_name);
         echo "<div class=\"notification\"><h3>Shell Output<h3><br>";
-        echo "<p style=\"font-family:'Lucida Console', monospace\" align=\"center\">";
+        echo "<p style=\"font-family:'Lucida Console', monospace\" align=\"left\">";
+        echo "<pre>";
         echo $output;
+        echo "</pre>";
         echo "</p></div>";
     }
     else

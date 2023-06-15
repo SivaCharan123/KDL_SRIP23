@@ -12,9 +12,15 @@ This folder contains the following files and directories,
 
 * `upload.php` : The PHP code that is run after the submit button is clicked on the upload form. It does the following things: first moves the file from POST to `datasets/` directory, then creates a `.meta` file which contains information retrived from the form in XML format, then executes a script called `upload-to-druid.py` which creates a `.json` file for Druid ingestion and sends the request to the Druid server.
 
-* `upload-to-druid.py` : The Python code for Druid ingestion.
+* `upload-to-druid.py` : The Python code for Druid ingestion (single file).
 
-* `dir-to-druid.py` : The Python code to ingest a directory by converting into a ZIP file to druid.
+* `upload-batch-druid.py` : The Python code to ingest a directory by going through CSV/XLSX files for a batch upload
+
+* `druid_lib.py` : Contains relevant functions to be used for Druid ingestion
+
+* `dataset-catalog.csv` : Contains metadata of the uploaded files.
+
+* `csv-writer.py` : Used to write metadata to CSV.
 
 * `settings.py` : The settings (such as default Druid server and port location, along with the default datasets directory). 
 
@@ -64,10 +70,12 @@ The form meta data is stored in the file `UNIXTIMESTAMP_filename.csv.meta`. It i
 
 - [ ] Classification of dataset based on column labels.
 
-- [ ] Implement a metadata CSV file for easier access.
+- [X] Implement a metadata CSV file for easier access.
 
 - [X] Implement a batch upload dump form.
 
 - [ ] Integrate with SSH.
 
 - [ ] Embed to WP.
+
+- [ ] Better error reporting
