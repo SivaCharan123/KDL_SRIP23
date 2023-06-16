@@ -94,4 +94,4 @@ The form meta data is stored in the file `UNIXTIMESTAMP_filename.csv.meta`. It i
 
 - [ ] Embed to WP.
 
-- [ ] Better error reporting
+- [X] Better error reporting
