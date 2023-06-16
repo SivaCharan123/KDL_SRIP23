@@ -7,6 +7,7 @@ import json
 import requests
 from requests.api import request
 import settings
+import logger
 
 def get_druid_json(file_name, file_path, json_file_name):
     '''
@@ -41,6 +42,7 @@ def get_druid_json(file_name, file_path, json_file_name):
     
     # Converting the dictionary into a JSON object and writing it into a file
     json_object = json.dumps(ingest_schema,indent=4)
+    logger.Log(f"Creating JSON spec for {file_name} in {json_file_name}")
     with open(json_file_name,'w') as outfile:
         outfile.write(json_object)
 
@@ -56,6 +58,6 @@ def ingest_to_druid(json_obj,url):
     headers = {"Content-Type" : "application/json"}
     response = requests.post(url, headers=headers, data=json_obj)
     if(response.status_code==200):
-        print("[LOG] Task ran successfully!")
+        logger.Log(f"Druid Task Succeeded.")
     else:
-        print("[ERR] Druid Task Failed.")
+        logger.Log(f"Druid Task Failed.")

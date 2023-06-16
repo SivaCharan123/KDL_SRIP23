@@ -89,28 +89,13 @@ else
     {
         if($file_type == 'xlsx' || $file_type == 'xls')
         {
-            shell_exec("/usr/bin/python3 xlsx-to-csv.py " . $target_file . " " . str_replace($file_type, "csv", $target_file));
+            shell_exec("/usr/bin/python3 xlsx2csv.py \"" . $target_file . "\" \"" . str_replace($file_type, "csv", $target_file) . "\"");
             $target_file = str_replace($file_type, "csv", $target_file);
             $target_file_name = str_replace($file_type, "csv", $target_file_name);
         }
-        $metafilename = $target_dir . $timestamp . "_" . substr(basename($FORM_FILE_NAME), 0 , (strrpos(basename($FORM_FILE_NAME), "."))) . ".meta";
-        $metafile = fopen($metafilename, "w");
-        fwrite($metafile, "<dataset filename=" . "\"" . $_FILES["csv_file"]["name"] . "\"" . ">\n");
-        fwrite($metafile, "\t<name>" . $FORM_DATASET_NAME . "</name>\n");
-        fwrite($metafile, "\t<year>" . $FORM_DATASET_YEAR . "</year>\n");
-        fwrite($metafile, "\t<desc>\n\t\t" . $FORM_DATASET_DESC. "\n\t</desc>\n");
-        fwrite($metafile, "\t<sdg>" . $FORM_SDG_FLAG . "</sdg>\n");
-        fwrite($metafile, "</dataset>");
-        fclose($metafile);
-        shell_exec("/usr/bin/python3 csv-writer.py \"" . $FORM_DATASET_NAME . "\" \"" . $FORM_DATASET_YEAR  . "\" \"" .  $FORM_DATASET_DESC . "\" \"" . $FORM_SDG_FLAG . "\" \"" .  $_FILES["csv_file"]["name"] ."\"");
+        shell_exec("/usr/bin/python3 csv_writer.py \"" . $FORM_DATASET_NAME . "\" \"" . $FORM_DATASET_YEAR  . "\" \"" .  $FORM_DATASET_DESC . "\" \"" . $FORM_SDG_FLAG . "\" \"" .  $_FILES["csv_file"]["name"] ."\"");
+        shell_exec("/usr/bin/python3 upload_single_druid.py " . $target_file_name);
         echo "<h1><center>The file " . htmlspecialchars(basename($FORM_FILE_NAME)) . " has been uploaded!</center></h1><br>";
-        $output = shell_exec("/usr/bin/python3 upload-to-druid.py " . $target_file_name);
-        echo "<div class=\"notification\"><h3>Shell Output<h3><br>";
-        echo "<p style=\"font-family:'Lucida Console', monospace\" align=\"left\">";
-        echo "<pre>";
-        echo $output;
-        echo "</pre>";
-        echo "</p></div>";
     }
     else
     {

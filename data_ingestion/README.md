@@ -10,23 +10,39 @@ This folder contains the following files and directories,
 
 * `upload-batch.php` : The backend code for batch (multiple file) upload.
 
-* `upload.php` : The PHP code that is run after the submit button is clicked on the upload form. It does the following things: first moves the file from POST to `datasets/` directory, then creates a `.meta` file which contains information retrived from the form in XML format, then executes a script called `upload-to-druid.py` which creates a `.json` file for Druid ingestion and sends the request to the Druid server.
+* `upload.php` : The backend code for single upload files.
 
-* `upload-to-druid.py` : The Python code for Druid ingestion (single file).
+* `upload_single_druid.py` : The Python code for Druid ingestion (single file).
 
-* `upload-batch-druid.py` : The Python code to ingest a directory by going through CSV/XLSX files for a batch upload
+* `upload_batch_druid.py` : The Python code to ingest a directory by going through CSV/XLSX files for a batch upload
 
 * `druid_lib.py` : Contains relevant functions to be used for Druid ingestion
 
 * `dataset-catalog.csv` : Contains metadata of the uploaded files.
 
-* `csv-writer.py` : Used to write metadata to CSV.
+* `csv_writer.py` : Used to write metadata to CSV.
+
+* `xlsx2csv.py` : Used to convert XLSX files to CSV.
 
 * `settings.py` : The settings (such as default Druid server and port location, along with the default datasets directory). 
+
+* `logger.py` : The logger used to log events and exceptions to a file.
+
+* `log.txt` : Default file for logging.
+
+* `clean.sh` : Script for emptying the metadata catalog, datasets directory and the log file. Used for testing purposes.
 
 * `styles/` : Contains CSS stylesheets used by the webpages
 
 * `datasets/` : Local storage for datasets uploaded.
+
+## Mechanism
+
+First, the files are moved from _POST to the directory `datasets`. If it is a single file, the timestamp is appended to the file. If there is batch upload, a directory is created with the name `timestamp_[Name of Dump]` and all the files are transferred there.
+
+Next, any XLSX files are converted to CSV. Finally, using `druid_lib.py` and the location of the Druid server from `settings.py`, JSON spec is created and the CSV files are then pushed to druid by creating a new task.
+
+The metadata is appended to `dataset-catalog.csv`.
 
 ## Running
 
