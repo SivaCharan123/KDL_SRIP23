@@ -1,0 +1,43 @@
+[16/06/2023 16:48:59] Writing metadata for MyDataDump
+[16/06/2023 16:48:59] Writing metadata for MyDataDump
+[16/06/2023 16:48:59] Writing metadata for MyDataDump
+[16/06/2023 16:48:59] Writing metadata for MyDataDump
+[16/06/2023 16:49:00] Converted datasets/1686914339_MyDataDump//titanic.xlsx to datasets/1686914339_MyDataDump//titanic.csv
+[16/06/2023 16:49:00] Converted datasets/1686914339_MyDataDump//TOP500-Computing.xlsx to datasets/1686914339_MyDataDump//TOP500-Computing.csv
+[16/06/2023 16:49:01] Batch upload started.
+[16/06/2023 16:49:01] Uploading nature-index-500.csv
+[16/06/2023 16:49:01] Creating JSON spec for nature-index-500.csv in datasets/1686914339_MyDataDump//nature-index-500.csv.json
+[16/06/2023 16:49:01] Druid Task Succeeded.
+[16/06/2023 16:49:01] Uploading titanic.csv
+[16/06/2023 16:49:01] Creating JSON spec for titanic.csv in datasets/1686914339_MyDataDump//titanic.csv.json
+[16/06/2023 16:49:01] Druid Task Succeeded.
+[16/06/2023 16:49:01] Uploading TOP500-Computing.csv
+[16/06/2023 16:49:01] Creating JSON spec for TOP500-Computing.csv in datasets/1686914339_MyDataDump//TOP500-Computing.csv.json
+[16/06/2023 16:49:01] Druid Task Succeeded.
+[16/06/2023 16:49:01] Uploading world-forecast.csv
+[16/06/2023 16:49:01] Creating JSON spec for world-forecast.csv in datasets/1686914339_MyDataDump//world-forecast.csv.json
+[16/06/2023 16:49:01] Druid Task Succeeded.
+[19/06/2023 12:31:38] Writing metadata for Test_DUMP
+[19/06/2023 12:31:38] Writing metadata for Test_DUMP
+[19/06/2023 12:31:38] Writing metadata for Test_DUMP
+[19/06/2023 12:31:38] Writing metadata for Test_DUMP
+[19/06/2023 12:31:39] Batch upload started.
+[19/06/2023 12:32:59] Writing metadata for Titanic Test Data Set
+[19/06/2023 12:32:59] Writing metadata for Titanic Test Data Set
+[19/06/2023 12:32:59] Writing metadata for Titanic Test Data Set
+[19/06/2023 12:32:59] Writing metadata for Titanic Test Data Set
+[19/06/2023 12:33:00] Converted datasets/1687158179_Titanic Test Data Set//1_titanic.xlsx to datasets/1687158179_Titanic Test Data Set//1_titanic.csv
+[19/06/2023 12:33:01] Converted datasets/1687158179_Titanic Test Data Set//2_TOP500-Computing.xlsx to datasets/1687158179_Titanic Test Data Set//2_TOP500-Computing.csv
+[19/06/2023 12:33:01] Batch upload started.
+[19/06/2023 12:33:01] Uploading 0_nature-index-500.csv
+[19/06/2023 12:33:01] Creating JSON spec for 0_nature-index-500.csv in datasets/1687158179_Titanic Test Data Set//0_nature-index-500.csv.json
+[19/06/2023 12:33:01] Druid Task Succeeded.
+[19/06/2023 12:33:01] Uploading 1_titanic.csv
+[19/06/2023 12:33:01] Creating JSON spec for 1_titanic.csv in datasets/1687158179_Titanic Test Data Set//1_titanic.csv.json
+[19/06/2023 12:33:01] Druid Task Succeeded.
+[19/06/2023 12:33:01] Uploading 2_TOP500-Computing.csv
+[19/06/2023 12:33:01] Creating JSON spec for 2_TOP500-Computing.csv in datasets/1687158179_Titanic Test Data Set//2_TOP500-Computing.csv.json
+[19/06/2023 12:33:01] Druid Task Succeeded.
+[19/06/2023 12:33:01] Uploading 3_world-forecast.csv
+[19/06/2023 12:33:01] Creating JSON spec for 3_world-forecast.csv in datasets/1687158179_Titanic Test Data Set//3_world-forecast.csv.json
+[19/06/2023 12:33:01] Druid Task Succeeded.

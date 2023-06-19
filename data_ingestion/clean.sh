@@ -13,7 +13,7 @@ then
     mkdir ./datasets/
     touch log.txt
     touch dataset-catalog.csv
-    echo "name,year,description,sdg,filename" > dataset-catalog.csv
+    echo "name,year,description,sdg,filename,time" > dataset-catalog.csv
     echo "*** CLEANUP FINISHED ***"
 else
     echo "*** NO CLEANUP DONE ***"

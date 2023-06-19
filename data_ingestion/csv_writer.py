@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # Usage: csv-writer 'Name' 'Year' 'Description' 'SDG Flags' 'File Name'
 from csv import writer
+from datetime import datetime
 import sys
 import settings
 import logger
@@ -10,7 +11,7 @@ if(len(sys.argv) != 6):
     exit(-1)
 
 try:
-    new_row = [sys.argv[1], int(sys.argv[2]), sys.argv[3], int(sys.argv[4]), sys.argv[5]]
+    new_row = [sys.argv[1], int(sys.argv[2]), sys.argv[3], int(sys.argv[4]), sys.argv[5], str(datetime.now())]
     logger.Log(f"Writing metadata for {sys.argv[1]}")
     with open(settings.METADATA_CSV, 'a') as catalog:
         writer_object = writer(catalog)

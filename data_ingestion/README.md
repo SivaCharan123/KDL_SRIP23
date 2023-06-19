@@ -6,35 +6,26 @@ Upload Form (CSV/XLSX, Single) | Upload Form (Batch)
 
 This folder contains the following files and directories, 
 
-* `form-upload.php` : The page which contains an upload form that takes CSV/XLSX files, written in PHP, HTML and Bootstrap 5.
-
-* `upload-batch.php` : The backend code for batch (multiple file) upload.
-
-* `upload.php` : The backend code for single upload files.
-
-* `upload_single_druid.py` : The Python code for Druid ingestion (single file).
-
-* `upload_batch_druid.py` : The Python code to ingest a directory by going through CSV/XLSX files for a batch upload
-
-* `druid_lib.py` : Contains relevant functions to be used for Druid ingestion
-
-* `dataset-catalog.csv` : Contains metadata of the uploaded files.
-
-* `csv_writer.py` : Used to write metadata to CSV.
-
-* `xlsx2csv.py` : Used to convert XLSX files to CSV.
-
-* `settings.py` : The settings (such as default Druid server and port location, along with the default datasets directory). 
-
-* `logger.py` : The logger used to log events and exceptions to a file.
-
-* `log.txt` : Default file for logging.
-
-* `clean.sh` : Script for emptying the metadata catalog, datasets directory and the log file. Used for testing purposes.
-
-* `styles/` : Contains CSS stylesheets used by the webpages
-
-* `datasets/` : Local storage for datasets uploaded.
+| File Name | Purpose |
+|---|---|
+| `form-upload.php` | The page which contains an upload form that takes CSV/XLSX files, written in PHP, HTML and Bootstrap 5.|
+| `upload-batch.php` | The backend code for batch (multiple file) upload. |
+| `upload.php` | The backend code for single upload files. |
+| `upload_single_druid.py` | The Python code for Druid ingestion (single file). |
+| `upload_batch_druid.py` | The Python code to ingest a directory by going through CSV/XLSX files for a batch upload |
+| `druid_lib.py` | Contains relevant functions to be used for Druid ingestion |
+| `dataset-catalog.csv` | Contains metadata of the uploaded files. |
+| `csv_writer.py` | Used to write metadata to CSV. |
+| `xlsx2csv.py` | Used to convert XLSX files to CSV. |
+| `data-catalog.php` | Catalog to display datasets currently in Druid |
+| `fetch.php` | The PHP page that calls `pydruid-fetch`, and shows a preview of the data. |
+| `pydruid_fetch.py` | Used to fetch data from Druid. |
+| `settings.py` | The settings (such as default Druid server and port location, along with the default datasets directory).  |
+| `logger.py` | The logger used to log events and exceptions to a file. |
+| `log.txt` | Default file for logging. |
+| `clean.sh` | Script for emptying the metadata catalog, datasets directory and the log file. Used for testing purposes. |
+| `styles/` | Contains CSS stylesheets used by the webpages |
+| `datasets/` | Local storage for datasets uploaded. |
 
 ## Mechanism
 
@@ -58,17 +49,7 @@ The metadata is appended to `dataset-catalog.csv`.
 
 ## Form metadata
 
-The form meta data is stored in the file `UNIXTIMESTAMP_filename.csv.meta`. It is in XML format with the following tags,
-
-- `<dataset> ... </dataset>`: Opening and closing.
-
-- `<name> ... </name>`: Name of the data set.
-
-- `<year> ... </year>`: Year corresponding to the data set.
-
-- `<desc> ... </desc>`: Description of the data set.
-
-- `<sdg> NUMBER </sdg>`: A bitwise encoding of the SDG goals relevant to the data set. Bits 0 - 16 stand for SDG goals 1-17 respectively as per UN. 
+The form meta data is stored in the file `dataset-catalog.csv`. Most of the columns are self-explanatory barring the SDG one. The SDG data is stored as bitfield, with bits 0-17 representing SDG goals.
 
 ## TODO
 
@@ -94,4 +75,6 @@ The form meta data is stored in the file `UNIXTIMESTAMP_filename.csv.meta`. It i
 
 - [ ] Embed to WP.
 
-- [X] Better error reporting
+- [X] Better error reporting.
+
+- [X] Integrate with catalog.

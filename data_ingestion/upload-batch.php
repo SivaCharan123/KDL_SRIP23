@@ -33,13 +33,16 @@ foreach($_FILES["batch_files"]["name"] as $filename)
 {
     echo "<div class=\"notification\">";
     echo "Uploading " . $filename . " ... ";
-    if(!move_uploaded_file($_FILES["batch_files"]["tmp_name"][$count], $target_dir_fullpath . basename($filename)))
+    $target_file_name = basename($filename);
+    // Prefix filenames with their index to make the filename unique
+    $target_file_name_actual = $count . "_" . $target_file_name;
+    if(!move_uploaded_file($_FILES["batch_files"]["tmp_name"][$count], $target_dir_fullpath . $target_file_name_actual))
     {
         echo "FAILED!<br>";
     }
     else
     {
-        shell_exec("/usr/bin/python3 csv_writer.py \"" . $DATA_DUMP_NAME . "\" \"" . $DATA_DUMP_YEAR  . "\" \"" .  $DATA_DUMP_DESC . "\" \"" . 0 . "\" \"" .  basename($filename) ."\"");
+        shell_exec("/usr/bin/python3 csv_writer.py \"" . $DATA_DUMP_NAME . "\" \"" . $DATA_DUMP_YEAR  . "\" \"" .  $DATA_DUMP_DESC . "\" \"" . 0 . "\" \"" .  $target_file_name_actual ."\"");
         echo "SUCCESS!<br>";
     }
     $count = $count + 1;
