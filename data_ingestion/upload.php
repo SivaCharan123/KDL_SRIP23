@@ -87,13 +87,10 @@ else
 {
     if(move_uploaded_file($_FILES["csv_file"]["tmp_name"], $target_file))
     {
-        if($file_type == 'xlsx' || $file_type == 'xls')
-        {
-            shell_exec("/usr/bin/python3 xlsx2csv.py \"" . $target_file . "\" \"" . str_replace($file_type, "csv", $target_file) . "\"");
-            $target_file = str_replace($file_type, "csv", $target_file);
-            $target_file_name = str_replace($file_type, "csv", $target_file_name);
-        }
-        shell_exec("/usr/bin/python3 csv_writer.py \"" . $FORM_DATASET_NAME . "\" \"" . $FORM_DATASET_YEAR  . "\" \"" .  $FORM_DATASET_DESC . "\" \"" . $FORM_SDG_FLAG . "\" \"" .  $_FILES["csv_file"]["name"] ."\"");
+        shell_exec("echo \"" . $DATA_DUMP_NAME . "\" > tmp.meta");
+        shell_exec("echo \"". $DATA_DUMP_YEAR  . "\" >> tmp.meta");
+        shell_exec("echo \"" . $DATA_DUMP_DESC . "\" >> tmp.meta");
+        shell_exec("echo \"" . 0 . "\" >> tmp.meta");
         shell_exec("/usr/bin/python3 upload_single_druid.py " . $target_file_name);
         echo "<h1><center>The file " . htmlspecialchars(basename($FORM_FILE_NAME)) . " has been uploaded!</center></h1><br>";
     }
@@ -103,6 +100,7 @@ else
     }
 }
 
+shell_exec("rm tmp.meta")
 echo "<h2><center>Redirecting to upload page in 10 seconds...</center></h2><br>";
 header('refresh:10;url=form-upload.php');
 ?>

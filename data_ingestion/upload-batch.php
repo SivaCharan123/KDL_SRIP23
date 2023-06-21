@@ -42,7 +42,11 @@ foreach($_FILES["batch_files"]["name"] as $filename)
     }
     else
     {
-        shell_exec("/usr/bin/python3 csv_writer.py \"" . $DATA_DUMP_NAME . "\" \"" . $DATA_DUMP_YEAR  . "\" \"" .  $DATA_DUMP_DESC . "\" \"" . 0 . "\" \"" .  $target_file_name_actual ."\"");
+        // Create meta file.
+        shell_exec("echo \"" . $DATA_DUMP_NAME . "\" > tmp.meta");
+        shell_exec("echo \"". $DATA_DUMP_YEAR  . "\" >> tmp.meta");
+        shell_exec("echo \"" . $DATA_DUMP_DESC . "\" >> tmp.meta");
+        shell_exec("echo \"" . 0 . "\" >> tmp.meta");
         echo "SUCCESS!<br>";
     }
     $count = $count + 1;
@@ -52,6 +56,7 @@ notify("Files uploaded successfully!");
 notify("Now, sending data to Druid server...");
 // The Python script will upload any CSV/XLSX files
 shell_exec("/usr/bin/python3 upload_batch_druid.py \"" . $target_dir . "\"");
+shell_exec("rm tmp.meta");
 // Redirect 
 echo "<h2><center>Redirecting to upload page in 10 seconds...</center></h2><br>";
 header('refresh:10;url=form-upload.php');

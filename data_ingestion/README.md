@@ -15,7 +15,7 @@ This folder contains the following files and directories,
 | `upload_batch_druid.py` | The Python code to ingest a directory by going through CSV/XLSX files for a batch upload |
 | `druid_lib.py` | Contains relevant functions to be used for Druid ingestion |
 | `dataset-catalog.csv` | Contains metadata of the uploaded files. |
-| `csv_writer.py` | Used to write metadata to CSV. |
+| `metadata_writer.py` | Used to write metadata to CSV. |
 | `xlsx2csv.py` | Used to convert XLSX files to CSV. |
 | `data-catalog.php` | Catalog to display datasets currently in Druid |
 | `fetch.php` | The PHP page that calls `pydruid-fetch`, and shows a preview of the data. |
@@ -56,6 +56,8 @@ The form meta data is stored in the file `dataset-catalog.csv`. Most of the colu
 - [X] Add SDG goals in the form. 
 
 - [X] Sanity checks in the form.
+
+- [X] Upload sheets of a single XLSX file
 
 - [ ] Data cleaning before ingestion.
 
