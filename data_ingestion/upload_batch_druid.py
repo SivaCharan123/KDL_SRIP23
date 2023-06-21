@@ -36,6 +36,6 @@ try:
         logger.Log(f"Uploading {upload[0]}")
         WriteMetaData(upload[0])
         json_object = get_druid_json(upload[0], upload[1], upload[2])
-        ingest_to_druid(json_object,f"{settings.DRUID_SERVERLOC}:{settings.DRUID_PORT}/druid/indexer/v1/task")
+        ingest_to_druid(json_object,f"{settings.DRUID_PROTOCOL}://{settings.DRUID_SERVERLOC}:{settings.DRUID_PORT}{settings.DRUID_TASK_PATH}")
 except:
     logger.LogException()

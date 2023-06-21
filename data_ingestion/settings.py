@@ -1,5 +1,8 @@
-DRUID_SERVERLOC = 'http://localhost'
+DRUID_PROTOCOL = 'http'
+DRUID_SERVERLOC = 'localhost'
 DRUID_PORT = '8888'
+DRUID_TASK_PATH = '/druid/indexer/v1/task'
+DRUID_SQL_PATH = '/druid/v2/sql'
 DATASETS_DIR = 'datasets'
 LOG_FILE = 'log.txt'
 LOGGING = True
