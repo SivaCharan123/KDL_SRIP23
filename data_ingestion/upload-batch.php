@@ -17,6 +17,9 @@ function notify($MSG)
     echo $MSG;
     echo "</div>";
 }
+
+chdir(dirname(__FILE__));
+
 $DATA_DUMP_NAME = validate_data($_POST["batch_name"]);
 $DATA_DUMP_YEAR = validate_data($_POST["batch_year"]);
 $DATA_DUMP_DESC = validate_data($_POST["batch_description"]);

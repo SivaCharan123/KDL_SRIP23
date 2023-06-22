@@ -24,3 +24,181 @@
 [21/06/2023 13:59:11] Writing metadata for 3_nature-index-500.csv.
 [21/06/2023 13:59:11] Creating JSON spec for 3_nature-index-500.csv in datasets/1687336151_Titanic Test Data Set//3_nature-index-500.csv.json
 [21/06/2023 13:59:11] Druid Task Succeeded.
+[22/06/2023 02:32:57] Converting 1_sample-multisheet.xlsx to CSV....
+[22/06/2023 02:32:57] Converted sheet 1_sample-multisheet.2018 to 1_sample-multisheet_2018.csv
+[22/06/2023 02:32:57] Converted sheet 1_sample-multisheet.2019 to 1_sample-multisheet_2019.csv
+[22/06/2023 02:32:57] Converting 2_titanic.xlsx to CSV....
+[22/06/2023 02:32:57] Converted sheet 2_titanic.complete to 2_titanic_complete.csv
+[22/06/2023 02:32:57] Converted sheet 2_titanic.numeric to 2_titanic_numeric.csv
+[22/06/2023 02:32:57] Converting 3_TOP500-Computing.xlsx to CSV....
+[22/06/2023 02:32:58] Converted sheet 3_TOP500-Computing.61 to 3_TOP500-Computing_61.csv
+[22/06/2023 02:32:58] Batch upload started.
+[22/06/2023 02:32:58] Uploading 0_nature-index-500.csv
+[22/06/2023 02:32:58] Writing metadata for 0_nature-index-500.csv.
+[22/06/2023 02:32:58] Creating JSON spec for 0_nature-index-500.csv in datasets/1687381376_Titanic Test Data Set//0_nature-index-500.csv.json
+[22/06/2023 02:32:58] Druid Task Succeeded.
+[22/06/2023 02:32:58] Uploading 1_sample-multisheet_2018.csv
+[22/06/2023 02:32:58] Writing metadata for 1_sample-multisheet_2018.csv.
+[22/06/2023 02:32:58] Creating JSON spec for 1_sample-multisheet_2018.csv in datasets/1687381376_Titanic Test Data Set//1_sample-multisheet_2018.csv.json
+[22/06/2023 02:32:58] Druid Task Succeeded.
+[22/06/2023 02:32:58] Uploading 1_sample-multisheet_2019.csv
+[22/06/2023 02:32:58] Writing metadata for 1_sample-multisheet_2019.csv.
+[22/06/2023 02:32:58] Creating JSON spec for 1_sample-multisheet_2019.csv in datasets/1687381376_Titanic Test Data Set//1_sample-multisheet_2019.csv.json
+[22/06/2023 02:32:58] Druid Task Succeeded.
+[22/06/2023 02:32:58] Uploading 2_titanic_complete.csv
+[22/06/2023 02:32:58] Writing metadata for 2_titanic_complete.csv.
+[22/06/2023 02:32:58] Creating JSON spec for 2_titanic_complete.csv in datasets/1687381376_Titanic Test Data Set//2_titanic_complete.csv.json
+[22/06/2023 02:32:58] Druid Task Succeeded.
+[22/06/2023 02:32:58] Uploading 2_titanic_numeric.csv
+[22/06/2023 02:32:58] Writing metadata for 2_titanic_numeric.csv.
+[22/06/2023 02:32:58] Creating JSON spec for 2_titanic_numeric.csv in datasets/1687381376_Titanic Test Data Set//2_titanic_numeric.csv.json
+[22/06/2023 02:32:58] Druid Task Succeeded.
+[22/06/2023 02:32:58] Uploading 3_TOP500-Computing_61.csv
+[22/06/2023 02:32:58] Writing metadata for 3_TOP500-Computing_61.csv.
+[22/06/2023 02:32:58] Creating JSON spec for 3_TOP500-Computing_61.csv in datasets/1687381376_Titanic Test Data Set//3_TOP500-Computing_61.csv.json
+[22/06/2023 02:32:58] Druid Task Succeeded.
+[22/06/2023 02:32:58] Uploading 4_world-forecast.csv
+[22/06/2023 02:32:58] Writing metadata for 4_world-forecast.csv.
+[22/06/2023 02:32:58] Creating JSON spec for 4_world-forecast.csv in datasets/1687381376_Titanic Test Data Set//4_world-forecast.csv.json
+[22/06/2023 02:32:58] Druid Task Succeeded.
+[22/06/2023 16:19:23] Batch upload started.
+[22/06/2023 16:19:43] Converting 0_sample-multisheet.xlsx to CSV....
+[22/06/2023 16:19:43] Converted sheet 0_sample-multisheet.2018 to 0_sample-multisheet_2018.csv
+[22/06/2023 16:19:43] Converted sheet 0_sample-multisheet.2019 to 0_sample-multisheet_2019.csv
+[22/06/2023 16:19:43] Converting 1_TOP500-Computing.xlsx to CSV....
+[22/06/2023 16:19:43] Converted sheet 1_TOP500-Computing.61 to 1_TOP500-Computing_61.csv
+[22/06/2023 16:19:43] Batch upload started.
+[22/06/2023 16:19:43] Uploading 0_sample-multisheet_2018.csv
+[22/06/2023 16:19:43] Writing metadata for 0_sample-multisheet_2018.csv.
+[22/06/2023 16:19:43] Creating JSON spec for 0_sample-multisheet_2018.csv in datasets/1687430982_sgautam64//0_sample-multisheet_2018.csv.json
+[22/06/2023 16:19:43] *** EXCEPTION ***
+[22/06/2023 16:19:43] Traceback (most recent call last):
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 200, in _new_conn
+[22/06/2023 16:19:43]     sock = connection.create_connection(
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+[22/06/2023 16:19:43]     raise err
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+[22/06/2023 16:19:43]     sock.connect(sa)
+[22/06/2023 16:19:43] ConnectionRefusedError: [Errno 111] Connection refused
+[22/06/2023 16:19:43] 
+[22/06/2023 16:19:43] The above exception was the direct cause of the following exception:
+[22/06/2023 16:19:43] 
+[22/06/2023 16:19:43] Traceback (most recent call last):
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+[22/06/2023 16:19:43]     response = self._make_request(
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+[22/06/2023 16:19:43]     conn.request(
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 388, in request
+[22/06/2023 16:19:43]     self.endheaders()
+[22/06/2023 16:19:43]   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+[22/06/2023 16:19:43]     self._send_output(message_body, encode_chunked=encode_chunked)
+[22/06/2023 16:19:43]   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+[22/06/2023 16:19:43]     self.send(msg)
+[22/06/2023 16:19:43]   File "/usr/lib/python3.10/http/client.py", line 975, in send
+[22/06/2023 16:19:43]     self.connect()
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 236, in connect
+[22/06/2023 16:19:43]     self.sock = self._new_conn()
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 215, in _new_conn
+[22/06/2023 16:19:43]     raise NewConnectionError(
+[22/06/2023 16:19:43] urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f84cc5524a0>: Failed to establish a new connection: [Errno 111] Connection refused
+[22/06/2023 16:19:43] 
+[22/06/2023 16:19:43] The above exception was the direct cause of the following exception:
+[22/06/2023 16:19:43] 
+[22/06/2023 16:19:43] Traceback (most recent call last):
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+[22/06/2023 16:19:43]     resp = conn.urlopen(
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+[22/06/2023 16:19:43]     retries = retries.increment(
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/retry.py", line 515, in increment
+[22/06/2023 16:19:43]     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+[22/06/2023 16:19:43] urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8888): Max retries exceeded with url: /druid/indexer/v1/task (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f84cc5524a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[22/06/2023 16:19:43] 
+[22/06/2023 16:19:43] During handling of the above exception, another exception occurred:
+[22/06/2023 16:19:43] 
+[22/06/2023 16:19:43] Traceback (most recent call last):
+[22/06/2023 16:19:43]   File "/mnt/c/Users/winga/OneDrive/Desktop/KDL_SRIP23/data_ingestion/upload_batch_druid.py", line 39, in <module>
+[22/06/2023 16:19:43]     ingest_to_druid(json_object,f"{settings.DRUID_PROTOCOL}://{settings.DRUID_SERVERLOC}:{settings.DRUID_PORT}{settings.DRUID_TASK_PATH}")
+[22/06/2023 16:19:43]   File "/mnt/c/Users/winga/OneDrive/Desktop/KDL_SRIP23/data_ingestion/druid_lib.py", line 59, in ingest_to_druid
+[22/06/2023 16:19:43]     response = requests.post(url, headers=headers, data=json_obj)
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+[22/06/2023 16:19:43]     return request("post", url, data=data, json=json, **kwargs)
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+[22/06/2023 16:19:43]     return session.request(method=method, url=url, **kwargs)
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+[22/06/2023 16:19:43]     resp = self.send(prep, **send_kwargs)
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+[22/06/2023 16:19:43]     r = adapter.send(request, **kwargs)
+[22/06/2023 16:19:43]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+[22/06/2023 16:19:43]     raise ConnectionError(e, request=request)
+[22/06/2023 16:19:43] requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8888): Max retries exceeded with url: /druid/indexer/v1/task (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f84cc5524a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[22/06/2023 16:19:43] 
+[22/06/2023 16:19:43] ***
+[22/06/2023 16:20:21] Converting 0_sample-multisheet.xlsx to CSV....
+[22/06/2023 16:20:21] Converted sheet 0_sample-multisheet.2018 to 0_sample-multisheet_2018.csv
+[22/06/2023 16:20:21] Converted sheet 0_sample-multisheet.2019 to 0_sample-multisheet_2019.csv
+[22/06/2023 16:20:21] Batch upload started.
+[22/06/2023 16:20:21] Uploading 0_sample-multisheet_2018.csv
+[22/06/2023 16:20:21] Writing metadata for 0_sample-multisheet_2018.csv.
+[22/06/2023 16:20:21] Creating JSON spec for 0_sample-multisheet_2018.csv in datasets/1687431020_Titanic Test Data Set//0_sample-multisheet_2018.csv.json
+[22/06/2023 16:20:21] *** EXCEPTION ***
+[22/06/2023 16:20:21] Traceback (most recent call last):
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 200, in _new_conn
+[22/06/2023 16:20:21]     sock = connection.create_connection(
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+[22/06/2023 16:20:21]     raise err
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+[22/06/2023 16:20:21]     sock.connect(sa)
+[22/06/2023 16:20:21] ConnectionRefusedError: [Errno 111] Connection refused
+[22/06/2023 16:20:21] 
+[22/06/2023 16:20:21] The above exception was the direct cause of the following exception:
+[22/06/2023 16:20:21] 
+[22/06/2023 16:20:21] Traceback (most recent call last):
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+[22/06/2023 16:20:21]     response = self._make_request(
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+[22/06/2023 16:20:21]     conn.request(
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 388, in request
+[22/06/2023 16:20:21]     self.endheaders()
+[22/06/2023 16:20:21]   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+[22/06/2023 16:20:21]     self._send_output(message_body, encode_chunked=encode_chunked)
+[22/06/2023 16:20:21]   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+[22/06/2023 16:20:21]     self.send(msg)
+[22/06/2023 16:20:21]   File "/usr/lib/python3.10/http/client.py", line 975, in send
+[22/06/2023 16:20:21]     self.connect()
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 236, in connect
+[22/06/2023 16:20:21]     self.sock = self._new_conn()
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 215, in _new_conn
+[22/06/2023 16:20:21]     raise NewConnectionError(
+[22/06/2023 16:20:21] urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f1f643618a0>: Failed to establish a new connection: [Errno 111] Connection refused
+[22/06/2023 16:20:21] 
+[22/06/2023 16:20:21] The above exception was the direct cause of the following exception:
+[22/06/2023 16:20:21] 
+[22/06/2023 16:20:21] Traceback (most recent call last):
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+[22/06/2023 16:20:21]     resp = conn.urlopen(
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+[22/06/2023 16:20:21]     retries = retries.increment(
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/retry.py", line 515, in increment
+[22/06/2023 16:20:21]     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+[22/06/2023 16:20:21] urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8888): Max retries exceeded with url: /druid/indexer/v1/task (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f643618a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[22/06/2023 16:20:21] 
+[22/06/2023 16:20:21] During handling of the above exception, another exception occurred:
+[22/06/2023 16:20:21] 
+[22/06/2023 16:20:21] Traceback (most recent call last):
+[22/06/2023 16:20:21]   File "/mnt/c/Users/winga/OneDrive/Desktop/KDL_SRIP23/data_ingestion/upload_batch_druid.py", line 39, in <module>
+[22/06/2023 16:20:21]     ingest_to_druid(json_object,f"{settings.DRUID_PROTOCOL}://{settings.DRUID_SERVERLOC}:{settings.DRUID_PORT}{settings.DRUID_TASK_PATH}")
+[22/06/2023 16:20:21]   File "/mnt/c/Users/winga/OneDrive/Desktop/KDL_SRIP23/data_ingestion/druid_lib.py", line 59, in ingest_to_druid
+[22/06/2023 16:20:21]     response = requests.post(url, headers=headers, data=json_obj)
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+[22/06/2023 16:20:21]     return request("post", url, data=data, json=json, **kwargs)
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+[22/06/2023 16:20:21]     return session.request(method=method, url=url, **kwargs)
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+[22/06/2023 16:20:21]     resp = self.send(prep, **send_kwargs)
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+[22/06/2023 16:20:21]     r = adapter.send(request, **kwargs)
+[22/06/2023 16:20:21]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+[22/06/2023 16:20:21]     raise ConnectionError(e, request=request)
+[22/06/2023 16:20:21] requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8888): Max retries exceeded with url: /druid/indexer/v1/task (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1f643618a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[22/06/2023 16:20:21] 
+[22/06/2023 16:20:21] ***

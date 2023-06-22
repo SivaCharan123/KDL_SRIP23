@@ -36,6 +36,8 @@ function sanitize($data)
     return htmlspecialchars(trim($data));
 }
 
+chdir(dirname(__FILE__));
+
 // Read the CSV file
 $file = 'dataset-catalog.csv';
 $csvData = file_get_contents($file);

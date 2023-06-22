@@ -33,6 +33,8 @@ function get_SDG_flag()
     }
     return $SDG_FLAG;
 }
+// Change to current working directory
+chdir(dirname(__FILE__));
 
 $FORM_FILE_NAME = validate_data($_FILES["csv_file"]["name"]);
 $FORM_DATASET_NAME = validate_data($_POST["csv_name"]);
