@@ -89,9 +89,9 @@ else
 {
     if(move_uploaded_file($_FILES["csv_file"]["tmp_name"], $target_file))
     {
-        shell_exec("echo \"" . $DATA_DUMP_NAME . "\" > tmp.meta");
-        shell_exec("echo \"". $DATA_DUMP_YEAR  . "\" >> tmp.meta");
-        shell_exec("echo \"" . $DATA_DUMP_DESC . "\" >> tmp.meta");
+        shell_exec("echo \"" . $FORM_DATASET_NAME . "\" > tmp.meta");
+        shell_exec("echo \"". $FORM_DATASET_YEAR  . "\" >> tmp.meta");
+        shell_exec("echo \"" . $FORM_DATASET_DESC . "\" >> tmp.meta");
         shell_exec("echo \"" . 0 . "\" >> tmp.meta");
         shell_exec("/usr/bin/python3 upload_single_druid.py " . $target_file_name);
         echo "<h1><center>The file " . htmlspecialchars(basename($FORM_FILE_NAME)) . " has been uploaded!</center></h1><br>";
@@ -102,7 +102,7 @@ else
     }
 }
 
-shell_exec("rm tmp.meta")
+shell_exec("rm tmp.meta");
 echo "<h2><center>Redirecting to upload page in 10 seconds...</center></h2><br>";
 header('refresh:10;url=form-upload.php');
 ?>
