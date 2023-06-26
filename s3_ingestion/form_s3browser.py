@@ -1,36 +1,12 @@
 import tkinter as tk
-import form_settings
+import settings
 from s3 import *
+from s3_to_druid import s3_to_druid
 
-class BrowserItem:
-    def __init__(self, name, type='file'):
-        self.name = name
-        self.type = type
-    
-    def __repr__(self) -> str:
-        return f"<BrowserItem, name: {self.name}, type:{self.type}>"
-
-def ConstructBrowserTree(files, folders):
-    browser_tree = []
-
-    browser_tree.append(BrowserItem("..", 'dir'))
-
-    for file in files:
-        if(file != ''):
-            browser_tree.append(BrowserItem(file, 'file'))
-    
-    for folder in folders:
-        if(folder != ''):
-            browser_tree.append(BrowserItem(folder, 'dir'))
-    
-    return browser_tree
-
-def Form_S3Browser(s3info):
+def Form_S3Browser(s3info, druidinfo):
     s3_client = CreateS3Client(s3info)
     current_dir = ''
-    current_files = GetS3Files(s3_client, s3info, current_dir)
-    current_directories = GetS3Directories(s3_client, s3info, current_dir)
-    browser_tree = ConstructBrowserTree(current_files, current_directories)
+    browser_tree = ExploreS3Directory(s3_client, s3info, current_dir)
 
     # Array to hold selected items
     selected_items = []
@@ -47,6 +23,7 @@ def Form_S3Browser(s3info):
 
     # Create entry for current path
     lbl_s3files_currentdir = tk.Label(master=frm_browser, text='')
+    lbl_druid_URL = tk.Label(master=frm_browser, text=f'{druidinfo.Druid_protocol}://{druidinfo.Druid_host}:{druidinfo.Druid_port}')
 
     # Create two list boxes, one for browsing and the other for selections.
     s3files_browser = tk.Listbox(master=frm_browser, height=20, width=50, bg="white", activestyle='dotbox', font="Helvetica", fg="black", selectmode="extended")
@@ -84,7 +61,7 @@ def Form_S3Browser(s3info):
     
     # This function is called when a directory changed is requested
     def inner_OnListBoxDoubleClick(ev):
-        nonlocal current_dir, current_files, current_directories, browser_tree
+        nonlocal current_dir, browser_tree
         get_selections = s3files_browser.curselection()
 
         # If more than one or zero is selected, ignore.
@@ -101,9 +78,7 @@ def Form_S3Browser(s3info):
             else:
                 current_dir += browser_tree[id].name + "/"
 
-            current_files = GetS3Files(s3_client, s3info, current_dir)
-            current_directories = GetS3Directories(s3_client, s3info, current_dir)
-            browser_tree = ConstructBrowserTree(current_files, current_directories)
+            browser_tree = ExploreS3Directory(s3_client, s3info, current_dir)
             inner_UpdateCurrentDirLabel()
             inner_PopulateBrowserBox()
 
@@ -126,8 +101,8 @@ def Form_S3Browser(s3info):
 
     # This function is called when a submit button is clicked
     def inner_Submit():
-        for file in selected_items:
-            DownloadS3File(s3_client, s3info, file.name, "./")
+        s3_to_druid(s3_client, s3info, druidinfo, selected_items)
+        window.destroy()
     
     # Populate the browser box
     inner_UpdateCurrentDirLabel()
@@ -142,12 +117,14 @@ def Form_S3Browser(s3info):
     label_added.grid(row=0, column=1)
 
     lbl_s3files_currentdir.grid(row=1, column=0)
+    lbl_druid_URL.grid(row=1, column=1)
+
     s3files_browser.grid(row=2, column=0)
-    selected_browser.grid(row=2, column=1, sticky="w", pady=form_settings.DEFAULT_PADDING_Y)
+    selected_browser.grid(row=2, column=1, sticky="w", pady=settings.DEFAULT_PADDING_Y)
 
     btn_add.grid(row=3, column=0)
     btn_remove.grid(row=3, column=1)
 
-    frm_browser.grid(row=0, column=0, padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
-    btn_submit.grid(row=1, column=0, padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
+    frm_browser.grid(row=0, column=0, padx=settings.DEFAULT_PADDING_X, pady=settings.DEFAULT_PADDING_Y)
+    btn_submit.grid(row=1, column=0, padx=settings.DEFAULT_PADDING_X, pady=settings.DEFAULT_PADDING_Y)
     window.mainloop()

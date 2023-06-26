@@ -1,17 +1,17 @@
 import tkinter as tk 
 import tkinter.filedialog as tfd
-import form_settings
+import settings
 import json 
 
 class S3Info:
 
-    def __init__(self, AWS_key, AWS_secret, AWS_bucket):
+    def __init__(self, AWS_key, AWS_secret, AWS_bucket, AWS_downloaddir):
         self.AWS_key = AWS_key
         self.AWS_secret = AWS_secret
         self.AWS_bucket = AWS_bucket
-
+        self.AWS_downloaddir = AWS_downloaddir
     def __repr__(self):
-        return f"<AWS key: '{self.AWS_key}', AWS Secret: '{self.AWS_secret}', AWS Bucket Name: '{self.AWS_bucket}'>"
+        return f"<AWS key: '{self.AWS_key}', AWS Secret: '{self.AWS_secret}', AWS Bucket Name: '{self.AWS_bucket}', Downloading to: {self.AWS_downloaddir}>"
 
 class DruidInfo:
 
@@ -80,17 +80,17 @@ def Form_S3Info():
 
     btn_AWS_browsedownloaddir = tk.Button(master=frm_s3, text="...", command=inner_BrowseAWSDir)
 
-    lbl_AWS_keyid.grid(row=0, column=0, sticky="w", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
-    ent_AWS_keyid.grid(row=0, column=1, sticky="e", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
+    lbl_AWS_keyid.grid(row=0, column=0, sticky="w", padx=settings.DEFAULT_PADDING_X, pady=settings.DEFAULT_PADDING_Y)
+    ent_AWS_keyid.grid(row=0, column=1, sticky="e", padx=settings.DEFAULT_PADDING_X, pady=settings.DEFAULT_PADDING_Y)
 
-    lbl_AWS_secret.grid(row=1, column=0, sticky="w", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
-    ent_AWS_secret.grid(row=1, column=1, sticky="e", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
+    lbl_AWS_secret.grid(row=1, column=0, sticky="w", padx=settings.DEFAULT_PADDING_X, pady=settings.DEFAULT_PADDING_Y)
+    ent_AWS_secret.grid(row=1, column=1, sticky="e", padx=settings.DEFAULT_PADDING_X, pady=settings.DEFAULT_PADDING_Y)
 
-    lbl_AWS_bucketname.grid(row=2, column=0, sticky="w", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
-    ent_AWS_bucketname.grid(row=2, column=1, sticky="w", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
+    lbl_AWS_bucketname.grid(row=2, column=0, sticky="w", padx=settings.DEFAULT_PADDING_X, pady=settings.DEFAULT_PADDING_Y)
+    ent_AWS_bucketname.grid(row=2, column=1, sticky="w", padx=settings.DEFAULT_PADDING_X, pady=settings.DEFAULT_PADDING_Y)
 
-    lbl_AWS_downloaddir.grid(row=3, column=0, sticky="w", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
-    ent_AWS_downloaddir.grid(row=3, column=1, sticky="w", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
+    lbl_AWS_downloaddir.grid(row=3, column=0, sticky="w", padx=settings.DEFAULT_PADDING_X, pady=settings.DEFAULT_PADDING_Y)
+    ent_AWS_downloaddir.grid(row=3, column=1, sticky="w", padx=settings.DEFAULT_PADDING_X, pady=settings.DEFAULT_PADDING_Y)
 
     btn_AWS_browsedownloaddir.grid(row=3, column=2)
     
@@ -110,8 +110,8 @@ def Form_S3Info():
     lbl_Druid_taskpath = tk.Label(master=frm_druid, text="Task")
 
     lbl_Druid_protocol.grid(row=0, column=0)
-    ent_Druid_protocol.grid(row=1, column=0, pady=form_settings.DEFAULT_PADDING_Y)
-    lbl_URL_delimiter.grid(row=1, column=1, pady=form_settings.DEFAULT_PADDING_Y)
+    ent_Druid_protocol.grid(row=1, column=0, pady=settings.DEFAULT_PADDING_Y)
+    lbl_URL_delimiter.grid(row=1, column=1, pady=settings.DEFAULT_PADDING_Y)
 
     lbl_Druid_host.grid(row=0, column=2)
     ent_Druid_host.grid(row=1, column=2)
@@ -129,15 +129,15 @@ def Form_S3Info():
     btn_submit = tk.Button(master=window, text="Get Bucket Files \N{RIGHTWARDS BLACK ARROW}", command=inner_OnSubmitClick)
 
     lbl_AWS_title.grid(row=0, column=0)
-    frm_s3.grid(row=1, column=0, padx=form_settings.FRAME_PADDING_X, pady=form_settings.FRAME_PADDING_Y)
+    frm_s3.grid(row=1, column=0, padx=settings.FRAME_PADDING_X, pady=settings.FRAME_PADDING_Y)
     lbl_Druid_title.grid(row=2, column=0)
 
-    frm_druid.grid(row=3, column=0, padx=form_settings.FRAME_PADDING_X, pady=form_settings.FRAME_PADDING_Y)
-    btn_submit.grid(row=4, column=0, padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
+    frm_druid.grid(row=3, column=0, padx=settings.FRAME_PADDING_X, pady=settings.FRAME_PADDING_Y)
+    btn_submit.grid(row=4, column=0, padx=settings.DEFAULT_PADDING_X, pady=settings.DEFAULT_PADDING_Y)
 
     window.mainloop()
 
     if(GetClicked):
-        return [S3Info(AWS_keyid.get(), AWS_secret.get(), AWS_bucket.get()), DruidInfo(Druid_protocol.get(), Druid_host.get(), Druid_port.get(), Druid_taskpath.get())]
+        return [S3Info(AWS_keyid.get(), AWS_secret.get(), AWS_bucket.get(), AWS_downloaddir.get()), DruidInfo(Druid_protocol.get(), Druid_host.get(), Druid_port.get(), Druid_taskpath.get())]
     else:
         return None
