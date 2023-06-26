@@ -1,4 +1,5 @@
 import tkinter as tk 
+import tkinter.filedialog as tfd
 import form_settings
 import json 
 
@@ -12,6 +13,16 @@ class S3Info:
     def __repr__(self):
         return f"<AWS key: '{self.AWS_key}', AWS Secret: '{self.AWS_secret}', AWS Bucket Name: '{self.AWS_bucket}'>"
 
+class DruidInfo:
+
+    def __init__(self, Druid_protocol, Druid_host, Druid_port, Druid_taskpath):
+        self.Druid_protocol = Druid_protocol
+        self.Druid_host = Druid_host
+        self.Druid_port = Druid_port
+        self.Druid_taskpath = Druid_taskpath
+    
+    def __repr__(self):
+        return f"Druid Server Info: <{self.Druid_protocol}://{self.Druid_host}:{self.Druid_port}{self.Druid_taskpath}>"
 
 def Form_S3Info():
 
@@ -19,15 +30,7 @@ def Form_S3Info():
     window.eval('tk::PlaceWindow . center')
     window.title("S3 to Druid File Transfer")
     window.resizable(width=False, height=False)
-    defaults = json.loads(''.join(open("defaults.secure_json").readlines()))
 
-    GetClicked = False
-    
-    def inner_OnSubmitClick():
-        nonlocal GetClicked
-        GetClicked = True
-        window.destroy()
-    
     AWS_keyid = tk.StringVar()
     AWS_secret = tk.StringVar()
     AWS_bucket = tk.StringVar()
@@ -36,17 +39,29 @@ def Form_S3Info():
     Druid_port = tk.StringVar()
     Druid_taskpath = tk.StringVar()
     AWS_downloaddir = tk.StringVar()
+    GetClicked = False
 
+    # Load defaults
+    defaults = json.loads(''.join(open("defaults.secure_json").readlines()))
     AWS_keyid.set(defaults["AWS_KEYID"])
     AWS_secret.set(defaults["AWS_SECRET"])
     AWS_bucket.set(defaults["AWS_BUCKET"])
     AWS_downloaddir.set(defaults["AWS_DOWNLOAD_DIRECTORY"])
-    
     Druid_protocol.set(defaults["DRUID_PROTOCOL"])
     Druid_host.set(defaults["DRUID_SERVERLOC"])
     Druid_port.set(defaults["DRUID_PORT"])
     Druid_taskpath.set(defaults["DRUID_TASK_PATH"])
+    
+    def inner_OnSubmitClick():
+        nonlocal GetClicked
+        GetClicked = True
+        window.destroy()
 
+    def inner_BrowseAWSDir():
+        filename = tfd.askdirectory()
+        AWS_downloaddir.set(filename)
+
+    # -------------- FRAME CREATION ------
     frm_s3 = tk.Frame(master=window, borderwidth=2, relief="ridge")
     frm_druid = tk.Frame(master=window, borderwidth=2, relief="ridge")
 
@@ -63,6 +78,8 @@ def Form_S3Info():
     ent_AWS_downloaddir = tk.Entry(master=frm_s3, width=50, textvariable=AWS_downloaddir)
     lbl_AWS_downloaddir = tk.Label(master=frm_s3, text="AWS Downloads Directory")
 
+    btn_AWS_browsedownloaddir = tk.Button(master=frm_s3, text="...", command=inner_BrowseAWSDir)
+
     lbl_AWS_keyid.grid(row=0, column=0, sticky="w", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
     ent_AWS_keyid.grid(row=0, column=1, sticky="e", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
 
@@ -75,6 +92,8 @@ def Form_S3Info():
     lbl_AWS_downloaddir.grid(row=3, column=0, sticky="w", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
     ent_AWS_downloaddir.grid(row=3, column=1, sticky="w", padx=form_settings.DEFAULT_PADDING_X, pady=form_settings.DEFAULT_PADDING_Y)
 
+    btn_AWS_browsedownloaddir.grid(row=3, column=2)
+    
     # -------------- DRUID FORM --------------
     ent_Druid_protocol = tk.Entry(master=frm_druid, width=5, textvariable=Druid_protocol)
     lbl_Druid_protocol = tk.Label(master=frm_druid, text="Protocol")
@@ -119,6 +138,6 @@ def Form_S3Info():
     window.mainloop()
 
     if(GetClicked):
-        return S3Info(AWS_keyid.get(), AWS_secret.get(), AWS_bucket.get())
+        return [S3Info(AWS_keyid.get(), AWS_secret.get(), AWS_bucket.get()), DruidInfo(Druid_protocol.get(), Druid_host.get(), Druid_port.get(), Druid_taskpath.get())]
     else:
         return None
