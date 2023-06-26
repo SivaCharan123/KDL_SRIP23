@@ -1,0 +1,12 @@
+{
+    "AWS_KEYID": "<Your AWS Key ID>",
+    "AWS_SECRET": "<Your AWS Secret Key>",
+    "AWS_BUCKET": "<Your AWS Bucket Name>",
+
+    "AWS_DOWNLOAD_DIRECTORY": "./datasets/",
+
+    "DRUID_PROTOCOL": "http",
+    "DRUID_SERVERLOC": "localhost",
+    "DRUID_PORT": "8888",
+    "DRUID_TASK_PATH": "/druid/indexer/v1/task"
+}
