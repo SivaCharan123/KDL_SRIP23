@@ -98,7 +98,7 @@ else
     }
     else
     {
-        echo "<div class=\"error\">There was an error on the server side uploading the file. Contact site administrator.</div>";
+        echo "<div class=\"error\">There was an error on the server side uploading the file. Contact site administrator. See following error message for details: <br>" . $_FILES["datei"]["error"] . "</div>";
     }
 }
 
