@@ -16,7 +16,7 @@ def get_druid_json(file_name, file_path, json_file_name):
             -> JSON spec for Druid - JSON object
     '''
     # Reading the file and the columns
-    df = pd.read_csv(file_path + "/" + file_name)
+    df = pd.read_csv(file_path + "/" + file_name, delimiter=',')
     column_list = list(df.columns)
 
     # Initiating a dictionary in the format of an ingestion spec
@@ -54,6 +54,31 @@ def ingest_to_druid(json_obj,url):
     headers = {"Content-Type" : "application/json"}
     response = requests.post(url, headers=headers, data=json_obj)
     if(response.status_code==200):
-        print(f"Druid Task Succeeded.")
+        print(f"Druid Task Submitted.")
     else:
         print(f"Druid Task Failed.")
+    
+    task_id = response.json()['task']
+
+    print("Waiting for Druid Task Report...")
+    while True:
+        status = check_task_status(url, task_id)
+        if(status == "SUCCESS"):
+            print("Druid Task Suceeded.")
+            return True
+
+        if(status != None and status != ""):
+            for i in range(0, 5):
+                print(check_task_status(url, task_id))
+            print(status)
+            print("Druid Task Failed.")
+            return False
+def check_task_status(url, task_id):
+    try:
+        spec = requests.get(url + "/" + task_id + "/reports").json()
+        if(spec["ingestionStatsAndErrors"]["payload"]["ingestionState"] == "COMPLETED"):
+            return "SUCCESS"
+        else:
+            return spec["ingestionStatsAndErrors"]["payload"]["errorMsg"]
+    except:
+        return None

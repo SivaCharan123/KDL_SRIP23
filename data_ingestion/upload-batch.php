@@ -11,6 +11,28 @@ function validate_data($DATA)
     return $DATA;
 }
 
+// Helper function for SDG goals
+function set_bit($NUMBER, $BIT)
+{
+    return ($NUMBER) | (1 << $BIT); 
+}
+
+function get_SDG_flag()
+{
+    if(!isset($_POST['batch_sdg']))
+    {
+        return 0;
+    }
+    $FORM_SDG_DATA = $_POST["batch_sdg"];
+    $SDG_FLAG = 0;
+    foreach($FORM_SDG_DATA as $SDG)
+    {
+        $SDG_FLAG = set_bit($SDG_FLAG, $SDG);
+    }
+    return $SDG_FLAG;
+}
+
+
 function notify($MSG)
 {
     echo "<div class=\"notification\">";
@@ -23,6 +45,7 @@ chdir(dirname(__FILE__));
 $DATA_DUMP_NAME = validate_data($_POST["batch_name"]);
 $DATA_DUMP_YEAR = validate_data($_POST["batch_year"]);
 $DATA_DUMP_DESC = validate_data($_POST["batch_description"]);
+$DATA_DUMP_SDG = get_SDG_flag();
 
 $timestamp = time();
 $target_dir =  $timestamp . "_" . $DATA_DUMP_NAME . "/";
@@ -49,7 +72,7 @@ foreach($_FILES["batch_files"]["name"] as $filename)
         shell_exec("echo \"" . $DATA_DUMP_NAME . "\" > tmp.meta");
         shell_exec("echo \"". $DATA_DUMP_YEAR  . "\" >> tmp.meta");
         shell_exec("echo \"" . $DATA_DUMP_DESC . "\" >> tmp.meta");
-        shell_exec("echo \"" . 0 . "\" >> tmp.meta");
+        shell_exec("echo \"" . $DATA_DUMP_SDG . "\" >> tmp.meta");
         echo "SUCCESS!<br>";
     }
     $count = $count + 1;

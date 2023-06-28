@@ -15,6 +15,7 @@
     <link href="styles/styles.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/upload-batch.js"></script>
+    <script src="js/generate-checkboxes.js"></script>
 </head>
 
 <body>
@@ -60,7 +61,9 @@
                                         <div class="sdg-checkboxes">
                                             <label for="csv_sdg[]" class="col-sm-4 col-form-label">Select relevant
                                                 SDGs</label>
-                                            <script src="js/generate-checkboxes.js"></script>
+                                            <script>
+                                                generate_checkboxes("sdg-checkboxes", "csv_sdg")
+                                            </script>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -100,6 +103,13 @@
                                             placeholder="Enter a short description to help users and programs classify this data dump..."
                                             cols="50" rows="5"></textarea>
                                     </div>
+                                    <div class="batch-checkboxes">
+                                            <label for="batch_sdg[]" class="col-sm-4 col-form-label">Select relevant
+                                                SDGs</label>
+                                            <script>
+                                                generate_checkboxes("batch-checkboxes", "batch_sdg")
+                                            </script>
+                                        </div>
                                     <div class="form-group row">
                                         <div class="col-12 col-md-12 my-5">
                                             <div class="control-group" id="fields">
