@@ -1,0 +1,95 @@
+[28/06/2023 23:09:33] Converting 0_titanic.xlsx to CSV....
+[28/06/2023 23:09:34] Converted sheet 0_titanic.complete to 0_titanic_complete.csv
+[28/06/2023 23:09:34] Converted sheet 0_titanic.numeric to 0_titanic_numeric.csv
+[28/06/2023 23:09:34] Converting 1_TOP500-Computing.xlsx to CSV....
+[28/06/2023 23:09:34] Converted sheet 1_TOP500-Computing.61 to 1_TOP500-Computing_61.csv
+[28/06/2023 23:09:34] Batch upload started.
+[28/06/2023 23:09:34] Uploading 0_titanic_complete.csv
+[28/06/2023 23:09:34] Writing metadata for 0_titanic_complete.csv.
+[28/06/2023 23:09:34] Creating JSON spec for 0_titanic_complete.csv in datasets/1687973973_LotsofData//0_titanic_complete.csv.json
+[28/06/2023 23:09:34] Druid Task Succeeded.
+[28/06/2023 23:09:34] Uploading 0_titanic_numeric.csv
+[28/06/2023 23:09:34] Writing metadata for 0_titanic_numeric.csv.
+[28/06/2023 23:09:34] Creating JSON spec for 0_titanic_numeric.csv in datasets/1687973973_LotsofData//0_titanic_numeric.csv.json
+[28/06/2023 23:09:34] Druid Task Succeeded.
+[28/06/2023 23:09:34] Uploading 1_TOP500-Computing_61.csv
+[28/06/2023 23:09:34] Writing metadata for 1_TOP500-Computing_61.csv.
+[28/06/2023 23:09:34] Creating JSON spec for 1_TOP500-Computing_61.csv in datasets/1687973973_LotsofData//1_TOP500-Computing_61.csv.json
+[28/06/2023 23:09:34] Druid Task Succeeded.
+[28/06/2023 23:09:34] Uploading 2_nature-index-500.csv
+[28/06/2023 23:09:34] Writing metadata for 2_nature-index-500.csv.
+[28/06/2023 23:09:34] Creating JSON spec for 2_nature-index-500.csv in datasets/1687973973_LotsofData//2_nature-index-500.csv.json
+[28/06/2023 23:09:35] Druid Task Succeeded.
+[28/06/2023 23:19:24] Converting 0_titanic.xlsx to CSV....
+[28/06/2023 23:19:24] Converted sheet 0_titanic.complete to 0_titanic_complete.csv
+[28/06/2023 23:19:24] Converted sheet 0_titanic.numeric to 0_titanic_numeric.csv
+[28/06/2023 23:19:24] Batch upload started.
+[28/06/2023 23:19:24] Uploading 0_titanic_complete.csv
+[28/06/2023 23:19:24] Writing metadata for 0_titanic_complete.csv.
+[28/06/2023 23:19:24] Creating JSON spec for 0_titanic_complete.csv in datasets/1687974564_Test Dataset Dump//0_titanic_complete.csv.json
+[28/06/2023 23:19:24] Druid Task Succeeded.
+[28/06/2023 23:19:24] Uploading 0_titanic_numeric.csv
+[28/06/2023 23:19:24] Writing metadata for 0_titanic_numeric.csv.
+[28/06/2023 23:19:24] Creating JSON spec for 0_titanic_numeric.csv in datasets/1687974564_Test Dataset Dump//0_titanic_numeric.csv.json
+[28/06/2023 23:19:24] Druid Task Succeeded.
+[28/06/2023 23:25:13] Converting 0_titanic.xlsx to CSV....
+[28/06/2023 23:25:14] Converted sheet 0_titanic.complete to 0_titanic_complete.csv
+[28/06/2023 23:25:14] Converted sheet 0_titanic.numeric to 0_titanic_numeric.csv
+[28/06/2023 23:25:14] Batch upload started.
+[28/06/2023 23:25:14] Uploading 0_titanic_complete.csv
+[28/06/2023 23:25:14] Writing metadata for 0_titanic_complete.csv.
+[28/06/2023 23:25:14] Creating JSON spec for 0_titanic_complete.csv in datasets/1687974913_Titanic Test Data Set//0_titanic_complete.csv.json
+[28/06/2023 23:25:14] Druid Task Succeeded.
+[28/06/2023 23:25:14] Uploading 0_titanic_numeric.csv
+[28/06/2023 23:25:14] Writing metadata for 0_titanic_numeric.csv.
+[28/06/2023 23:25:14] Creating JSON spec for 0_titanic_numeric.csv in datasets/1687974913_Titanic Test Data Set//0_titanic_numeric.csv.json
+[28/06/2023 23:25:14] Druid Task Succeeded.
+[29/06/2023 11:27:29] Converting 0_sample-multisheet.xlsx to CSV....
+[29/06/2023 11:27:29] Converted sheet 0_sample-multisheet.2018 to 0_sample-multisheet_2018.csv
+[29/06/2023 11:27:29] Converted sheet 0_sample-multisheet.2019 to 0_sample-multisheet_2019.csv
+[29/06/2023 11:27:29] Batch upload started.
+[29/06/2023 11:27:29] Uploading 0_sample-multisheet_2018.csv
+[29/06/2023 11:27:29] Writing metadata for 0_sample-multisheet_2018.csv.
+[29/06/2023 11:27:29] Creating JSON spec for 0_sample-multisheet_2018.csv in datasets/1688018248_sample_multisheet//0_sample-multisheet_2018.csv.json
+[29/06/2023 11:27:29] Druid Task Succeeded.
+[29/06/2023 11:27:29] Uploading 0_sample-multisheet_2019.csv
+[29/06/2023 11:27:29] Writing metadata for 0_sample-multisheet_2019.csv.
+[29/06/2023 11:27:29] Creating JSON spec for 0_sample-multisheet_2019.csv in datasets/1688018248_sample_multisheet//0_sample-multisheet_2019.csv.json
+[29/06/2023 11:27:29] Druid Task Succeeded.
+[29/06/2023 11:54:24] Converted sheet 1688019864_titanic.complete to 1688019864_titanic_complete.csv
+[29/06/2023 11:54:24] Converted sheet 1688019864_titanic.numeric to 1688019864_titanic_numeric.csv
+[29/06/2023 11:54:24] Uploading file: 1688019864_titanic.xlsx
+[29/06/2023 11:54:24] *** EXCEPTION ***
+[29/06/2023 11:54:24] Traceback (most recent call last):
+[29/06/2023 11:54:24]   File "/mnt/c/Users/winga/OneDrive/Desktop/KDL_SRIP23/data_ingestion/upload_single_druid.py", line 19, in <module>
+[29/06/2023 11:54:24]     WriteMetaData(file)
+[29/06/2023 11:54:24] TypeError: WriteMetaData() missing 1 required positional argument: 'path'
+[29/06/2023 11:54:24] 
+[29/06/2023 11:54:24] ***
+[29/06/2023 11:56:04] Converted sheet 1688019963_titanic.complete to 1688019963_titanic_complete.csv
+[29/06/2023 11:56:04] Converted sheet 1688019963_titanic.numeric to 1688019963_titanic_numeric.csv
+[29/06/2023 11:56:04] Uploading file: 1688019963_titanic.xlsx
+[29/06/2023 11:56:04] Writing metadata for 1688019963_titanic_complete.csv.
+[29/06/2023 11:56:04] Creating JSON spec for 1688019963_titanic_complete.csv in datasets/1688019963_titanic_complete.csv.json
+[29/06/2023 11:56:04] Druid Task Succeeded.
+[29/06/2023 11:56:04] Writing metadata for 1688019963_titanic_numeric.csv.
+[29/06/2023 11:56:04] Creating JSON spec for 1688019963_titanic_numeric.csv in datasets/1688019963_titanic_numeric.csv.json
+[29/06/2023 11:56:04] Druid Task Succeeded.
+[30/06/2023 03:06:47] Converted sheet 1688074606_titanic.complete to 1688074606_titanic_complete.csv
+[30/06/2023 03:06:47] Converted sheet 1688074606_titanic.numeric to 1688074606_titanic_numeric.csv
+[30/06/2023 03:06:47] Uploading file: 1688074606_titanic.xlsx
+[30/06/2023 03:06:47] Writing metadata for 1688074606_titanic_complete.csv.
+[30/06/2023 03:06:47] Creating JSON spec for 1688074606_titanic_complete.csv in datasets/1688074606_titanic_complete.csv.json
+[30/06/2023 03:06:48] Druid Task Succeeded.
+[30/06/2023 03:06:48] Writing metadata for 1688074606_titanic_numeric.csv.
+[30/06/2023 03:06:48] Creating JSON spec for 1688074606_titanic_numeric.csv in datasets/1688074606_titanic_numeric.csv.json
+[30/06/2023 03:06:48] Druid Task Succeeded.
+[30/06/2023 03:12:45] Converted sheet 1688074964_titanic.complete to 1688074964_titanic_complete.csv
+[30/06/2023 03:12:45] Converted sheet 1688074964_titanic.numeric to 1688074964_titanic_numeric.csv
+[30/06/2023 03:12:45] Uploading file: 1688074964_titanic.xlsx
+[30/06/2023 03:12:45] Writing metadata for 1688074964_titanic_complete.csv.
+[30/06/2023 03:12:45] Creating JSON spec for 1688074964_titanic_complete.csv in datasets/1688074964_titanic_complete.csv.json
+[30/06/2023 03:12:45] Druid Task Succeeded.
+[30/06/2023 03:12:45] Writing metadata for 1688074964_titanic_numeric.csv.
+[30/06/2023 03:12:45] Creating JSON spec for 1688074964_titanic_numeric.csv in datasets/1688074964_titanic_numeric.csv.json
+[30/06/2023 03:12:45] Druid Task Succeeded.

@@ -1,20 +1,19 @@
-from csv import writer
 from datetime import datetime
 import os
-import settings
 import logger
+import json
+import pandas
 
-def WriteMetaData(uploaded_file):
+def WriteMetaData(uploaded_file, path):
     try:
         logger.Log(f"Writing metadata for {uploaded_file}.")
         # This file contains meta data taken from the form.
         meta_data = open("tmp.meta").read().splitlines()
         # Remove extension as files are named without extension in Druid
         uploaded_file = os.path.splitext(uploaded_file)[0]
-        new_row = [meta_data[0], int(meta_data[1]), meta_data[2], int(meta_data[3]), uploaded_file, str(datetime.now())]
-        with open(settings.METADATA_CSV, 'a') as catalog:
-            writer_object = writer(catalog)
-            writer_object.writerow(new_row)
-            catalog.close()
+        meta_data_json = { 'name': meta_data[0], 'year': int(meta_data[1]), 'description': meta_data[2], 'sdg_flags': int(meta_data[3]), 'filename': uploaded_file, 'upload_time': str(datetime.now()) } 
+        df = pandas.read_csv(path + "/" + uploaded_file + ".csv")
+        df["KDL_METADATA"] = [json.dumps(meta_data_json)] + ["N.A." for i in range(0, len(df.index) - 1)]
+        df.to_csv(path + "/" + uploaded_file + ".csv")
     except:
         logger.LogException()

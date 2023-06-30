@@ -19,7 +19,8 @@ This folder contains the following files and directories,
 | `xlsx2csv.py` | Used to convert XLSX files to CSV. |
 | `data-catalog.php` | Catalog to display datasets currently in Druid |
 | `fetch.php` | The PHP page that calls `pydruid-fetch`, and shows a preview of the data. |
-| `pydruid_fetch.py` | Used to fetch data from Druid. |
+| `fetch_rows.py` | Fetches first 100 rows of a given dataset. |
+| `fetch_catalog.py` | Fetches the catalog. Called every time the dataset is accessed. |
 | `settings.py` | The settings (such as default Druid server and port location, along with the default datasets directory).  |
 | `logger.py` | The logger used to log events and exceptions to a file. |
 | `log.txt` | Default file for logging. |
@@ -32,8 +33,6 @@ This folder contains the following files and directories,
 First, the files are moved from _POST to the directory `datasets`. If it is a single file, the timestamp is appended to the file. If there is batch upload, a directory is created with the name `timestamp_[Name of Dump]` and all the files are transferred there.
 
 Next, any XLSX files are converted to CSV. Finally, using `druid_lib.py` and the location of the Druid server from `settings.py`, JSON spec is created and the CSV files are then pushed to druid by creating a new task.
-
-The metadata is appended to `dataset-catalog.csv`.
 
 ## Running
 

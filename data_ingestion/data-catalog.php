@@ -40,6 +40,9 @@ chdir(dirname(__FILE__));
 
 // Read the CSV file
 $file = 'dataset-catalog.csv';
+
+shell_exec("/usr/bin/python3 fetch_catalog.py " . $file);
+
 $csvData = file_get_contents($file);
 $lines = explode(PHP_EOL, $csvData);
 

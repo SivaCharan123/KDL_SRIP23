@@ -38,7 +38,7 @@ if (isset($_GET['datasetName'])) {
     $datasetName = $_GET['datasetName'];
 
     // Call the Python script using system command
-    $command = '/usr/bin/python3 pydruid_fetch.py ' . escapeshellarg($datasetName);
+    $command = '/usr/bin/python3 fetch_rows.py ' . escapeshellarg($datasetName);
     $output = shell_exec($command);
 
     // Decode the JSON response

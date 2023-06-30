@@ -16,10 +16,9 @@ try:
 
     logger.Log(f"Uploading file: {csv_file_name}")
     for file in upload_data:
-        WriteMetaData(file)
+        WriteMetaData(file, os.getcwd() + "/" + settings.DATASETS_DIR)
         json_object = get_druid_json(file, os.getcwd() + "/" + settings.DATASETS_DIR, settings.DATASETS_DIR + "/" + file + ".json")
         ingest_to_druid(json_object,f"{settings.DRUID_PROTOCOL}://{settings.DRUID_SERVERLOC}:{settings.DRUID_PORT}{settings.DRUID_TASK_PATH}")
-        
 
 except:
     logger.LogException()

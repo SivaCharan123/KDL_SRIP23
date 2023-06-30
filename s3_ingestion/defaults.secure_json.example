@@ -3,7 +3,7 @@
     "AWS_SECRET": "<Your AWS Secret Key>",
     "AWS_BUCKET": "<Your AWS Bucket Name>",
 
-    "AWS_DOWNLOAD_DIRECTORY": "datasets/",
+    "AWS_DOWNLOAD_DIRECTORY": ""/mnt/c/Users/winga/OneDrive/Desktop/KDL_SRIP23/data_ingestion/datasets/",
 
     "DRUID_PROTOCOL": "http",
     "DRUID_SERVERLOC": "localhost",

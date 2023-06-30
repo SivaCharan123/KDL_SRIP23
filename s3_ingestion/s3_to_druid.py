@@ -37,12 +37,12 @@ def s3_to_druid(s3_client, s3info, druidinfo, files):
                 df.columns = [col.replace(',', '') for col in df.columns]
 
                 # Extract first 10 columns for debugging purposes.
-                first_10 = df.head(10)
-                file = os.path.splitext(file)[0] + "_FIRST10" + ".csv"
-                first_10.to_csv(file)
+                #first_10 = df.head(10)
+                #file = os.path.splitext(file)[0] + "_FIRST10" + ".csv"
+                #first_10.to_csv(file)
 
-                #df.to_csv(file)
-                json_object = get_druid_json(os.path.basename(file), os.getcwd() + "/" + os.path.dirname(file), os.path.dirname(file) + "/" + os.path.basename(file) + ".json")
+                df.to_csv(file)
+                json_object = get_druid_json(os.path.basename(file), os.path.dirname(file), os.path.dirname(file) + "/" + os.path.basename(file) + ".json")
                 status = ingest_to_druid(json_object, druid_url)
 
         if(status):

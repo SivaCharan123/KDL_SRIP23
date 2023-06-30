@@ -1,6 +1,18 @@
 import boto3
 import os
+import json
 import settings 
+
+class S3Info:
+
+    def __init__(self, AWS_key, AWS_secret, AWS_bucket, AWS_downloaddir):
+        self.AWS_key = AWS_key
+        self.AWS_secret = AWS_secret
+        self.AWS_bucket = AWS_bucket
+        self.AWS_downloaddir = AWS_downloaddir
+    def __repr__(self):
+        return f"<AWS key: '{self.AWS_key}', AWS Secret: '{self.AWS_secret}', AWS Bucket Name: '{self.AWS_bucket}', Downloading to: {self.AWS_downloaddir}>"
+
 
 class BrowserItem:
     def __init__(self, name, type='file'):
@@ -9,6 +21,28 @@ class BrowserItem:
     
     def __repr__(self) -> str:
         return f"<BrowserItem, name: {self.name}, type:{self.type}>"
+
+def GetS3InfoFromConsole():
+    defaults = json.loads(''.join(open("defaults.secure_json").readlines()))
+
+    AWS_keyID = input(f"Enter Amazon AWS Key ID (default: {defaults['AWS_KEYID']}): ")
+    AWS_secret = input(f"Enter Amazon Secret Key (default: {defaults['AWS_SECRET']}): ")
+    AWS_bucket = input(f"Enter AWS Bucket Name (default: {defaults['AWS_BUCKET']}): ")
+    AWS_downloaddir = input(f"Enter AWS Downloads directory (default: {defaults['AWS_DOWNLOAD_DIRECTORY']})")
+
+    if(AWS_keyID == ""):
+        AWS_keyID = defaults['AWS_KEYID']
+    
+    if(AWS_secret == ""):
+        AWS_secret = defaults['AWS_SECRET']
+    
+    if(AWS_bucket == ""):
+        AWS_bucket = defaults['AWS_BUCKET']
+    
+    if(AWS_downloaddir == ""):
+        AWS_downloaddir = defaults['AWS_DOWNLOAD_DIRECTORY']
+    
+    return [S3Info(AWS_keyID, AWS_secret, AWS_bucket, AWS_downloaddir), None]
 
 def ConstructBrowserTree(files, folders):
     browser_tree = []

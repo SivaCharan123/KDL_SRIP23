@@ -2,16 +2,7 @@ import tkinter as tk
 import tkinter.filedialog as tfd
 import settings
 import json 
-
-class S3Info:
-
-    def __init__(self, AWS_key, AWS_secret, AWS_bucket, AWS_downloaddir):
-        self.AWS_key = AWS_key
-        self.AWS_secret = AWS_secret
-        self.AWS_bucket = AWS_bucket
-        self.AWS_downloaddir = AWS_downloaddir
-    def __repr__(self):
-        return f"<AWS key: '{self.AWS_key}', AWS Secret: '{self.AWS_secret}', AWS Bucket Name: '{self.AWS_bucket}', Downloading to: {self.AWS_downloaddir}>"
+from s3 import S3Info
 
 class DruidInfo:
 

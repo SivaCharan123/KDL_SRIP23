@@ -21,7 +21,7 @@ def get_druid_json(file_name, file_path, json_file_name):
 
     # Initiating a dictionary in the format of an ingestion spec
     current_date = date.today().strftime("%Y-%m-%d") + "T00:00:00Z"
-    ingest_schema = {"type" : "index_parallel","spec" : {"type" : "index_parallel","dataSchema" : {}, "ioConfig" : {"type" : "index_parallel","inputSource" : {"type" : "local", "baseDir" : file_path, "filter" : file_name},"inputFormat" : {"type" : "csv", "findColumnsFromHeader" : True}}, "tuningConfig": {"type" : "index_parallel","partitionsSpec" : {"type" : "dynamic"}}}}
+    ingest_schema = {"type" : "index_parallel","spec" : {"type" : "index_parallel","dataSchema" : {}, "ioConfig" : {"type" : "index_parallel","inputSource" : {"type" : "local", "baseDir" : file_path, "filter" : file_name},"inputFormat" : {"type" : "csv", "findColumnsFromHeader" : True}}, "tuningConfig": {"type" : "index_parallel", "maxColumnsToMerge": 4, "druid.index.runner.javaoOpts" : " -XX:MaxDirectMemorySize=4g", "partitionsSpec" : {"type" : "dynamic"}}}}
     ingest_schema['spec']['dataSchema']["dataSource"] = file_name.replace(".csv","")
     ingest_schema['spec']['dataSchema']["timestampSpec"] = {"column": "!!!_no_such_column_!!!","missingValue": current_date}
     ingest_schema['spec']['dataSchema']["granularitySpec"] = {"type": "uniform", "segmentGranularity": "DAY", "queryGranularity": "NONE", "rollup": False}
