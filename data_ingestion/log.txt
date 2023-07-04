@@ -93,3 +93,76 @@
 [30/06/2023 03:12:45] Writing metadata for 1688074964_titanic_numeric.csv.
 [30/06/2023 03:12:45] Creating JSON spec for 1688074964_titanic_numeric.csv in datasets/1688074964_titanic_numeric.csv.json
 [30/06/2023 03:12:45] Druid Task Succeeded.
+[04/07/2023 13:12:42] *** EXCEPTION ***
+[04/07/2023 13:12:42] Traceback (most recent call last):
+[04/07/2023 13:12:42]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/compat/_optional.py", line 142, in import_optional_dependency
+[04/07/2023 13:12:42]     module = importlib.import_module(name)
+[04/07/2023 13:12:42]   File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+[04/07/2023 13:12:42]     return _bootstrap._gcd_import(name[level:], package, level)
+[04/07/2023 13:12:42]   File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+[04/07/2023 13:12:42]   File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+[04/07/2023 13:12:42]   File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+[04/07/2023 13:12:42] ModuleNotFoundError: No module named 'openpyxl'
+[04/07/2023 13:12:42] 
+[04/07/2023 13:12:42] During handling of the above exception, another exception occurred:
+[04/07/2023 13:12:42] 
+[04/07/2023 13:12:42] Traceback (most recent call last):
+[04/07/2023 13:12:42]   File "/mnt/c/Users/winga/OneDrive/Desktop/KDL_SRIP23/data_ingestion/xlsx2csv.py", line 13, in convert2CSV
+[04/07/2023 13:12:42]     xlsx_file = pandas.ExcelFile(xlsx_dir + "/" + xlsx_name)
+[04/07/2023 13:12:42]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/excel/_base.py", line 1513, in __init__
+[04/07/2023 13:12:42]     self._reader = self._engines[engine](self._io, storage_options=storage_options)
+[04/07/2023 13:12:42]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/excel/_openpyxl.py", line 548, in __init__
+[04/07/2023 13:12:42]     import_optional_dependency("openpyxl")
+[04/07/2023 13:12:42]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/compat/_optional.py", line 145, in import_optional_dependency
+[04/07/2023 13:12:42]     raise ImportError(msg)
+[04/07/2023 13:12:42] ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+[04/07/2023 13:12:42] 
+[04/07/2023 13:12:42] ***
+[04/07/2023 13:12:42] Uploading file: 1688456562_titanic.xlsx
+[04/07/2023 13:12:42] *** EXCEPTION ***
+[04/07/2023 13:12:42] Traceback (most recent call last):
+[04/07/2023 13:12:42]   File "/mnt/c/Users/winga/OneDrive/Desktop/KDL_SRIP23/data_ingestion/upload_single_druid.py", line 18, in <module>
+[04/07/2023 13:12:42]     for file in upload_data:
+[04/07/2023 13:12:42] TypeError: 'NoneType' object is not iterable
+[04/07/2023 13:12:42] 
+[04/07/2023 13:12:42] ***
+[04/07/2023 13:13:33] Converted sheet 1688456612_titanic.complete to 1688456612_titanic_complete.csv
+[04/07/2023 13:13:33] Converted sheet 1688456612_titanic.numeric to 1688456612_titanic_numeric.csv
+[04/07/2023 13:13:33] Uploading file: 1688456612_titanic.xlsx
+[04/07/2023 13:13:33] Writing metadata for 1688456612_titanic_complete.csv.
+[04/07/2023 13:13:33] Creating JSON spec for 1688456612_titanic_complete.csv in datasets/1688456612_titanic_complete.csv.json
+[04/07/2023 13:13:33] Druid Task Succeeded.
+[04/07/2023 13:13:33] Writing metadata for 1688456612_titanic_numeric.csv.
+[04/07/2023 13:13:33] Creating JSON spec for 1688456612_titanic_numeric.csv in datasets/1688456612_titanic_numeric.csv.json
+[04/07/2023 13:13:33] Druid Task Succeeded.
+[04/07/2023 13:21:11] Converting 2_sample-multisheet.xlsx to CSV....
+[04/07/2023 13:21:11] Converted sheet 2_sample-multisheet.2018 to 2_sample-multisheet_2018.csv
+[04/07/2023 13:21:11] Converted sheet 2_sample-multisheet.2019 to 2_sample-multisheet_2019.csv
+[04/07/2023 13:21:11] Converting 3_titanic.xlsx to CSV....
+[04/07/2023 13:21:11] Converted sheet 3_titanic.complete to 3_titanic_complete.csv
+[04/07/2023 13:21:11] Converted sheet 3_titanic.numeric to 3_titanic_numeric.csv
+[04/07/2023 13:21:11] Batch upload started.
+[04/07/2023 13:21:11] Uploading 0_world-forecast.csv
+[04/07/2023 13:21:11] Writing metadata for 0_world-forecast.csv.
+[04/07/2023 13:21:11] Creating JSON spec for 0_world-forecast.csv in datasets/1688457071_open system data//0_world-forecast.csv.json
+[04/07/2023 13:21:11] Druid Task Succeeded.
+[04/07/2023 13:21:11] Uploading 1_nature-index-500.csv
+[04/07/2023 13:21:11] Writing metadata for 1_nature-index-500.csv.
+[04/07/2023 13:21:11] Creating JSON spec for 1_nature-index-500.csv in datasets/1688457071_open system data//1_nature-index-500.csv.json
+[04/07/2023 13:21:11] Druid Task Succeeded.
+[04/07/2023 13:21:11] Uploading 2_sample-multisheet_2018.csv
+[04/07/2023 13:21:11] Writing metadata for 2_sample-multisheet_2018.csv.
+[04/07/2023 13:21:11] Creating JSON spec for 2_sample-multisheet_2018.csv in datasets/1688457071_open system data//2_sample-multisheet_2018.csv.json
+[04/07/2023 13:21:11] Druid Task Succeeded.
+[04/07/2023 13:21:11] Uploading 2_sample-multisheet_2019.csv
+[04/07/2023 13:21:11] Writing metadata for 2_sample-multisheet_2019.csv.
+[04/07/2023 13:21:11] Creating JSON spec for 2_sample-multisheet_2019.csv in datasets/1688457071_open system data//2_sample-multisheet_2019.csv.json
+[04/07/2023 13:21:11] Druid Task Succeeded.
+[04/07/2023 13:21:11] Uploading 3_titanic_complete.csv
+[04/07/2023 13:21:11] Writing metadata for 3_titanic_complete.csv.
+[04/07/2023 13:21:12] Creating JSON spec for 3_titanic_complete.csv in datasets/1688457071_open system data//3_titanic_complete.csv.json
+[04/07/2023 13:21:12] Druid Task Succeeded.
+[04/07/2023 13:21:12] Uploading 3_titanic_numeric.csv
+[04/07/2023 13:21:12] Writing metadata for 3_titanic_numeric.csv.
+[04/07/2023 13:21:12] Creating JSON spec for 3_titanic_numeric.csv in datasets/1688457071_open system data//3_titanic_numeric.csv.json
+[04/07/2023 13:21:12] Druid Task Succeeded.

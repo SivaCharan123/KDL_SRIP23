@@ -15,5 +15,12 @@ def WriteMetaData(uploaded_file, path):
         df = pandas.read_csv(path + "/" + uploaded_file + ".csv")
         df["KDL_METADATA"] = [json.dumps(meta_data_json)] + ["N.A." for i in range(0, len(df.index) - 1)]
         df.to_csv(path + "/" + uploaded_file + ".csv")
+
+        # Write to metadata.json
+        existing_metadata = json.loads(''.join(open('metadata.json', 'r').readlines()))
+        existing_metadata[uploaded_file] = meta_data_json
+        f = open('metadata.json', 'w')
+        f.write(json.dumps(existing_metadata))
+        
     except:
         logger.LogException()

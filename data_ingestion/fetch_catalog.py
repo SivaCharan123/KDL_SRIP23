@@ -19,7 +19,12 @@ for table in tables:
         json_data = pydruid_helper.ExecuteSQLQuery(query)['KDL_METADATA'][0]
         data = json.loads(json_data)
     except:
-        data = {"name": "#NOMETA", "year": "#NOMETA", "description": "#NOMETA", "sdg_flags": "#NOMETA", "filename": "#NOMETA", "upload_time": "#NOMETA"}
+        try:
+            # If not then try to find it in metadata.json
+            metadata_json = json.loads(''.join(open('metadata.json', 'r').readlines()))
+            data = metadata_json[table]
+        except:
+            data = {"name": "#NOMETA", "year": "#NOMETA", "description": "#NOMETA", "sdg_flags": "#NOMETA", "filename": "#NOMETA", "upload_time": "#NOMETA"}
     
     metadata_rows.append([data['name'], data['year'], data['description'], data['sdg_flags'], table, data['upload_time']])
 
