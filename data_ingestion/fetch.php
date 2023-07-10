@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<div class="container gfont">
+<div class="container-fluid gfont">
 <?php
 // Function to sanitize the cell data
 function sanitize($data)

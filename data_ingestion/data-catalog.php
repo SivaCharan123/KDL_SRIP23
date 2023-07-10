@@ -9,7 +9,7 @@
     <link href="styles/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div class="container gfont">
+<div class="container-fluid gfont">
 <h1><center>DATASET CATALOG</center></h1>
 <p>
 This is the dataset catalog. Here, you may find all the datasets that have been uploaded to the server. Click on the filename to preview the dataset.
