@@ -2,29 +2,14 @@
 <html>
 <head>
     <title>Data Catalog</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <link href="styles/tables.css" rel=stylesheet type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="styles/google-font.css" rel="stylesheet" type="text/css" />
+    <link href="styles/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<link href="styles/google-font.css" rel="stylesheet" type="text/css" />
-<link href="styles/styles.css" rel="stylesheet" type="text/css"/>
-<div class="gfont">
+<div class="container gfont">
 <h1><center>DATASET CATALOG</center></h1>
 <p>
 This is the dataset catalog. Here, you may find all the datasets that have been uploaded to the server. Click on the filename to preview the dataset.
