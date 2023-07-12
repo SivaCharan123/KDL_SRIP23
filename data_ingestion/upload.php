@@ -92,7 +92,7 @@ else
         shell_exec("echo \"" . $FORM_DATASET_NAME . "\" > tmp.meta");
         shell_exec("echo \"". $FORM_DATASET_YEAR  . "\" >> tmp.meta");
         shell_exec("echo \"" . $FORM_DATASET_DESC . "\" >> tmp.meta");
-        shell_exec("echo \"" . 0 . "\" >> tmp.meta");
+        shell_exec("echo \"" . $FORM_SDG_FLAG . "\" >> tmp.meta");
         shell_exec("/usr/bin/python3 upload_single_druid.py " . $target_file_name);
         echo "<h1><center>The file " . htmlspecialchars(basename($FORM_FILE_NAME)) . " has been uploaded!</center></h1><br>";
     }

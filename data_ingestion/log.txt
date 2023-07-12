@@ -166,3 +166,19 @@
 [04/07/2023 13:21:12] Writing metadata for 3_titanic_numeric.csv.
 [04/07/2023 13:21:12] Creating JSON spec for 3_titanic_numeric.csv in datasets/1688457071_open system data//3_titanic_numeric.csv.json
 [04/07/2023 13:21:12] Druid Task Succeeded.
+[12/07/2023 17:24:26] Batch upload started.
+[12/07/2023 17:35:17] *** EXCEPTION ***
+[12/07/2023 17:35:17] Traceback (most recent call last):
+[12/07/2023 17:35:17]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/fetch_rows.py", line 11, in <module>
+[12/07/2023 17:35:17]     df = df.drop(['KDL_METADATA'], axis=1)
+[12/07/2023 17:35:17]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/core/frame.py", line 5258, in drop
+[12/07/2023 17:35:17]     return super().drop(
+[12/07/2023 17:35:17]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/core/generic.py", line 4549, in drop
+[12/07/2023 17:35:17]     obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+[12/07/2023 17:35:17]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/core/generic.py", line 4591, in _drop_axis
+[12/07/2023 17:35:17]     new_axis = axis.drop(labels, errors=errors)
+[12/07/2023 17:35:17]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 6699, in drop
+[12/07/2023 17:35:17]     raise KeyError(f"{list(labels[mask])} not found in axis")
+[12/07/2023 17:35:17] KeyError: "['KDL_METADATA'] not found in axis"
+[12/07/2023 17:35:17] 
+[12/07/2023 17:35:17] ***

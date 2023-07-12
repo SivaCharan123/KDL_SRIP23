@@ -10,8 +10,8 @@
 </head>
 <body>
 <div class="container-fluid gfont">
-<h1><center>DATASET CATALOG</center></h1>
-<p>
+<h1 style="text-align:center;">DATASET CATALOG</h1>
+<p style="text-align:center;">
 This is the dataset catalog. Here, you may find all the datasets that have been uploaded to the server. Click on the filename to preview the dataset.
 </p>
 <?php
@@ -19,6 +19,22 @@ This is the dataset catalog. Here, you may find all the datasets that have been 
 function sanitize($data)
 {
     return htmlspecialchars(trim($data));
+}
+
+// Parse the SDG Flag
+function parse_sdgs($sdg_flags)
+{
+    $sdg_out = "";
+    for($i = 0 ; $i < 18; $i++)
+    {
+        if($sdg_flags & (1 << $i))
+        {
+            $sdg_out .= (string)$i . "<br>";
+        }
+    }
+    if($sdg_out == "")
+        $sdg_out = 'None';
+    return $sdg_out;
 }
 
 chdir(dirname(__FILE__));
@@ -32,7 +48,7 @@ $csvData = file_get_contents($file);
 $lines = explode(PHP_EOL, $csvData);
 
 // Generate the table
-$table = '<table>';
+$table = '<table class="mx-auto">';
 $table .= '<tr>';
 $table .= '<th>S.No</th>';
 $table .= '<th>Dataset Name</th>';
@@ -63,9 +79,14 @@ for ($i = 1; $i < count($lines); $i++) {
             }
 
             // Check if the column is "File Name"
-            if ($k === 4) {
+            if ($k == 4) {
                 $link = 'fetch.php?datasetName=' . urlencode($cellData);
                 $table .= '<td><a href="' . $link . '">' . $cellData . '</a></td>';
+            } else if($k == 3)
+            {
+                // Parse SDGs
+                $sdgs = parse_sdgs((int)$cellData);
+                $table .= '<td>' . $sdgs . '</td>';
             } else {
                 $table .= '<td>' . $cellData . '</td>';
             }

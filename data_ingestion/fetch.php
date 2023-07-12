@@ -32,7 +32,7 @@ if (isset($_GET['datasetName'])) {
 
     // Generate the table
     if (!empty($data)) {
-        $table = '<table>';
+        $table = '<table class="mx-auto">';
         $table .= '<tr>';
 
         // Generate table headers dynamically based on the JSON keys
@@ -55,7 +55,7 @@ if (isset($_GET['datasetName'])) {
 
         $table .= '</table>';
     } else {
-        $table = 'No data available.';
+        $table = 'No data available. Druid is perhaps not running on the server. If you are a server administrator reading this, please initialize Druid.';
     }
 
     echo $table;
