@@ -7,6 +7,7 @@ table {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
+.table tr th, 
 th {
     background-color: #009879;
     color: #ffffff;
@@ -23,6 +24,7 @@ th
     cursor: pointer;
 }
 
+.table tr th:hover,
 th:hover
 {
     background-color: #00A8A9
