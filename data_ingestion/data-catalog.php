@@ -14,7 +14,7 @@
 
 <body>
     <div class="container">
-        <h2 class="text-muted"><b>List of datasets uploaded to Apache&reg; Druid</b></h1>
+        <h2 class="text-muted"><b>List of datasets uploaded to Apache&reg; Druid</b></h2>
             <p>
                 <a class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#server_info" aria-expanded="false"
                     aria-controls="server_info">
@@ -32,7 +32,7 @@
                     </tr>
                     <?php
                     ini_set("allow_url_fopen", 1);
-                    $content = file_get_contents('http://localhost:8888/status');
+                    $content = @file_get_contents('http://localhost:8888/status');
                     if ($content == FALSE) {
                         echo '<tr><td>Druid Status</td><td style="color:red;font-weight:bold;">NOT OK [USING CACHED CATALOG]</td></tr>';
                     } else {

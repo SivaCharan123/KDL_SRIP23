@@ -182,3 +182,91 @@
 [12/07/2023 17:35:17] KeyError: "['KDL_METADATA'] not found in axis"
 [12/07/2023 17:35:17] 
 [12/07/2023 17:35:17] ***
+[12/07/2023 22:40:08] Uploading file: 1689181807_KAG_HEALTH.csv
+[12/07/2023 22:40:08] Writing metadata for 1689181807_KAG_HEALTH.csv.
+[12/07/2023 22:40:08] Creating JSON spec for 1689181807_KAG_HEALTH.csv in datasets/1689181807_KAG_HEALTH.csv.json
+[12/07/2023 22:40:08] Druid Task Succeeded.
+[12/07/2023 22:48:33] Uploading file: 1689182313_AGRICULTURE_CENSUS_HOLDINGS.csv
+[12/07/2023 22:48:33] Writing metadata for 1689182313_AGRICULTURE_CENSUS_HOLDINGS.csv.
+[12/07/2023 22:48:33] Creating JSON spec for 1689182313_AGRICULTURE_CENSUS_HOLDINGS.csv in datasets/1689182313_AGRICULTURE_CENSUS_HOLDINGS.csv.json
+[12/07/2023 22:48:33] Druid Task Succeeded.
+[12/07/2023 22:52:05] Uploading file: 1689182525_AGRICULTURE_CENSUS_HOLDINGS.csv
+[12/07/2023 22:52:05] Writing metadata for 1689182525_AGRICULTURE_CENSUS_HOLDINGS.csv.
+[12/07/2023 22:52:05] Creating JSON spec for 1689182525_AGRICULTURE_CENSUS_HOLDINGS.csv in datasets/1689182525_AGRICULTURE_CENSUS_HOLDINGS.csv.json
+[12/07/2023 22:52:05] Druid Task Succeeded.
+[12/07/2023 22:55:08] Uploading file: 1689182708_AGRICULTURE_CENSUS_HOLDINGS.csv
+[12/07/2023 22:55:08] Writing metadata for 1689182708_AGRICULTURE_CENSUS_HOLDINGS.csv.
+[12/07/2023 22:55:08] Creating JSON spec for 1689182708_AGRICULTURE_CENSUS_HOLDINGS.csv in datasets/1689182708_AGRICULTURE_CENSUS_HOLDINGS.csv.json
+[12/07/2023 22:55:09] Druid Task Succeeded.
+[12/07/2023 23:11:59] Converting 1_titanic.xlsx to CSV....
+[12/07/2023 23:11:59] Converted sheet 1_titanic.complete to 1_titanic_complete.csv
+[12/07/2023 23:11:59] Converted sheet 1_titanic.numeric to 1_titanic_numeric.csv
+[12/07/2023 23:11:59] Converting 3_TOP500-Computing.xlsx to CSV....
+[12/07/2023 23:11:59] Converted sheet 3_TOP500-Computing.61 to 3_TOP500-Computing_61.csv
+[12/07/2023 23:11:59] Batch upload started.
+[12/07/2023 23:11:59] Uploading 0_nature-index-500.csv
+[12/07/2023 23:11:59] Writing metadata for 0_nature-index-500.csv.
+[12/07/2023 23:11:59] Creating JSON spec for 0_nature-index-500.csv in datasets/1689183718_datadump test//0_nature-index-500.csv.json
+[12/07/2023 23:11:59] Druid Task Succeeded.
+[12/07/2023 23:11:59] Uploading 1_titanic_complete.csv
+[12/07/2023 23:11:59] Writing metadata for 1_titanic_complete.csv.
+[12/07/2023 23:11:59] Creating JSON spec for 1_titanic_complete.csv in datasets/1689183718_datadump test//1_titanic_complete.csv.json
+[12/07/2023 23:12:00] Druid Task Succeeded.
+[12/07/2023 23:12:00] Uploading 1_titanic_numeric.csv
+[12/07/2023 23:12:00] Writing metadata for 1_titanic_numeric.csv.
+[12/07/2023 23:12:00] Creating JSON spec for 1_titanic_numeric.csv in datasets/1689183718_datadump test//1_titanic_numeric.csv.json
+[12/07/2023 23:12:00] Druid Task Succeeded.
+[12/07/2023 23:12:00] Uploading 2_world-forecast.csv
+[12/07/2023 23:12:00] Writing metadata for 2_world-forecast.csv.
+[12/07/2023 23:12:00] Creating JSON spec for 2_world-forecast.csv in datasets/1689183718_datadump test//2_world-forecast.csv.json
+[12/07/2023 23:12:00] Druid Task Succeeded.
+[12/07/2023 23:12:00] Uploading 3_TOP500-Computing_61.csv
+[12/07/2023 23:12:00] Writing metadata for 3_TOP500-Computing_61.csv.
+[12/07/2023 23:12:00] Creating JSON spec for 3_TOP500-Computing_61.csv in datasets/1689183718_datadump test//3_TOP500-Computing_61.csv.json
+[12/07/2023 23:12:00] Druid Task Succeeded.
+[12/07/2023 23:14:19] Batch upload started.
+[12/07/2023 23:14:52] Batch upload started.
+[12/07/2023 23:18:34] Batch upload started.
+[12/07/2023 23:19:18] Batch upload started.
+[12/07/2023 23:26:16] Converting 1_titanic.xlsx to CSV....
+[12/07/2023 23:26:16] Converted sheet 1_titanic.complete to 1_titanic_complete.csv
+[12/07/2023 23:26:16] Converted sheet 1_titanic.numeric to 1_titanic_numeric.csv
+[12/07/2023 23:26:16] Converting 2_TOP500-Computing.xlsx to CSV....
+[12/07/2023 23:26:16] Converted sheet 2_TOP500-Computing.61 to 2_TOP500-Computing_61.csv
+[12/07/2023 23:26:16] Batch upload started.
+[12/07/2023 23:26:16] Uploading 0_nature-index-500.csv
+[12/07/2023 23:26:16] Writing metadata for 0_nature-index-500.csv.
+[12/07/2023 23:26:16] Creating JSON spec for 0_nature-index-500.csv in datasets/1689184575_newdatadump00//0_nature-index-500.csv.json
+[12/07/2023 23:26:16] Druid Task Succeeded.
+[12/07/2023 23:26:16] Uploading 1_titanic_complete.csv
+[12/07/2023 23:26:16] Writing metadata for 1_titanic_complete.csv.
+[12/07/2023 23:26:16] Creating JSON spec for 1_titanic_complete.csv in datasets/1689184575_newdatadump00//1_titanic_complete.csv.json
+[12/07/2023 23:26:16] Druid Task Succeeded.
+[12/07/2023 23:26:16] Uploading 1_titanic_numeric.csv
+[12/07/2023 23:26:16] Writing metadata for 1_titanic_numeric.csv.
+[12/07/2023 23:26:16] Creating JSON spec for 1_titanic_numeric.csv in datasets/1689184575_newdatadump00//1_titanic_numeric.csv.json
+[12/07/2023 23:26:16] Druid Task Succeeded.
+[12/07/2023 23:26:16] Uploading 2_TOP500-Computing_61.csv
+[12/07/2023 23:26:16] Writing metadata for 2_TOP500-Computing_61.csv.
+[12/07/2023 23:26:16] Creating JSON spec for 2_TOP500-Computing_61.csv in datasets/1689184575_newdatadump00//2_TOP500-Computing_61.csv.json
+[12/07/2023 23:26:16] Druid Task Succeeded.
+[12/07/2023 23:26:34] Batch upload started.
+[12/07/2023 23:30:00] Batch upload started.
+[12/07/2023 23:31:49] Batch upload started.
+[12/07/2023 23:33:02] Batch upload started.
+[12/07/2023 23:33:11] Batch upload started.
+[12/07/2023 23:36:08] Converting 0_TOP500-Computing.xlsx to CSV....
+[12/07/2023 23:36:08] Converted sheet 0_TOP500-Computing.61 to 0_TOP500-Computing_61.csv
+[12/07/2023 23:36:08] Batch upload started.
+[12/07/2023 23:36:08] Uploading 0_TOP500-Computing_61.csv
+[12/07/2023 23:36:08] Writing metadata for 0_TOP500-Computing_61.csv.
+[12/07/2023 23:36:08] Creating JSON spec for 0_TOP500-Computing_61.csv in datasets/1689185168_Test_Data_Dump//0_TOP500-Computing_61.csv.json
+[12/07/2023 23:36:08] Druid Task Succeeded.
+[12/07/2023 23:36:08] Uploading 1_nature-index-500.csv
+[12/07/2023 23:36:08] Writing metadata for 1_nature-index-500.csv.
+[12/07/2023 23:36:09] Creating JSON spec for 1_nature-index-500.csv in datasets/1689185168_Test_Data_Dump//1_nature-index-500.csv.json
+[12/07/2023 23:36:09] Druid Task Succeeded.
+[12/07/2023 23:36:09] Uploading 2_world-forecast.csv
+[12/07/2023 23:36:09] Writing metadata for 2_world-forecast.csv.
+[12/07/2023 23:36:09] Creating JSON spec for 2_world-forecast.csv in datasets/1689185168_Test_Data_Dump//2_world-forecast.csv.json
+[12/07/2023 23:36:09] Druid Task Succeeded.

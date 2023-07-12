@@ -8,3 +8,7 @@ def ExecuteSQLQuery(query):
     json_data = requests.post(druid_url, json={"query": query}).json()
     df = pd.DataFrame.from_dict(pd.json_normalize(json_data), orient='columns')
     return df
+
+def ExecuteSQLQueryGetJSON(query):
+    json_data = requests.post(druid_url, json={"query": query}).json()
+    return json_data
