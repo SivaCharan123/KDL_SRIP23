@@ -102,18 +102,19 @@
                                             cols="50" rows="5"></textarea>
                                     </div>
                                     <div class="batch-checkboxes">
-                                            <label for="batch_sdg[]" class="col-sm-4 col-form-label">Select relevant
-                                                SDGs</label>
-                                            <script>
-                                                generate_checkboxes("batch-checkboxes", "batch_sdg")
-                                            </script>
-                                        </div>
+                                        <label for="batch_sdg[]" class="col-sm-4 col-form-label">Select relevant
+                                            SDGs</label>
+                                        <script>
+                                            generate_checkboxes("batch-checkboxes", "batch_sdg")
+                                        </script>
+                                    </div>
                                     <div class="form-group row">
                                         <div class="col-12 col-md-12 my-5">
                                             <div class="control-group" id="fields">
                                                 <div class="controls">
                                                     <div class="entry input-group upload-input-group">
-                                                        <input class="form-control" name="batch_files[]" id="batch_files[]" type="file">
+                                                        <input class="form-control" name="batch_files[]"
+                                                            id="batch_files[]" type="file">
                                                         <button class="btn btn-upload btn-success btn-add"
                                                             type="button">
                                                             <i class="fa fa-plus"></i>

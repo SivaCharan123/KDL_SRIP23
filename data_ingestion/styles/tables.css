@@ -1,6 +1,5 @@
 
 table {
-    border-collapse: collapse;
     margin: 25px 25px;
     font-size: 0.8rem;
     font-family: sans-serif;
@@ -8,7 +7,7 @@ table {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-thead tr {
+th {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
@@ -19,10 +18,25 @@ td {
     padding: 12px 15px;
 }
 
-tbody tr:nth-of-type(even) {
+th
+{
+    cursor: pointer;
+}
+
+th:hover
+{
+    background-color: #00A8A9
+}
+
+tr:hover, tr:nth-of-type(even):hover
+{
+    background-color: #e1f1f1;
+}
+
+tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-tbody tr:last-of-type {
+tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
