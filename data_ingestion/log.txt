@@ -468,3 +468,156 @@
 [13/07/2023 14:53:56] requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8888): Max retries exceeded with url: /druid/v2/sql (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f69f06bfc10>: Failed to establish a new connection: [Errno 111] Connection refused'))
 [13/07/2023 14:53:56] 
 [13/07/2023 14:53:56] ***
+[13/07/2023 16:25:46] Converted sheet 1689245741_SDG1-4 Indicatorwise Results (1).SDG 1- Taluka data to 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 1- Taluka data.csv
+[13/07/2023 16:25:46] Converted sheet 1689245741_SDG1-4 Indicatorwise Results (1).SDG 1 -Gp level data to 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 1 -Gp level data.csv
+[13/07/2023 16:25:46] Converted sheet 1689245741_SDG1-4 Indicatorwise Results (1).SDG 2 Malnutrition Taluka to 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 2 Malnutrition Taluka.csv
+[13/07/2023 16:25:46] Converted sheet 1689245741_SDG1-4 Indicatorwise Results (1).SDG2 Gp data to 1689245741_SDG1-4 Indicatorwise Results (1)_SDG2 Gp data.csv
+[13/07/2023 16:25:46] Converted sheet 1689245741_SDG1-4 Indicatorwise Results (1).SDG 3 Taluka Data to 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 3 Taluka Data.csv
+[13/07/2023 16:25:46] Converted sheet 1689245741_SDG1-4 Indicatorwise Results (1).SDG 4 Taluka to 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 4 Taluka.csv
+[13/07/2023 16:25:47] Converted sheet 1689245741_SDG1-4 Indicatorwise Results (1).SDG4 Gp level data to 1689245741_SDG1-4 Indicatorwise Results (1)_SDG4 Gp level data.csv
+[13/07/2023 16:25:47] Uploading file: 1689245741_SDG1-4 Indicatorwise Results (1).xlsx
+[13/07/2023 16:25:47] Writing metadata for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 1- Taluka data.csv.
+[13/07/2023 16:25:47] Creating JSON spec for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 1- Taluka data.csv in datasets/1689245741_SDG1-4 Indicatorwise Results (1)_SDG 1- Taluka data.csv.json
+[13/07/2023 16:25:47] Druid Task Succeeded.
+[13/07/2023 16:25:47] Writing metadata for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 1 -Gp level data.csv.
+[13/07/2023 16:25:47] Creating JSON spec for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 1 -Gp level data.csv in datasets/1689245741_SDG1-4 Indicatorwise Results (1)_SDG 1 -Gp level data.csv.json
+[13/07/2023 16:25:47] Druid Task Succeeded.
+[13/07/2023 16:25:47] Writing metadata for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 2 Malnutrition Taluka.csv.
+[13/07/2023 16:25:47] Creating JSON spec for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 2 Malnutrition Taluka.csv in datasets/1689245741_SDG1-4 Indicatorwise Results (1)_SDG 2 Malnutrition Taluka.csv.json
+[13/07/2023 16:25:47] Druid Task Succeeded.
+[13/07/2023 16:25:47] Writing metadata for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG2 Gp data.csv.
+[13/07/2023 16:25:47] Creating JSON spec for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG2 Gp data.csv in datasets/1689245741_SDG1-4 Indicatorwise Results (1)_SDG2 Gp data.csv.json
+[13/07/2023 16:25:47] Druid Task Succeeded.
+[13/07/2023 16:25:47] Writing metadata for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 3 Taluka Data.csv.
+[13/07/2023 16:25:47] Creating JSON spec for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 3 Taluka Data.csv in datasets/1689245741_SDG1-4 Indicatorwise Results (1)_SDG 3 Taluka Data.csv.json
+[13/07/2023 16:25:47] Druid Task Succeeded.
+[13/07/2023 16:25:47] Writing metadata for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 4 Taluka.csv.
+[13/07/2023 16:25:48] Creating JSON spec for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG 4 Taluka.csv in datasets/1689245741_SDG1-4 Indicatorwise Results (1)_SDG 4 Taluka.csv.json
+[13/07/2023 16:25:48] Druid Task Succeeded.
+[13/07/2023 16:25:48] Writing metadata for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG4 Gp level data.csv.
+[13/07/2023 16:25:48] Creating JSON spec for 1689245741_SDG1-4 Indicatorwise Results (1)_SDG4 Gp level data.csv in datasets/1689245741_SDG1-4 Indicatorwise Results (1)_SDG4 Gp level data.csv.json
+[13/07/2023 16:25:48] Druid Task Succeeded.
+[13/07/2023 16:34:37] Uploading file: 1689246277_SDG_1_Taluka_Data.csv
+[13/07/2023 16:34:37] Writing metadata for 1689246277_SDG_1_Taluka_Data.csv.
+[13/07/2023 16:34:37] Creating JSON spec for 1689246277_SDG_1_Taluka_Data.csv in datasets/1689246277_SDG_1_Taluka_Data.csv.json
+[13/07/2023 16:34:37] Druid Task Succeeded.
+[13/07/2023 16:39:46] Uploading file: 1689246585_SDG1_Gp_Level_Data.csv
+[13/07/2023 16:39:46] Writing metadata for 1689246585_SDG1_Gp_Level_Data.csv.
+[13/07/2023 16:39:46] Creating JSON spec for 1689246585_SDG1_Gp_Level_Data.csv in datasets/1689246585_SDG1_Gp_Level_Data.csv.json
+[13/07/2023 16:39:46] Druid Task Succeeded.
+[13/07/2023 16:56:12] Uploading file: 1689247572_SDG4_Taluka_Data.csv
+[13/07/2023 16:56:12] Writing metadata for 1689247572_SDG4_Taluka_Data.csv.
+[13/07/2023 16:56:12] Creating JSON spec for 1689247572_SDG4_Taluka_Data.csv in datasets/1689247572_SDG4_Taluka_Data.csv.json
+[13/07/2023 16:56:12] Druid Task Succeeded.
+[13/07/2023 16:56:42] Uploading file: 1689247601_SDG4_Gp_Level_Data.csv
+[13/07/2023 16:56:42] Writing metadata for 1689247601_SDG4_Gp_Level_Data.csv.
+[13/07/2023 16:56:42] Creating JSON spec for 1689247601_SDG4_Gp_Level_Data.csv in datasets/1689247601_SDG4_Gp_Level_Data.csv.json
+[13/07/2023 16:56:42] Druid Task Succeeded.
+[13/07/2023 17:02:28] Uploading file: 1689247948_SDG4_Gp_Level_Data.csv
+[13/07/2023 17:02:28] Writing metadata for 1689247948_SDG4_Gp_Level_Data.csv.
+[13/07/2023 17:02:28] Creating JSON spec for 1689247948_SDG4_Gp_Level_Data.csv in datasets/1689247948_SDG4_Gp_Level_Data.csv.json
+[13/07/2023 17:02:28] Druid Task Succeeded.
+[13/07/2023 17:12:15] Uploading file: 1689248534_SDG4_Gp_Level_Data.csv
+[13/07/2023 17:12:15] Writing metadata for 1689248534_SDG4_Gp_Level_Data.csv.
+[13/07/2023 17:12:15] *** EXCEPTION ***
+[13/07/2023 17:12:15] Traceback (most recent call last):
+[13/07/2023 17:12:15]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/metadata_writer.py", line 15, in WriteMetaData
+[13/07/2023 17:12:15]     df = pandas.read_csv(path + "/" + uploaded_file + ".csv")
+[13/07/2023 17:12:15]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+[13/07/2023 17:12:15]     return _read(filepath_or_buffer, kwds)
+[13/07/2023 17:12:15]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 583, in _read
+[13/07/2023 17:12:15]     return parser.read(nrows)
+[13/07/2023 17:12:15]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1704, in read
+[13/07/2023 17:12:15]     ) = self._engine.read(  # type: ignore[attr-defined]
+[13/07/2023 17:12:15]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+[13/07/2023 17:12:15]     chunks = self._reader.read_low_memory(nrows)
+[13/07/2023 17:12:15]   File "pandas/_libs/parsers.pyx", line 814, in pandas._libs.parsers.TextReader.read_low_memory
+[13/07/2023 17:12:15]   File "pandas/_libs/parsers.pyx", line 875, in pandas._libs.parsers.TextReader._read_rows
+[13/07/2023 17:12:15]   File "pandas/_libs/parsers.pyx", line 850, in pandas._libs.parsers.TextReader._tokenize_rows
+[13/07/2023 17:12:15]   File "pandas/_libs/parsers.pyx", line 861, in pandas._libs.parsers.TextReader._check_tokenize_status
+[13/07/2023 17:12:15]   File "pandas/_libs/parsers.pyx", line 2029, in pandas._libs.parsers.raise_parser_error
+[13/07/2023 17:12:15] pandas.errors.ParserError: Error tokenizing data. C error: Expected 74 fields in line 1309, saw 75
+[13/07/2023 17:12:15] 
+[13/07/2023 17:12:15] 
+[13/07/2023 17:12:15] ***
+[13/07/2023 17:12:15] *** EXCEPTION ***
+[13/07/2023 17:12:15] Traceback (most recent call last):
+[13/07/2023 17:12:15]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/upload_single_druid.py", line 20, in <module>
+[13/07/2023 17:12:15]     json_object = get_druid_json(file, os.getcwd() + "/" + settings.DATASETS_DIR, settings.DATASETS_DIR + "/" + file + ".json")
+[13/07/2023 17:12:15]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/druid_lib.py", line 23, in get_druid_json
+[13/07/2023 17:12:15]     df = pd.read_csv(file_path + "/" + file_name)
+[13/07/2023 17:12:15]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+[13/07/2023 17:12:15]     return _read(filepath_or_buffer, kwds)
+[13/07/2023 17:12:15]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 583, in _read
+[13/07/2023 17:12:15]     return parser.read(nrows)
+[13/07/2023 17:12:15]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1704, in read
+[13/07/2023 17:12:15]     ) = self._engine.read(  # type: ignore[attr-defined]
+[13/07/2023 17:12:15]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+[13/07/2023 17:12:15]     chunks = self._reader.read_low_memory(nrows)
+[13/07/2023 17:12:15]   File "pandas/_libs/parsers.pyx", line 814, in pandas._libs.parsers.TextReader.read_low_memory
+[13/07/2023 17:12:15]   File "pandas/_libs/parsers.pyx", line 875, in pandas._libs.parsers.TextReader._read_rows
+[13/07/2023 17:12:15]   File "pandas/_libs/parsers.pyx", line 850, in pandas._libs.parsers.TextReader._tokenize_rows
+[13/07/2023 17:12:15]   File "pandas/_libs/parsers.pyx", line 861, in pandas._libs.parsers.TextReader._check_tokenize_status
+[13/07/2023 17:12:15]   File "pandas/_libs/parsers.pyx", line 2029, in pandas._libs.parsers.raise_parser_error
+[13/07/2023 17:12:15] pandas.errors.ParserError: Error tokenizing data. C error: Expected 74 fields in line 1309, saw 75
+[13/07/2023 17:12:15] 
+[13/07/2023 17:12:15] 
+[13/07/2023 17:12:15] ***
+[13/07/2023 17:13:25] Uploading file: 1689248605_SDG4_Gp_Level_Data.csv
+[13/07/2023 17:13:25] Writing metadata for 1689248605_SDG4_Gp_Level_Data.csv.
+[13/07/2023 17:13:25] *** EXCEPTION ***
+[13/07/2023 17:13:25] Traceback (most recent call last):
+[13/07/2023 17:13:25]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/metadata_writer.py", line 15, in WriteMetaData
+[13/07/2023 17:13:25]     df = pandas.read_csv(path + "/" + uploaded_file + ".csv")
+[13/07/2023 17:13:25]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+[13/07/2023 17:13:25]     return _read(filepath_or_buffer, kwds)
+[13/07/2023 17:13:25]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 583, in _read
+[13/07/2023 17:13:25]     return parser.read(nrows)
+[13/07/2023 17:13:25]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1704, in read
+[13/07/2023 17:13:25]     ) = self._engine.read(  # type: ignore[attr-defined]
+[13/07/2023 17:13:25]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+[13/07/2023 17:13:25]     chunks = self._reader.read_low_memory(nrows)
+[13/07/2023 17:13:25]   File "pandas/_libs/parsers.pyx", line 814, in pandas._libs.parsers.TextReader.read_low_memory
+[13/07/2023 17:13:25]   File "pandas/_libs/parsers.pyx", line 875, in pandas._libs.parsers.TextReader._read_rows
+[13/07/2023 17:13:25]   File "pandas/_libs/parsers.pyx", line 850, in pandas._libs.parsers.TextReader._tokenize_rows
+[13/07/2023 17:13:25]   File "pandas/_libs/parsers.pyx", line 861, in pandas._libs.parsers.TextReader._check_tokenize_status
+[13/07/2023 17:13:25]   File "pandas/_libs/parsers.pyx", line 2029, in pandas._libs.parsers.raise_parser_error
+[13/07/2023 17:13:25] pandas.errors.ParserError: Error tokenizing data. C error: Expected 74 fields in line 1309, saw 75
+[13/07/2023 17:13:25] 
+[13/07/2023 17:13:25] 
+[13/07/2023 17:13:25] ***
+[13/07/2023 17:13:25] *** EXCEPTION ***
+[13/07/2023 17:13:25] Traceback (most recent call last):
+[13/07/2023 17:13:25]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/upload_single_druid.py", line 20, in <module>
+[13/07/2023 17:13:25]     json_object = get_druid_json(file, os.getcwd() + "/" + settings.DATASETS_DIR, settings.DATASETS_DIR + "/" + file + ".json")
+[13/07/2023 17:13:25]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/druid_lib.py", line 23, in get_druid_json
+[13/07/2023 17:13:25]     df = pd.read_csv(file_path + "/" + file_name)
+[13/07/2023 17:13:25]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+[13/07/2023 17:13:25]     return _read(filepath_or_buffer, kwds)
+[13/07/2023 17:13:25]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 583, in _read
+[13/07/2023 17:13:25]     return parser.read(nrows)
+[13/07/2023 17:13:25]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1704, in read
+[13/07/2023 17:13:25]     ) = self._engine.read(  # type: ignore[attr-defined]
+[13/07/2023 17:13:25]   File "/home/sgautam/.local/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+[13/07/2023 17:13:25]     chunks = self._reader.read_low_memory(nrows)
+[13/07/2023 17:13:25]   File "pandas/_libs/parsers.pyx", line 814, in pandas._libs.parsers.TextReader.read_low_memory
+[13/07/2023 17:13:25]   File "pandas/_libs/parsers.pyx", line 875, in pandas._libs.parsers.TextReader._read_rows
+[13/07/2023 17:13:25]   File "pandas/_libs/parsers.pyx", line 850, in pandas._libs.parsers.TextReader._tokenize_rows
+[13/07/2023 17:13:25]   File "pandas/_libs/parsers.pyx", line 861, in pandas._libs.parsers.TextReader._check_tokenize_status
+[13/07/2023 17:13:25]   File "pandas/_libs/parsers.pyx", line 2029, in pandas._libs.parsers.raise_parser_error
+[13/07/2023 17:13:25] pandas.errors.ParserError: Error tokenizing data. C error: Expected 74 fields in line 1309, saw 75
+[13/07/2023 17:13:25] 
+[13/07/2023 17:13:25] 
+[13/07/2023 17:13:25] ***
+[13/07/2023 17:18:56] Uploading file: 1689248935_SDG4_Gp_Level_Data.csv
+[13/07/2023 17:18:56] Writing metadata for 1689248935_SDG4_Gp_Level_Data.csv.
+[13/07/2023 17:18:56] Creating JSON spec for 1689248935_SDG4_Gp_Level_Data.csv in datasets/1689248935_SDG4_Gp_Level_Data.csv.json
+[13/07/2023 17:18:56] Druid Task Succeeded.
+[13/07/2023 18:28:16] Uploading file: 1689253096_SDG4_Gp_Level_Data.csv
+[13/07/2023 18:28:16] Writing metadata for 1689253096_SDG4_Gp_Level_Data.csv.
+[13/07/2023 18:28:16] Creating JSON spec for 1689253096_SDG4_Gp_Level_Data.csv in datasets/1689253096_SDG4_Gp_Level_Data.csv.json
+[13/07/2023 18:28:17] Druid Task Succeeded.
+[13/07/2023 18:42:05] Uploading file: 1689253925_SDG4_Gp_Level_Data_Cleaned.csv
+[13/07/2023 18:42:05] Writing metadata for 1689253925_SDG4_Gp_Level_Data_Cleaned.csv.
+[13/07/2023 18:42:05] Creating JSON spec for 1689253925_SDG4_Gp_Level_Data_Cleaned.csv in datasets/1689253925_SDG4_Gp_Level_Data_Cleaned.csv.json
+[13/07/2023 18:42:05] Druid Task Succeeded.
