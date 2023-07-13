@@ -51,7 +51,7 @@
                         Upload one XLSX/CSV or a batch of such files to the Druid cluster.
                     </div>
                     <div class="card-footer">
-                        <form action="/form-upload.php">
+                        <form action="./form-upload.php">
                             <input type="submit" class="btn btn-primary" value="Go to Upload Page" />
                         </form>
                     </div>
@@ -66,7 +66,7 @@
                         A list of the datasets online in the Druid cluster. Preview the dataset columns.
                     </div>
                     <div class="card-footer">
-                        <form action="/data-catalog.php">
+                        <form action="./data-catalog.php">
                             <input type="submit" class="btn btn-primary" value="Go to Data Catalog" />
                         </form>
                     </div>
@@ -81,7 +81,7 @@
                         View and query created ontologies.
                     </div>
                     <div class="card-footer">
-                        <form action="/retrieval.php">
+                        <form action="./retrieval.php">
                             <input type="submit" class="btn btn-primary" value="Go to Ontology" />
                         </form>
                     </div>
@@ -96,7 +96,7 @@
                         View Druid Task Log, execute direct queries to the cluster, and check log files.
                     </div>
                     <div class="card-footer">
-                        <form action="/druid-status.php">
+                        <form action="./druid-status.php">
                             <input type="submit" class="btn btn-primary" value="Go to Druid Status" />
                         </form>
                     </div>
