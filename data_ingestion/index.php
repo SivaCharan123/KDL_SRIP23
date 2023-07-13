@@ -111,7 +111,7 @@
                         View the documentation on this cluster.
                     </div>
                     <div class="card-footer">
-                        <form action="/doc/index.html">
+                        <form action="https://relativisticmechanic.github.io/KDL_SRIP23_Docs/">
                             <input type="submit" class="btn btn-primary" value="View Docs" />
                         </form>
                     </div>
