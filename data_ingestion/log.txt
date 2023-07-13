@@ -270,3 +270,201 @@
 [12/07/2023 23:36:09] Writing metadata for 2_world-forecast.csv.
 [12/07/2023 23:36:09] Creating JSON spec for 2_world-forecast.csv in datasets/1689185168_Test_Data_Dump//2_world-forecast.csv.json
 [12/07/2023 23:36:09] Druid Task Succeeded.
+[13/07/2023 14:51:06] *** EXCEPTION ***
+[13/07/2023 14:51:06] Traceback (most recent call last):
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+[13/07/2023 14:51:06]     conn = connection.create_connection(
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+[13/07/2023 14:51:06]     raise err
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+[13/07/2023 14:51:06]     sock.connect(sa)
+[13/07/2023 14:51:06] ConnectionRefusedError: [Errno 111] Connection refused
+[13/07/2023 14:51:06] 
+[13/07/2023 14:51:06] During handling of the above exception, another exception occurred:
+[13/07/2023 14:51:06] 
+[13/07/2023 14:51:06] Traceback (most recent call last):
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+[13/07/2023 14:51:06]     httplib_response = self._make_request(
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 415, in _make_request
+[13/07/2023 14:51:06]     conn.request(method, url, **httplib_request_kw)
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+[13/07/2023 14:51:06]     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+[13/07/2023 14:51:06]   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+[13/07/2023 14:51:06]     self._send_request(method, url, body, headers, encode_chunked)
+[13/07/2023 14:51:06]   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+[13/07/2023 14:51:06]     self.endheaders(body, encode_chunked=encode_chunked)
+[13/07/2023 14:51:06]   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+[13/07/2023 14:51:06]     self._send_output(message_body, encode_chunked=encode_chunked)
+[13/07/2023 14:51:06]   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+[13/07/2023 14:51:06]     self.send(msg)
+[13/07/2023 14:51:06]   File "/usr/lib/python3.10/http/client.py", line 975, in send
+[13/07/2023 14:51:06]     self.connect()
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+[13/07/2023 14:51:06]     conn = self._new_conn()
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+[13/07/2023 14:51:06]     raise NewConnectionError(
+[13/07/2023 14:51:06] urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f54ef483c10>: Failed to establish a new connection: [Errno 111] Connection refused
+[13/07/2023 14:51:06] 
+[13/07/2023 14:51:06] During handling of the above exception, another exception occurred:
+[13/07/2023 14:51:06] 
+[13/07/2023 14:51:06] Traceback (most recent call last):
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+[13/07/2023 14:51:06]     resp = conn.urlopen(
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+[13/07/2023 14:51:06]     retries = retries.increment(
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+[13/07/2023 14:51:06]     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+[13/07/2023 14:51:06] urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8888): Max retries exceeded with url: /druid/v2/sql (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f54ef483c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[13/07/2023 14:51:06] 
+[13/07/2023 14:51:06] During handling of the above exception, another exception occurred:
+[13/07/2023 14:51:06] 
+[13/07/2023 14:51:06] Traceback (most recent call last):
+[13/07/2023 14:51:06]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/fetch_rows.py", line 10, in <module>
+[13/07/2023 14:51:06]     df = pydruid_helper.ExecuteSQLQuery(druid_query)
+[13/07/2023 14:51:06]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/pydruid_helper.py", line 8, in ExecuteSQLQuery
+[13/07/2023 14:51:06]     json_data = requests.post(druid_url, json={"query": query}).json()
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+[13/07/2023 14:51:06]     return request("post", url, data=data, json=json, **kwargs)
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+[13/07/2023 14:51:06]     return session.request(method=method, url=url, **kwargs)
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+[13/07/2023 14:51:06]     resp = self.send(prep, **send_kwargs)
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+[13/07/2023 14:51:06]     r = adapter.send(request, **kwargs)
+[13/07/2023 14:51:06]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+[13/07/2023 14:51:06]     raise ConnectionError(e, request=request)
+[13/07/2023 14:51:06] requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8888): Max retries exceeded with url: /druid/v2/sql (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f54ef483c10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[13/07/2023 14:51:06] 
+[13/07/2023 14:51:06] ***
+[13/07/2023 14:51:45] *** EXCEPTION ***
+[13/07/2023 14:51:45] Traceback (most recent call last):
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+[13/07/2023 14:51:45]     conn = connection.create_connection(
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+[13/07/2023 14:51:45]     raise err
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+[13/07/2023 14:51:45]     sock.connect(sa)
+[13/07/2023 14:51:45] ConnectionRefusedError: [Errno 111] Connection refused
+[13/07/2023 14:51:45] 
+[13/07/2023 14:51:45] During handling of the above exception, another exception occurred:
+[13/07/2023 14:51:45] 
+[13/07/2023 14:51:45] Traceback (most recent call last):
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+[13/07/2023 14:51:45]     httplib_response = self._make_request(
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 415, in _make_request
+[13/07/2023 14:51:45]     conn.request(method, url, **httplib_request_kw)
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+[13/07/2023 14:51:45]     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+[13/07/2023 14:51:45]   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+[13/07/2023 14:51:45]     self._send_request(method, url, body, headers, encode_chunked)
+[13/07/2023 14:51:45]   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+[13/07/2023 14:51:45]     self.endheaders(body, encode_chunked=encode_chunked)
+[13/07/2023 14:51:45]   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+[13/07/2023 14:51:45]     self._send_output(message_body, encode_chunked=encode_chunked)
+[13/07/2023 14:51:45]   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+[13/07/2023 14:51:45]     self.send(msg)
+[13/07/2023 14:51:45]   File "/usr/lib/python3.10/http/client.py", line 975, in send
+[13/07/2023 14:51:45]     self.connect()
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+[13/07/2023 14:51:45]     conn = self._new_conn()
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+[13/07/2023 14:51:45]     raise NewConnectionError(
+[13/07/2023 14:51:45] urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fed082ffc10>: Failed to establish a new connection: [Errno 111] Connection refused
+[13/07/2023 14:51:45] 
+[13/07/2023 14:51:45] During handling of the above exception, another exception occurred:
+[13/07/2023 14:51:45] 
+[13/07/2023 14:51:45] Traceback (most recent call last):
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+[13/07/2023 14:51:45]     resp = conn.urlopen(
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+[13/07/2023 14:51:45]     retries = retries.increment(
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+[13/07/2023 14:51:45]     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+[13/07/2023 14:51:45] urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8888): Max retries exceeded with url: /druid/v2/sql (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fed082ffc10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[13/07/2023 14:51:45] 
+[13/07/2023 14:51:45] During handling of the above exception, another exception occurred:
+[13/07/2023 14:51:45] 
+[13/07/2023 14:51:45] Traceback (most recent call last):
+[13/07/2023 14:51:45]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/fetch_rows.py", line 10, in <module>
+[13/07/2023 14:51:45]     df = pydruid_helper.ExecuteSQLQuery(druid_query)
+[13/07/2023 14:51:45]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/pydruid_helper.py", line 8, in ExecuteSQLQuery
+[13/07/2023 14:51:45]     json_data = requests.post(druid_url, json={"query": query}).json()
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+[13/07/2023 14:51:45]     return request("post", url, data=data, json=json, **kwargs)
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+[13/07/2023 14:51:45]     return session.request(method=method, url=url, **kwargs)
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+[13/07/2023 14:51:45]     resp = self.send(prep, **send_kwargs)
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+[13/07/2023 14:51:45]     r = adapter.send(request, **kwargs)
+[13/07/2023 14:51:45]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+[13/07/2023 14:51:45]     raise ConnectionError(e, request=request)
+[13/07/2023 14:51:45] requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8888): Max retries exceeded with url: /druid/v2/sql (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fed082ffc10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[13/07/2023 14:51:45] 
+[13/07/2023 14:51:45] ***
+[13/07/2023 14:53:56] *** EXCEPTION ***
+[13/07/2023 14:53:56] Traceback (most recent call last):
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+[13/07/2023 14:53:56]     conn = connection.create_connection(
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 95, in create_connection
+[13/07/2023 14:53:56]     raise err
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+[13/07/2023 14:53:56]     sock.connect(sa)
+[13/07/2023 14:53:56] ConnectionRefusedError: [Errno 111] Connection refused
+[13/07/2023 14:53:56] 
+[13/07/2023 14:53:56] During handling of the above exception, another exception occurred:
+[13/07/2023 14:53:56] 
+[13/07/2023 14:53:56] Traceback (most recent call last):
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+[13/07/2023 14:53:56]     httplib_response = self._make_request(
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 415, in _make_request
+[13/07/2023 14:53:56]     conn.request(method, url, **httplib_request_kw)
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 244, in request
+[13/07/2023 14:53:56]     super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+[13/07/2023 14:53:56]   File "/usr/lib/python3.10/http/client.py", line 1282, in request
+[13/07/2023 14:53:56]     self._send_request(method, url, body, headers, encode_chunked)
+[13/07/2023 14:53:56]   File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+[13/07/2023 14:53:56]     self.endheaders(body, encode_chunked=encode_chunked)
+[13/07/2023 14:53:56]   File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+[13/07/2023 14:53:56]     self._send_output(message_body, encode_chunked=encode_chunked)
+[13/07/2023 14:53:56]   File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+[13/07/2023 14:53:56]     self.send(msg)
+[13/07/2023 14:53:56]   File "/usr/lib/python3.10/http/client.py", line 975, in send
+[13/07/2023 14:53:56]     self.connect()
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 205, in connect
+[13/07/2023 14:53:56]     conn = self._new_conn()
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+[13/07/2023 14:53:56]     raise NewConnectionError(
+[13/07/2023 14:53:56] urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f69f06bfc10>: Failed to establish a new connection: [Errno 111] Connection refused
+[13/07/2023 14:53:56] 
+[13/07/2023 14:53:56] During handling of the above exception, another exception occurred:
+[13/07/2023 14:53:56] 
+[13/07/2023 14:53:56] Traceback (most recent call last):
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+[13/07/2023 14:53:56]     resp = conn.urlopen(
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+[13/07/2023 14:53:56]     retries = retries.increment(
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+[13/07/2023 14:53:56]     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+[13/07/2023 14:53:56] urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8888): Max retries exceeded with url: /druid/v2/sql (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f69f06bfc10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[13/07/2023 14:53:56] 
+[13/07/2023 14:53:56] During handling of the above exception, another exception occurred:
+[13/07/2023 14:53:56] 
+[13/07/2023 14:53:56] Traceback (most recent call last):
+[13/07/2023 14:53:56]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/fetch_rows.py", line 10, in <module>
+[13/07/2023 14:53:56]     df = pydruid_helper.ExecuteSQLQuery(druid_query)
+[13/07/2023 14:53:56]   File "/mnt/c/Users/winga/OneDrive/Desktop/repos/KDL_SRIP23/data_ingestion/pydruid_helper.py", line 8, in ExecuteSQLQuery
+[13/07/2023 14:53:56]     json_data = requests.post(druid_url, json={"query": query}).json()
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/api.py", line 115, in post
+[13/07/2023 14:53:56]     return request("post", url, data=data, json=json, **kwargs)
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+[13/07/2023 14:53:56]     return session.request(method=method, url=url, **kwargs)
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+[13/07/2023 14:53:56]     resp = self.send(prep, **send_kwargs)
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+[13/07/2023 14:53:56]     r = adapter.send(request, **kwargs)
+[13/07/2023 14:53:56]   File "/home/sgautam/.local/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+[13/07/2023 14:53:56]     raise ConnectionError(e, request=request)
+[13/07/2023 14:53:56] requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8888): Max retries exceeded with url: /druid/v2/sql (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f69f06bfc10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[13/07/2023 14:53:56] 
+[13/07/2023 14:53:56] ***
