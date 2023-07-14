@@ -3,12 +3,19 @@
 
 <head>
     <title>Retrieve Data</title>
-    <link href="styles/tables.css" rel=stylesheet type="text/css" />
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
+    <link rel="manifest" href="resources/favicons/site.webmanifest">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="styles/tables.css" rel=stylesheet type="text/css" />
+
     <style>
         body {
             padding: 0% 3% 3% 3%;
@@ -37,7 +44,16 @@
         }
 
         .table-responsive {
-            max-height: 600px;
+            min-height: 500px;
+            max-height: 500px;
+            text-align: center;
+        }
+        
+        table {
+            all: unset;
+            text-align: center;
+            font-size: 0.8rem;
+            filter: drop-shadow(0 0 3px #ddd);
         }
     </style>
 </head>
@@ -70,7 +86,8 @@
                     <div class="col-3">
                         <div class="card shadow">
                             <div class="card-header">
-                                <h5 class="card-title">Select SDGs</h5>
+                                <h5 class="card-title">Select SDGs <button style="float:right;" class="btn btn-sm btn-primary" type="submit"
+                                        onClick="$('#sdg_query_form').submit()"><i class="fa fa-filter"></i>&nbsp;Filter</button></h5>
                             </div>
                             <div class="card-body">
                                 <em>I'm looking for the datasets which are relevant to:</em>
@@ -79,10 +96,6 @@
                                         <div class="form-group row">
                                             <div class="sdg_checkboxes">
                                             </div>
-                                        </div>
-
-                                        <div class="py-3">
-                                            <button class="btn btn-primary" type="submit">Filter</button>
                                         </div>
                                     </form>
                                 </small>
@@ -93,9 +106,9 @@
                     <div class="col-9">
                         <div class="card shadow">
                             <div class="card-header">
-                                <h5 class="card-title">Query Result</h5>
+                                <h5 class="card-title"><span class="fa fa-bar-chart"></span>&nbsp;Datasets Available</h5>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body justify-content-center">
                                 <div class="table-responsive" id="sdg_query_results">
                                 </div>
                             </div>
@@ -109,13 +122,14 @@
                     <div class="col-12">
                         <div class="card shadow">
                             <div class="card-header">
-                                <h5 class="card-title">Enter your SQL query</h5>
+                                <h5 class="card-title" style="display:inline">Enter your SQL query</h5>
+                                &nbsp;&nbsp;<a href="#" onClick="loadExampleQuery()">Load Example Query</a>
                             </div>
                             <div class="card-body px-0 py-0">
                                 <div id="custom_query_input">SELECT * FROM dataset;</div>
                             </div>
                             <div class="card-footer d-flex flex-row-reverse">
-                                <button class="btn btn-success" id="custom_sql_query_button"
+                                <button class="btn btn-primary" id="custom_sql_query_button"
                                     onClick="executeSQLQueryFromEditor()"><i class="fa fa-play"></i>&nbsp;Execute
                                     SQL</button>
                             </div>
@@ -145,8 +159,8 @@
                                 </div>
                             </div>
                             <div class="card-footer d-flex flex-row-reverse">
-                                <button class="btn btn-sm btn-success" onClick="downloadCustomQueryCSV()"><span
-                                        class="fa fa-download"></span>&nbsp;
+                                <button class="btn btn-sm btn-primary" onClick="downloadCustomQueryCSV()"><span
+                                        class="fas fa-download"></span>&nbsp;
                                     Download CSV</button>
                             </div>
                         </div>

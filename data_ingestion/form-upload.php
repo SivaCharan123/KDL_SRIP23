@@ -2,8 +2,13 @@
 <html>
 
 <head>
-    <title>Upload a File</title>
+    <title>Cluster Upload Page</title>
     <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
+    <link rel="manifest" href="resources/favicons/site.webmanifest">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,10 +20,9 @@
 
     <style>
         body {
-            background-image: linear-gradient(rgb(2, 98, 128), rgb(0, 92, 57));
+            padding-top: 2%;
             width: 100%;
             height: 100%;
-
         }
 
         .container {
@@ -37,7 +41,7 @@
 </head>
 
 <body>
-    <h1 style="text-align:center;padding-top:1%;color:white;">Upload Dataset</h1>
+    <h1 style="text-align:center"><span class="fa fa-upload"></span>&nbsp;Upload Dataset</h1>
     <div class='container'>
         <div class="card shadow w-50 mx-auto">
             <div class="card-header">
@@ -89,7 +93,7 @@
                         </div>
                         <div class="form-group">
                             <br>
-                            <button type="submit" class="btn btn-success w-100">Upload File</button>
+                            <button type="submit" class="btn btn-primary w-100">Upload File</button>
                         </div>
                     </form>
                 </div>
@@ -134,7 +138,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <button type="submit" class="btn btn-success w-100">Upload Dump</button>
+                            <button type="submit" class="btn btn-primary w-100">Upload Dump</button>
                         </div>
                     </form>
                 </div>

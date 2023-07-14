@@ -3,6 +3,12 @@
 
 <head>
     <title>Data Catalog</title>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
+    <link rel="manifest" href="resources/favicons/site.webmanifest">
+
     <link href="styles/tables.css" rel=stylesheet type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -22,7 +28,7 @@
         </p>
 
         <div class="collapse" id="server_info">
-            <table>
+            <table class="table">
                 <tr>
                     <td>Running on</td>
                     <td><span class="text-muted">
@@ -104,7 +110,7 @@
         $lines = explode(PHP_EOL, $csvData);
 
         // Generate the table
-        $table = '<table id="dataset-catalog" class="mx-auto w-100">';
+        $table = '<table id="dataset-catalog" class="table mx-auto w-100">';
         $table .= '<tr>';
         $table .= '<th>S.No</th>';
         $table .= '<th>Name</th>';

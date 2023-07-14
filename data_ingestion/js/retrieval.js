@@ -5,9 +5,23 @@ var dataCatalogMeta = null;
 var currentCSVdata = "";
 var currentQuerydata = null;
 
+var exampleQuery = `-- Select Stunting, 6 Year Schooling, Safe Water, Sanitation, and MPI status from the SDG1 taluka table and group by district
+SELECT "District", 
+ROUND(AVG("DEPRIVATION_HOUSEHOLD_BMI_BELOW_ADULT_OR_STUNTING_CHILD"),2) AS "% Stunting", 
+ROUND(AVG("DERPIVATION_HOUSEHOLD_NO_MEMBER_SIX_YR_SCHOOL"),2) AS "% Without 6 Year Schooling",
+ROUND(AVG("DEPRIVATION_HOUSEHOLD_NO_SAFE_WATER"),2) AS "% Without Safe Water",
+ROUND(AVG("DERPIVATION_HOUSEHOLD_NO_SANITATION"),2) AS "% Without Sanitation",
+ROUND(AVG("MPI"),3) AS "Multidimensional Poverty Index" 
+FROM "1689254129_SDG_1_Taluka_Data" GROUP BY "District"`
+
 // Create SQL Editor
 var SQL_Editor = ace.edit("custom_query_input");
 SQL_Editor.session.setMode("ace/mode/sql");
+
+function loadExampleQuery()
+{
+    SQL_Editor.setValue(exampleQuery, 1);
+}
 
 function generateSDGFlag() {
     var inputs = document.querySelectorAll("#sdg_query_form input[name='sdg_query[]']");
@@ -33,7 +47,9 @@ function parseSDGFlags(flag)
     return sdgs;
 }
 
+// Download CSV to client's file given a druid table
 function downloadCSV(druid_table) {
+    // Send query to csv-from-druid.php
     jsonToSend = { "query": "SELECT * from \"" + druid_table + "\"" };
     console.log(jsonToSend)
     $.ajax({
@@ -49,13 +65,14 @@ function downloadCSV(druid_table) {
     });
 }
 
-function buildRow(table_name, sdg_flags)
+function buildRow(table_name, name, sdg_flags)
 {
     var row = ""
     row += '<tr>'
     row += '<td>' + table_name + '</td>'
+    row += '<td>' + name + '</td>'
     row += '<td>' + parseSDGFlags(sdg_flags).join(",") + '</td>'
-    row += '<td><button class="btn btn-secondary" onClick="downloadCSV(\'' + table_name + '\')"><span class="fa fa-download"></span></button></td>'
+    row += '<td><button class="btn btn-sm btn-secondary" onClick="downloadCSV(\'' + table_name + '\')"><span class="fas fa-download"></span></button></td>'
     row += '</tr>'
     return row
 }
@@ -64,20 +81,21 @@ function buildTableFromMetaData(metadata, sdg) {
     var content = ""
     content += '<table class="table">'
     content += '<tr>'
-    content += '<th>Table Name</th>'
+    content += '<th>Table Name (On Druid)</th>'
+    content += '<th>Name</th>'
     content += '<th>Relevant SDGs</th>'
     content += '<th>Download CSV</th>'
     content += '</tr>'
 
     for (table in metadata) {
         if (sdg == 0) {
-            content += buildRow(table, metadata[table]["sdg_flags"]);
+            content += buildRow(table, metadata[table]["name"], metadata[table]["sdg_flags"]);
         }
         else
         {
             if(metadata[table]["sdg_flags"] & sdg)
             {
-                content += buildRow(table, metadata[table]["sdg_flags"]);
+                content += buildRow(table, metadata[table]["name"], metadata[table]["sdg_flags"]);
             }
         }
     }
@@ -124,7 +142,7 @@ function executeSQLQueryFromEditor()
             }).done((data) => {
                 data = JSON.parse(data);
                 currentQuerydata = data;
-                buildTableFromQuery(currentQuerydata, "#custom_query_results_table", 10);
+                buildTableFromQuery(currentQuerydata, "#custom_query_results_table", $("#show_entry_limit").val());
                 enableExecuteButton();
             });
         }
