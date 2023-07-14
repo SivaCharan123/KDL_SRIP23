@@ -52,13 +52,13 @@
                                     ini_set("allow_url_fopen", 1);
                                     $content = @file_get_contents('http://localhost:8888/status');
                                     if ($content == FALSE) {
-                                        echo '<tr><td>Druid Status</td><td style="color:red;font-weight:bold;">NOT OK</td></tr>';
+                                        echo '<tr><td>Druid Status</td><td style="color:red;font-weight:bold;"><span class="fa fa-ban"></span>&nbsp;NOT OK</td></tr>';
                                     } else {
                                         $obj = json_decode($content);
                                         $maxMem = ceil($obj->memory->maxMemory / (1024 * 1024));
                                         $freeMem = ceil($obj->memory->freeMemory / (1024 * 1024));
                                         $percentFree = ceil(($freeMem / $maxMem) * 100.0);
-                                        echo '<tr><td>Druid Status</td><td style="color:green;font-weight:bold;">OK</td></tr>';
+                                        echo '<tr><td>Druid Status</td><td style="color:green;font-weight:bold;"><span class="fa fa-signal"></span>&nbsp;OK</td></tr>';
                                         echo "<tr><td>Druid version</td><td>" . $obj->version . "</td></tr>";
                                         echo "<tr><td>Max Memory</td><td>" . $maxMem . " MB" . '</td></tr>';
                                         echo "<tr><td>Free Memory</td><td>" . $freeMem . " MB (" . $percentFree . '%)' . '</td></tr>';
