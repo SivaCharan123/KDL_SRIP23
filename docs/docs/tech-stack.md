@@ -4,7 +4,7 @@ Currently, all the utilities are running on the [WSL-CADS](http://cads.iiitb.ac.
 
 ## Frontend
 
-The frontend code is written entirely in HTML, CSS and Javascript. It uses Bootstrap 5.0.1 for the UI and Font-Awesome 6.4.0 for various UI icons.
+The frontend code is written entirely in HTML, CSS and Javascript. It uses Bootstrap 5.0.1 for the UI and Font-Awesome 6.4.0 for various UI icons. The retrieval page uses FileSaver.js and ACE 1.5.0 Editor for saving CSVs on the client machine and allowing SQL code to be written in a nicely presentable manner.
 
 ## Backend
 

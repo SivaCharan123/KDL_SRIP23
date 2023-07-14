@@ -12,3 +12,7 @@ def ExecuteSQLQuery(query):
 def ExecuteSQLQueryGetJSON(query):
     json_data = requests.post(druid_url, json={"query": query}).json()
     return json_data
+
+def ExecuteSQLQueryGetCSV(query):
+    csv = requests.post(druid_url, json={"query": query, "resultFormat": "csv", "header": True}).text
+    return csv

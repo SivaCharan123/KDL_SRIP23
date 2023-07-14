@@ -18,35 +18,7 @@ function sendQueryToPHP() {
     }).done((data) => {
         console.log(data);
         data = JSON.parse(data);
-        buildTable(data, "#query_results");
+        buildTableFromQuery(data, "#query_results", 100);
         $('#spinner_query').empty();
     })
-}
-
-function buildTable(data, selector) {
-    var tableHeaders = [];
-    if (data.length == 0) {
-        return;
-    }
-    for (key in data[0]) {
-        tableHeaders.push(key);
-    }
-
-    content = '<div class="table-responsive">'
-    content += '<table class="table">';
-    content += "<tr>";
-    for (var i = 0; i < tableHeaders.length; i++) {
-        content += "<th>" + tableHeaders[i] + "</th>";
-    }
-    content += "</tr>"
-    for (object in data) {
-        content += "<tr>";
-        for (let header of tableHeaders) {
-            content += "<td>" + data[object][header] + "</td>";
-        }
-        content += "</tr>";
-    }
-    content += "</table>"
-    content += "</div>"
-    $(selector).html(content);
 }

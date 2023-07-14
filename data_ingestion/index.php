@@ -75,10 +75,10 @@
 
             <div class="col-2 d-flex align-items-stretch">
                 <div class="card shadow">
-                    <div class="card-header">Ontology Retrieval</div>
+                    <div class="card-header">Retrieval</div>
                     <img class="card-img-top" src="resources/owl_logo.png" alt="">
                     <div class="card-body">
-                        View and query created ontologies.
+                        View and retrieve data and ontologies.
                     </div>
                     <div class="card-footer">
                         <form action="./retrieval.php">
