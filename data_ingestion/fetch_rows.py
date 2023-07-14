@@ -8,7 +8,10 @@ try:
     dataset_name = os.path.splitext(sys.argv[1])[0]
     druid_query = 'SELECT * FROM "' + dataset_name + '" LIMIT 100'
     df = pydruid_helper.ExecuteSQLQuery(druid_query)
-    df = df.drop(['KDL_METADATA'], axis=1)
+    try:
+        df = df.drop(['KDL_METADATA'], axis=1)
+    except:
+        pass
     print(df.to_json(orient='records'))
 except:
     logger.LogException()
