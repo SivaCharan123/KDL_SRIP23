@@ -122,11 +122,11 @@
                     <div class="col-12">
                         <div class="card shadow">
                             <div class="card-header">
-                                <h5 class="card-title" style="display:inline">Enter your SQL query</h5>
+                                <h5 class="card-title" style="display:inline">SQL Editor</h5>
                                 &nbsp;&nbsp;<a href="#" onClick="loadExampleQuery()">Load Example Query</a>
                             </div>
                             <div class="card-body px-0 py-0">
-                                <div id="custom_query_input">SELECT * FROM dataset;</div>
+                                <div id="custom_query_input"></div>
                             </div>
                             <div class="card-footer d-flex flex-row-reverse">
                                 <button class="btn btn-primary" id="custom_sql_query_button"
@@ -183,6 +183,7 @@
                 integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
                 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
             <script src="js/ace-1.5.0/ace.js"></script>
+            <script src="js/ace-1.5.0/ext-language_tools.js"></script>
             <script src="js/generate-checkboxes.js"></script>
             <script src="js/query-table-builder.js"></script>
             <script src="js/retrieval.js"></script>

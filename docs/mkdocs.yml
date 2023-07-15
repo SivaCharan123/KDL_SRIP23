@@ -12,6 +12,7 @@ nav:
       - data-catalog.php: "source-code/data-catalog.php.md"
       - druid-status.php: "source-code/druid-status.php.md"
       - retrieval.php: "source-code/retrieval.php.md"
+      - metadata-viewer.php: "source-code/metadata-viewer.php.md"
       - fetch.php: "source-code/fetch.php.md"
       - druid-query.php: "source-code/druid-query.php.md"
       - upload.php: "source-code/upload.php.md"
@@ -36,6 +37,7 @@ nav:
       - js/upload-batch.js: "source-code/js_upload-batch.js.md"
       - js/retrieval.js: "source-code/js_retrieval.js.md"
       - js/query-table-builder.js: "source-code/js_query-table-builder.js.md"
+      - js/metadata-tree.js: "source-code/js_metadata-tree.js.md"
       - js/ace-1.5.0: "source-code/js_ace1.5.0.md"
       - styles/tables.css: "source-code/styles_tables.css.md"
 

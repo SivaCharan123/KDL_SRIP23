@@ -1,5 +1,6 @@
 // The metadata.json fetched is loaded here on document.ready
 var dataCatalogMeta = null;
+var autoCompleteTableList = [];
 
 // The CSV data fetched is loaded into this variable for downloading
 var currentCSVdata = "";
@@ -17,6 +18,20 @@ FROM "1689254129_SDG_1_Taluka_Data" GROUP BY "District"`
 // Create SQL Editor
 var SQL_Editor = ace.edit("custom_query_input");
 SQL_Editor.session.setMode("ace/mode/sql");
+
+// Enable autocomplete
+SQL_Editor.setOptions({
+    enableBasicAutocompletion: true,
+    theme: "ace/theme/chrome",
+    fontSize: "12pt",
+    placeholder: "Enter SQL Query here..."
+});
+// Enable autocomplete on every word change
+SQL_Editor.commands.on("afterExec", function (e) {
+    if (e.command.name == "insertstring" && /^[\w.]$/.test(e.args)) {
+        SQL_Editor.execCommand("startAutocomplete");
+    }
+});
 
 function loadExampleQuery()
 {
@@ -88,6 +103,8 @@ function buildTableFromMetaData(metadata, sdg) {
     content += '</tr>'
 
     for (table in metadata) {
+        // Add table to autocomplete list
+        autoCompleteTableList.push({ value: '"' + table + '"', score: 1000, meta: "table_name" });
         if (sdg == 0) {
             content += buildRow(table, metadata[table]["name"], metadata[table]["sdg_flags"]);
         }
@@ -100,7 +117,13 @@ function buildTableFromMetaData(metadata, sdg) {
         }
     }
 
-    content += '</table>'
+    content += '</table>';
+    // Push all these table names to the editor for autocomplete.
+    SQL_Editor.completers.push({
+        getCompletions: function(editor, session, pos, prefix, callback) {
+          callback(null, autoCompleteTableList);
+        }
+      });
     return content;
 }
 
@@ -128,7 +151,8 @@ function executeSQLQueryFromEditor()
     $.ajax({
         type: 'POST',
         url: 'csv-from-druid.php',
-        data: queryJSON
+        data: queryJSON,
+        timeout: 20000
     }).done((data) => {
         data = JSON.parse(data);
         if(data["Error"] == "")
@@ -138,21 +162,21 @@ function executeSQLQueryFromEditor()
             $.ajax({
                 type: 'POST',
                 url: 'druid-query.php',
-                data: queryJSON
+                data: queryJSON,
             }).done((data) => {
                 data = JSON.parse(data);
                 currentQuerydata = data;
                 buildTableFromQuery(currentQuerydata, "#custom_query_results_table", $("#show_entry_limit").val());
-                enableExecuteButton();
             });
         }
         else
         {
             console.log(data);
             buildTableFromQuery(data, "#custom_query_results_table", 0);
-            enableExecuteButton();
         }
-    });
+    }).fail( (jqXHR, textStatus) => {
+        $("#custom_query_results_table").html('It seems something went wrong! Contact site administrator.');
+    }).always(() => { enableExecuteButton() });
 }
 
 // Called when user changes the number of entires to be shown
