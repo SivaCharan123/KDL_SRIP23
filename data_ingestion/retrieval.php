@@ -180,7 +180,7 @@
                             </div>
                             <div class="card-body">
                                 <?php 
-                                    $content = file_get_contents("ontology/ontology.json");
+                                    $content = file_get_contents("ontology/ontology.ont_json");
                                     if($content != false)
                                     {
                                         $json_data = json_decode($content);
