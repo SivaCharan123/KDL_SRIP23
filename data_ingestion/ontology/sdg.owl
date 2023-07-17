@@ -1,0 +1,782 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl"
+     xml:base="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sdg_updated_1="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#">
+    <owl:Ontology rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl">
+        <rdfs:label xml:lang="en">SDG Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#datasource -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#datasource"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#directly_related_to -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#directly_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#related_to"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#indirectly_related_to -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#indirectly_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#related_to"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#related_to -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#related_to"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_Goals -->
+
+    <owl:ObjectProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_Goals">
+        <rdfs:domain rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#State"/>
+        <rdfs:range rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#directly_related_to -->
+
+    <owl:ObjectProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#directly_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#hasdomain -->
+
+    <owl:ObjectProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#hasdomain">
+        <rdfs:domain rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#District"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#indirectly_related_to -->
+
+    <owl:ObjectProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#indirectly_related_to">
+        <rdfs:subPropertyOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#related_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#ispartof -->
+
+    <owl:ObjectProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#ispartof"/>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#related_to -->
+
+    <owl:ObjectProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#related_to"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Area -->
+
+    <owl:DatatypeProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Area">
+        <rdfs:domain rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#State"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#CroppingPattern -->
+
+    <owl:DatatypeProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#CroppingPattern">
+        <rdfs:domain rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#LandProductivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#GeographicLandUse -->
+
+    <owl:DatatypeProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#GeographicLandUse">
+        <rdfs:domain rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#LandProductivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Population -->
+
+    <owl:DatatypeProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Population">
+        <rdfs:domain rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#State"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SECCOwnLand -->
+
+    <owl:DatatypeProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SECCOwnLand">
+        <rdfs:domain rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#LandTenure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Wage_rate -->
+
+    <owl:DatatypeProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Wage_rate">
+        <rdfs:domain rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#DecentEmployment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#eNAMPricePerCrop -->
+
+    <owl:DatatypeProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#eNAMPricePerCrop">
+        <rdfs:domain rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#LandProductivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment rdf:resource="https://enam.gov.in/web/dashboard/trade-data"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#source -->
+
+    <owl:DatatypeProperty rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#source">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#BioDiversity -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#BioDiversity">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Environmental"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Country -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Country">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Geographic_entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#DecentEmployment -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#DecentEmployment">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Social"/>
+        <rdfs:comment xml:lang="en">It informs about economic risks faced by unskilled workers (those performing simple and routine tasks) in terms of remuneration received, the later benchmarked against the minimum wage set at national level in the agricultural sector</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#District -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#District">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Geographic_entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#ispartof"/>
+                <owl:someValuesFrom rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#State"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Economic -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Economic">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.4.1"/>
+        <rdfs:comment>The approaches to framing and defining sustainable agriculture vary in terms of their coverage of the three primary dimensions of sustainability, i.e. economic, environmental and social.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Environmental -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Environmental">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.4.1"/>
+        <rdfs:comment>The approaches to framing and defining sustainable agriculture vary in terms of their coverage of the three primary dimensions of sustainability, i.e. economic, environmental and social.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#FIES -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#FIES">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#FoodSecurity"/>
+        <rdfs:comment>FIES - Food Insecurity Experience Scale.
+
+Based on the answers to the below questions:
+1.The respondent’s recollection that he/she (or any other adult in the household) would be worried about not having enough food to eat due to lack of money or other resources
+2 The respondent’s recollection that he/she (or any adult in the household) was unable to eat healthy and nutritious food because of lack of money or other resources
+3 The respondent’s recollection that he/she (or any adult in the household) only ate a few kinds of food due to lack of money or other resources
+4 The respondent’s recollection that he/she (or any adult in the household) had to skip a meal because there was no enough money or other resources for food
+5 The respondent’s recollection that he/she (or any adult in the household) ate less than he/she thought he should due to lack of money or other resources
+6 The respondent’s recollection that his/her household ran out of food because of a lack of money or other resources
+7 The respondent’s recollection that he/she (or any adult in the household) was hungry but not eating due to lack of money or other resources for food
+8 The respondent’s recollection that he/she (or any adult in the household) did not eat for a whole day because of a lack of money or other resources</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#FarmOutputValuePerHectre -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#FarmOutputValuePerHectre">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#LandProductivity"/>
+        <rdfs:comment>A simple way to enable aggregation is to reflect the multiple outputs produced by a single farm in terms of values (i.e. quantity multiplied by prices).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#FertilizerPollutionRisk -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#FertilizerPollutionRisk">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Environmental"/>
+        <rdfs:comment xml:lang="en">Agriculture can affect the quality of the environment through excessive use or inadequate management of fertilizers. Sustainable agriculture implies that the level of chemicals in soil and water bodies remains within acceptable thresholds. Integrated plant nutrient management considers all sources of nutrients (mineral and organic) and their management in order to obtain best nutrient balance. Measuring soil and water quality captures the extent and causes of pollution, but establishing monitoring systems of soil and water is costly and not always feasible in countries.</rdfs:comment>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_ClimateChange_SyntheticFertilizers</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_LIS_FertilizerByProduct</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_LIS_FertilizerbyNutrient</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_LIS_FertilizersIndicators</rdfs:datasource>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#FoodSecurity -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#FoodSecurity">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Social"/>
+        <rdfs:comment xml:lang="en">FIES is a metric of severity of food insecurity at the household level that relies on people’s direct yes/no responses to eight simple questions regarding their access to adequate food. It is a statistical measurement scale similar to other widely-accepted statistical scales designed to measure unobservable traits such as aptitude/intelligence, personality, and a broad range of social, psychological and health-related conditions.</rdfs:comment>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_FoodBalance_CommodityBalances</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_FoodBalance_FoodBalances_2013</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_FoodBalance_FoodBalances_2014</rdfs:datasource>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Food_Insecurity -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Food_Insecurity">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.1.2"/>
+        <rdfs:comment>The percentage of individuals in the population who have experienced food insecurity at moderate or severe levels during the reference period. The severity of food insecurity, defined as a latent trait, is measured on the Food Insecurity Experience Scale global reference scale, a measurement standard established by FAO through the application of the Food Insecurity Experience Scale in more than 140 countries worldwide, starting in 2014.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Geographic_entity -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Geographic_entity"/>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal1_EndPoverty -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal1_EndPoverty">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG"/>
+        <rdfs:comment>End poverty in all its forms everywhere.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal2_EndHunger -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal2_EndHunger">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG"/>
+        <rdfs:comment>End hunger, achieve food security and improved nutrition and promote sustainable agriculture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal5_GenderEquality -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal5_GenderEquality">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG"/>
+        <rdfs:comment>Achieve gender equality and empower all women and girls.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#LandProductivity -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#LandProductivity">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Economic"/>
+        <rdfs:comment>Land productivity is a measure of agricultural value of outputs obtained on a given area of land.
+A simple way to enable aggregation is to reflect the multiple outputs produced by a single farm in terms of values (i.e. quantity multiplied by prices).</rdfs:comment>
+        <rdfs:datasource>FAOSTAT_data_LIS_LivestockPatterns</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_Production_CropAndLivestock</rdfs:datasource>
+        <rdfs:datasource>FAOSTAT_data_Production_ProductionIndices</rdfs:datasource>
+        <rdfs:datasource>Karnataka_Table12_29_liv_stk_cns_2007</rdfs:datasource>
+        <rdfs:datasource>enam_trade_17062021</rdfs:datasource>
+        <rdfs:datasource>fci_Stock_Position_commodity_01_Wheat_Karnataka_2020</rdfs:datasource>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#LandTenure -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#LandTenure">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Social"/>
+        <rdfs:comment xml:lang="en">Since agricultural land is a key input for agricultural production, having secure rights over land ensures that the agricultural holding controls such a key asset and does not risk losing the land used by the holding for farming.
+Evidence shows that farmers tend to be less productive if they have limited access to and control of economic resources and services, particularly land. Long-lasting inequalities of economic and financial resources have positioned certain farmers at a disadvantage relative to others in their ability to participate in, contribute to and benefit from broader processes of development.</rdfs:comment>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_LIS_LandCover</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_LIS_LandUse</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_LIS_LandUseIndicators</rdfs:datasource>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#ManagementOfFertilizers -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#ManagementOfFertilizers">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#FertilizerPollutionRisk"/>
+        <rdfs:comment>Based on the answers to below questions:
+1.Follow protocols as per extension service or retail outlet directions or local regulations, not exceeding recommended doses
+2. Use organic source of nutrients (including manure or composting residues) alone, or in combination with synthetic or mineral fertilizers
+3. Use legumes as a cover crop, or component of a multi/crop or pasture system to reduce fertilizer inputs
+4. Distribute synthetic or mineral fertilizer application over the growing period
+5. Consider soil type and climate10 in deciding fertilizer application doses and frequencies
+6. Use soil sampling at least every 5 years to perform nutrient budget calculations
+7. Perform site-specific nutrient management or precision farming11
+8. Use buffer strips along water courses.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#ManagementOfPesticides -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#ManagementOfPesticides">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#PesticideRisk"/>
+        <rdfs:comment>Based on the answers to questions below
+Health
+1. Adherence to label directions for pesticide use (including use of protection equipment while applying pesticides)
+2. Maintenance and cleansing of protection equipment after use
+3. Safe disposal of waste (cartons, bottles and bags)
+Environment
+1. Adherence to label directions for pesticide application
+2. Adopt any of the these good practices: adjust planting time, apply crop spacing, crop
+rotation, mixed cropping or inter-cropping
+3. Perform biological pest control or use biopesticides
+4. Adopt pasture rotation to suppress livestock pest population
+5. Systematic removal of plant parts attacked by pests
+6. Maintenance and cleansing of spray equipment after use
+7. Use one pesticide no more than two times or in mixture in a season to avoid pesticide
+resistance</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#NetFarmIncome -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#NetFarmIncome">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Profitability"/>
+        <rdfs:comment>Net farm income refers to the return (both monetary and non-monetary) to farm operators for their labor, management and capital, after all production expenses have been paid (that is, gross farm income minus production expenses). It includes net income from farm production, the value of commodities consumed on the farm, depreciation, and inventory changes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Panchayats -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Panchayats">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Geographic_entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#PesticideRisk -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#PesticideRisk">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Environmental"/>
+        <rdfs:comment xml:lang="en">Pesticides are important inputs in modern agriculture (crop and livestock), but if not well managed they can cause harm to people’s health or to the environment. Practices associated with integrated pest management (IPM13) exist that contribute to minimise risks associated with the use of pesticides and limit their impact on human health and on the environment. The International Code of Conduct on Pesticide Management defines best practice in pesticide management</rdfs:comment>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_LIS_PesticideIndicators</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_LIS_PesticideTrade</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_LIS_PesticideUse</rdfs:datasource>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#PrevalenceOfSoilDegradation -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#PrevalenceOfSoilDegradation">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SoilHealth"/>
+        <rdfs:comment>Based on the area affected by the below threats:
+1. Soil erosion
+2. Reduction in soil fertility
+3. Salinization of irrigated land
+4. Waterlogging
+5. Other - Specify</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Profitability -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Profitability">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Economic"/>
+        <rdfs:comment xml:lang="en">Profitability is measured by NetFarmIncome.
+Net farm income refers to the return (both monetary and non-monetary) to farm operators for their labor, management and capital, after all production expenses have been paid (that is, gross farm income minus production expenses). It includes net income from farm production, the value of commodities consumed on the farm, depreciation, and inventory changes.</rdfs:comment>
+        <rdfs:datasource>FAOSTAT_data_LIS_LivestockPatterns</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_Production_AgriculturalProduction</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_Production_CropAndLivestock</rdfs:datasource>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Resilience -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Resilience">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Economic"/>
+        <rdfs:comment xml:lang="en">Resilience encompass absorptive, anticipatory and adaptive capacities and refers to the properties of a system that allows farms to deal with shocks and stresses, to persist and to continue to be well- functioning (in the sense of providing stability, predictable rules, security and other benefits to its members).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#RiskMitigationMechanism -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#RiskMitigationMechanism">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Resilience"/>
+        <rdfs:comment>This sub-indicator measures the incidence of the following mitigation mechanisms:
+• Access to or availed credit7
+• Access to or availed insurance
+• On farm diversification (share of a single agricultural commodity not greater than 66% in the
+total value of production of the holding)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG">
+        <rdfs:comment>Sustainable Development Goals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_1.4.2 -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_1.4.2">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal1_EndPoverty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.1.1 -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.1.1">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal2_EndHunger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.1.2 -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.1.2">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal2_EndHunger"/>
+        <rdfs:comment>Prevalence of moderate or severe food insecurity in the population, based on the Food
+Insecurity Experience Scale (FIES)</rdfs:comment>
+        <rdfs:related_to rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.1.1"/>
+        <rdfs:related_to rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.2.1"/>
+        <rdfs:related_to rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.2.2"/>
+        <rdfs:related_to rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.2.3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.2.1 -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.2.1">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal2_EndHunger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.2.2 -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.2.2">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal2_EndHunger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.2.3 -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.2.3">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal2_EndHunger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.3.1 -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.3.1">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal2_EndHunger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.3.2 -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.3.2">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal2_EndHunger"/>
+        <rdfs:comment xml:lang="en">Average income of small-scale food producers, by sex and indigenous status</rdfs:comment>
+        <rdfs:related_to rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.3.1"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.4.1 -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.4.1">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal2_EndHunger"/>
+        <rdfs:comment>By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality.
+
+Indicator 2.4.1: Proportion of agricultural area under productive and sustainable agriculture.</rdfs:comment>
+        <rdfs:directly_related_to rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.1.2"/>
+        <rdfs:directly_related_to rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_5.a.1"/>
+        <rdfs:indirectly_related_to rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.3.2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_5.a.1 -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_5.a.1">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Goal5_GenderEquality"/>
+        <rdfs:comment xml:lang="en">(a) Proportion of total agricultural population with ownership or secure rights over agricultural land, by sex; and 
+(b) share of women among owners or rights-bearers of agricultural land, by type of tenure</rdfs:comment>
+        <rdfs:related_to rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_1.4.2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SecureTenureRightsToLand -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SecureTenureRightsToLand">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#LandTenure"/>
+        <rdfs:comment>Based on the below questions:
+1.Formal document issued by the Land Registry/Cadastral Agency
+2.Name of the holder listed as owner/use right holder on legally recognized documents
+3.Rights to sell any of the parcel of the holding
+4.Rights to bequeath any of the parcel of the holding</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Share_of_women_based_on_tenure -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Share_of_women_based_on_tenure">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_5.a.1"/>
+        <rdfs:comment>Share of women among owners or right-bearers of agricultural land,by type of tenure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Social -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Social">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.4.1"/>
+        <rdfs:comment>The approaches to framing and defining sustainable agriculture vary in terms of their coverage of the three primary dimensions of sustainability, i.e. economic, environmental and social.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SoilHealth -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SoilHealth">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Environmental"/>
+        <rdfs:comment xml:lang="en">FAO and the Intergovernmental Technical Panel on Soils (ITPS) have identified 10 main threats to soil functions: soil erosion; soil organic carbon losses; nutrient imbalance; acidification; contamination; waterlogging; compaction; soil sealing; salinization and loss of soil biodiversity.</rdfs:comment>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_ClimateChange_ManureOnPasture</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_ClimateChange_ManuretoSoils</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_LIS_LivestockManure</rdfs:datasource>
+        <rdfs:datasource xml:lang="en">FAOSTAT_data_LIS_SoilNutrientBudget</rdfs:datasource>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#State -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#State">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Geographic_entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#ispartof"/>
+                <owl:someValuesFrom rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Tenure_rights_by_sex -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Tenure_rights_by_sex">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_5.a.1"/>
+        <rdfs:comment>Measures the percentage of individuals with ownership or secure tenure rights over agricultural land among the total agricultural population, by sex.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Towns -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Towns">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Geographic_entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#ispartof"/>
+                <owl:someValuesFrom rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#District"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#UseOfABSPractices -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#UseOfABSPractices">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#BioDiversity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#VariationInWaterAvailability -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#VariationInWaterAvailability">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#WaterUse"/>
+        <rdfs:comment>Based on the answers to these questions:
+1.whether the farmer uses water to irrigate crops on at least 10% of the agriculture area of the farm and why, if the answer is negative (does not need, cannot afford);
+2.whether the farmer is aware about issues of water availability in the area of the farm and notices a reduction in water availability over time;
+3.whether there are organizations (water users organisations, others) in charge of allocating water among users and the extent to which these organisations are working effectively.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Villages -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Villages">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Geographic_entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#ispartof"/>
+                <owl:someValuesFrom rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#District"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#WageRateInAgriculture -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#WageRateInAgriculture">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#DecentEmployment"/>
+        <rdfs:comment>based on the comparison between compensation recceived by the labor and minimum national wage rate</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#WaterUse -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#WaterUse">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Environmental"/>
+        <rdfs:comment xml:lang="en">In many places, water withdrawal from rivers and groundwater aquifers is beyond what can be considered environmentally sustainable. This affects both rivers and underground aquifers. Sustainable agriculture therefore requires that that level of use of freshwater for irrigation remains within acceptable boundaries. While there is no internationally agreed standards of water use sustainability, signals associated with unsustainable use of water typically include progressive reduction in the level of groundwater, drying out of springs and rivers, increased conflicts among water users.</rdfs:comment>
+        <rdfs:datasource>water_quality_2012_river_medium_minor_AP_Karnataka_orissa_pondicherry_tamilnadu</rdfs:datasource>
+    </owl:Class>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#annual_income -->
+
+    <owl:Class rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#annual_income">
+        <rdfs:subClassOf rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#SDG_2.3.2"/>
+        <rdfs:comment>The computation of income is based on the resolution adopted by the 17th International Conference of Labour Statisticians (ICLS). Income should be computed by deducting from revenues the operating costs and the depreciation of assets.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#India -->
+
+    <owl:NamedIndividual rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#India">
+        <rdf:type rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Tumkur -->
+
+    <owl:NamedIndividual rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#Tumkur">
+        <rdf:type rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09/sdg_updated_1.owl#District"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

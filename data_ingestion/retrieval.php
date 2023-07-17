@@ -48,7 +48,7 @@
             max-height: 500px;
             text-align: center;
         }
-        
+
         table {
             all: unset;
             text-align: center;
@@ -59,7 +59,7 @@
 </head>
 
 <body>
-    <h3 class="text-muted"><b>Data Cluster Retrieval Page</b></h3>
+    <h3 class="text-muted"><b>Data Cluster Query Module</b></h3>
 
     <ul class="nav nav-tabs">
         <li class="nav-item">
@@ -69,7 +69,7 @@
             <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2">Custom Query</button>
         </li>
         <li class="nav-item">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab3">See Available Ontologies</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab3">Ontologies</button>
         </li>
     </ul>
 
@@ -86,8 +86,10 @@
                     <div class="col-3">
                         <div class="card shadow">
                             <div class="card-header">
-                                <h5 class="card-title">Select SDGs <button style="float:right;" class="btn btn-sm btn-primary" type="submit"
-                                        onClick="$('#sdg_query_form').submit()"><i class="fa fa-filter"></i>&nbsp;Filter</button></h5>
+                                <h5 class="card-title">Select SDGs <button style="float:right;"
+                                        class="btn btn-sm btn-primary" type="submit"
+                                        onClick="$('#sdg_query_form').submit()"><i
+                                            class="fa fa-filter"></i>&nbsp;Filter</button></h5>
                             </div>
                             <div class="card-body">
                                 <em>I'm looking for the datasets which are relevant to:</em>
@@ -106,7 +108,8 @@
                     <div class="col-9">
                         <div class="card shadow">
                             <div class="card-header">
-                                <h5 class="card-title"><span class="fa fa-bar-chart"></span>&nbsp;Datasets Available</h5>
+                                <h5 class="card-title"><span class="fa fa-bar-chart"></span>&nbsp;Datasets Available
+                                </h5>
                             </div>
                             <div class="card-body justify-content-center">
                                 <div class="table-responsive" id="sdg_query_results">
@@ -171,7 +174,26 @@
             <div class="tab-pane fade" id="tab3">
                 <div class="row">
                     <div class="col-12">
-                        No ontologies available yet.
+                        <div class="card shadow">
+                            <div class="card-header">
+                                <h5 class="card-title">Available Ontologies</h5>
+                            </div>
+                            <div class="card-body">
+                                <?php 
+                                    $content = file_get_contents("ontology/ontology.json");
+                                    if($content != false)
+                                    {
+                                        $json_data = json_decode($content);
+                                        echo "<ul>";
+                                        foreach($json_data as $ont)
+                                        {
+                                            echo '<li><a href="' . $ont->link . '">' . $ont->title . "</a></li>";
+                                        }
+                                        echo "</ul>";
+                                    }
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

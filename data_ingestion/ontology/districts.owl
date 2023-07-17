@@ -1,0 +1,1681 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09#"
+     xml:base="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:districts="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#">
+    <owl:Ontology rdf:about="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09"> 
+        <owl:versionIRI rdf:resource="http://cads.iiitb.ac.in/wordpress/wp-content/uploads/2021/09"/>
+        <rdfs:label xml:lang="en">District Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#datasource -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#datasource"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#has">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#District"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Air_Quality_index -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Air_Quality_index">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AmbientAirQualityAndAverageConcentration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#PM10 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#PM10">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#//OtherFactsAboutAirPollution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#PM2.5 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#PM2.5">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#//OtherFactsAboutAirPollution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromAgricultureAndAlliedActivities -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromAgricultureAndAlliedActivities">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBy_products"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#By_products"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromArecanut -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromArecanut">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCondimentsAndSpices"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromArhar -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromArhar">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromPulses"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Pulses"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBajra -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBajra">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCereals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cereals"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBanana -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBanana">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFruitsAndVegetables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBlackPepper -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBlackPepper">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCondimentsAndSpices"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBy_products -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBy_products">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#By_products"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCaradamom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCaradamom">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCondimentsAndSpices"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCastor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCastor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCereals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCereals">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cereals"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCocoa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCocoa">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDrugsAndNarcotics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DrugsandNarcotics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCoconut -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCoconut">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCoffee -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCoffee">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDrugsAndNarcotics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DrugsandNarcotics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCondimentsAndSpices -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCondimentsAndSpices">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCoriander -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCoriander">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCondimentsAndSpices"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCrops -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCrops">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOthers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Others"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDrugsAndNarcotics -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDrugsAndNarcotics">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DrugsandNarcotics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDryChillies -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDryChillies">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCondimentsAndSpices"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDryFruits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDryFruits">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFruitsAndVegetables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDryGinger -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDryGinger">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCondimentsAndSpices"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDung">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromLivestock"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Livestock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromEgg -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromEgg">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromLivestock"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Livestock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFibres -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFibres">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Fibres"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFisheries -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFisheries">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOthers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Others"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFloriculture -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFloriculture">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFruitsAndVegetables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFodderAndGrass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFodderAndGrass">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromLivestock"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Livestock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromForestry -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromForestry">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOthers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Others"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFruitsAndVegetables -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFruitsAndVegetables">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromGarlic -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromGarlic">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCondimentsAndSpices"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromGram -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromGram">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromPulses"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Pulses"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromGroundnut -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromGroundnut">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromHorsegram -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromHorsegram">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromPulses"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Pulses"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromIncrementInStock -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromIncrementInStock">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOthers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Others"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromIndigo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromIndigo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Indigo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromJowar -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromJowar">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCereals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cereals"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromKapas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromKapas">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFibres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Fibres"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromKitchenGarden -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromKitchenGarden">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBy_products"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#By_products"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromLinseed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromLinseed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromLivestock -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromLivestock">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Livestock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromMaize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromMaize">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCereals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cereals"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromMeat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromMeat">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromLivestock"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Livestock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromMesta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromMesta">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFibres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Fibres"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromMilk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromMilk">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromLivestock"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Livestock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromMoong -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromMoong">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromPulses"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Pulses"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromNigerseed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromNigerseed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOnion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOnion">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFruitsAndVegetables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOtherHorticultureCrops -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOtherHorticultureCrops">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFruitsAndVegetables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOthers -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOthers">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Others"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromPaddy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromPaddy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCereals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cereals"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromPotato -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromPotato">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFruitsAndVegetables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromPulses -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromPulses">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Pulses"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromRagi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromRagi">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCereals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cereals"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromRapeseedAndMustard -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromRapeseedAndMustard">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromRubber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromRubber">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFibres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Fibres"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSafflower -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSafflower">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSanhemp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSanhemp">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFibres"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Fibres"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSesamum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSesamum">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSilkWormCocoonsAndHoney -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSilkWormCocoonsAndHoney">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOthers"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Others"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSmallMilletsAndCereals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSmallMilletsAndCereals">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCereals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cereals"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSoyabean -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSoyabean">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromStrawAndStalks -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromStrawAndStalks">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBy_products"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#By_products"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSugar -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSugar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Sugar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSugarcaneAndGur -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSugarcaneAndGur">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSugar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Sugar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSunflower -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSunflower">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromOilseeds"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSweetpotato -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromSweetpotato">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFruitsAndVegetables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTamarind -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTamarind">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCondimentsAndSpices"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTapioca -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTapioca">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromFruitsAndVegetables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTea">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDrugsAndNarcotics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DrugsandNarcotics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTobacco -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTobacco">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromDrugsAndNarcotics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DrugsandNarcotics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTotalAndOthersByProducts -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTotalAndOthersByProducts">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromBy_products"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#By_products"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTurmeric -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromTurmeric">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCondimentsAndSpices"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromUrad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromUrad">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromPulses"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Pulses"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromWheat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromWheat">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromCereals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cereals"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromWool -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromWool">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ValueOfOutputFromLivestock"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Livestock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#db_avg -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#db_avg">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NoisePollution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#db_max -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#db_max">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NoisePollution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#db_min -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#db_min">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NoisePollution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#solid_waste_tonnes_per_day -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#solid_waste_tonnes_per_day">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#SolidWaste"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Administrative_Units -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Administrative_Units">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AgriculturalPrices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AgriculturalPrices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Agriculture"/>
+        <rdfs:datasource rdf:resource="https://rpms.dacnet.nic.in/QueryReport.aspx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Agricultural_Input_Output -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Agricultural_Input_Output">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Agriculture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Agricultural_Input_Survey -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Agricultural_Input_Survey">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Agricultural_Input_Output"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Agriculture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Agriculture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AirPollution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AirPollution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#EnvironmentandPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AmbientAirQualityAndAverageConcentration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AmbientAirQualityAndAverageConcentration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AirPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#BanksandFinancialInstitutions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#BanksandFinancialInstitutions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#By_products -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#By_products">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cereals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cereals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CivilSuppliesandConsumerAffairs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CivilSuppliesandConsumerAffairs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Companies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Companies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cooperatives -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cooperatives">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CrimeandLaw -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CrimeandLaw">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Demographics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Demographics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#District -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#District">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#GeoEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities">
+        <rdfs:comment>This entity is made using https://www.indiastatkarnataka.com</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DrugsandNarcotics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DrugsandNarcotics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Economy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Economy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Education">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#EnvironmentalStandards -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#EnvironmentalStandards">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#EnvironmentandPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#EnvironmentandPollution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#EnvironmentandPollution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Fibres -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Fibres">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ForeignTrade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ForeignTrade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ForestAndWildlife -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#ForestAndWildlife">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#GeoEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#GeoEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#GeographicData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#GeographicData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Health -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Health">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Housing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Housing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#HydrologicalObservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#HydrologicalObservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#RiverActionPlans"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Indigo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Indigo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Industries -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Industries">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Insurance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Insurance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#LabourAndWorkforce -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#LabourAndWorkforce">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Livestock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Livestock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+        <rdfs:datasource rdf:resource="http://data.icrisat.org/dld/src/crops.html"/>
+        <rdfs:datasource rdf:resource="http://www.ahvs.kar.nic.in/en-reportsstat.html"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Media -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Media">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#MeteorlogicalData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#MeteorlogicalData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#MinesandMinerals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#MinesandMinerals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NWQMP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NWQMP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#WaterPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NoisePollution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NoisePollution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#EnvironmentandPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#OtherFactsAboutWaterPollution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#OtherFactsAboutWaterPollution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#WaterPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Others -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Others">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#PerCapitaAvailability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#PerCapitaAvailability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Petroleum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Petroleum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#PollutingIndustries -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#PollutingIndustries">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#EnvironmentandPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Power -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Power">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Pulses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Pulses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#RVPandFPR -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#RVPandFPR">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#RiverActionPlans"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#RiverActionPlans -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#RiverActionPlans">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#EnvironmentandPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#RuralandUrbanAreas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#RuralandUrbanAreas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#SocialandWelfareSchemes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#SocialandWelfareSchemes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#SolidWaste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#SolidWaste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#EnvironmentandPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Sports -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Sports">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Sugar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Sugar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Telecommunication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Telecommunication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Tourism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Tourism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Transport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Transport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DistrictEntities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Value_Of_Output_from_Agriculture_Forestry_Fishing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Agricultural_Input_Output"/>
+        <rdfs:comment>Annexure-8 in karnataka report has details of Production of crops district wise. This data is during 2011-2012.</rdfs:comment>
+        <rdfs:datasource rdf:resource="https://aps.dac.gov.in/APY/Public_Report1.aspx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#WasterWaterGenerationAndTreatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#WasterWaterGenerationAndTreatment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#WaterPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#WaterPollution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#WaterPollution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#EnvironmentandPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#//OtherFactsAboutAirPollution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#//OtherFactsAboutAirPollution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AirPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AgriculturalArea/LandUse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AgriculturalArea/LandUse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Agriculture"/>
+        <rdfs:datasource rdf:resource="https://aps.dac.gov.in/LUS/Public/Reports.aspx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#GangaActionPlan(GAP) -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#GangaActionPlan(GAP)">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#RiverActionPlans"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NationalLakeConservationPlan(NLCP) -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NationalLakeConservationPlan(NLCP)">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#RiverActionPlans"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NationalRiverConservationPlan(NRCP) -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NationalRiverConservationPlan(NRCP)">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#RiverActionPlans"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#WaterQualityTestingLaboratories(WQTLs) -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#WaterQualityTestingLaboratories(WQTLs)">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#WaterPollution"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#District"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Byproducts_2018"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Cereals_2018"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_CondimentsandSpices_2018"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_DrugsandNarcotics_2018"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Fibres_2018"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_FruitsandVegetables_2018"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Indigo_2018"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Livestock_2018"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Oilseeds_2018"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Pulses_2018"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Sugar_2018"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Byproducts_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Byproducts_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#By_products"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Cereals_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Cereals_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Cereals"/>
+        <districts:ValueOfOutputFromBajra rdf:datatype="http://www.w3.org/2001/XMLSchema#float">27887.0</districts:ValueOfOutputFromBajra>
+        <districts:ValueOfOutputFromJowar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">68090.0</districts:ValueOfOutputFromJowar>
+        <districts:ValueOfOutputFromMaize rdf:datatype="http://www.w3.org/2001/XMLSchema#float">274297.0</districts:ValueOfOutputFromMaize>
+        <districts:ValueOfOutputFromRagi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">69523.0</districts:ValueOfOutputFromRagi>
+        <districts:ValueOfOutputFromSmallMilletsAndCereals rdf:datatype="http://www.w3.org/2001/XMLSchema#float">63.0</districts:ValueOfOutputFromSmallMilletsAndCereals>
+        <districts:ValueOfOutputFromWheat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">39647.0</districts:ValueOfOutputFromWheat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_CondimentsandSpices_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_CondimentsandSpices_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#CondimentsandSpices"/>
+        <districts:ValueOfOutputFromArecanut rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</districts:ValueOfOutputFromArecanut>
+        <districts:ValueOfOutputFromBlackPepper rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</districts:ValueOfOutputFromBlackPepper>
+        <districts:ValueOfOutputFromCaradamom rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</districts:ValueOfOutputFromCaradamom>
+        <districts:ValueOfOutputFromCoriander rdf:datatype="http://www.w3.org/2001/XMLSchema#float">181.0</districts:ValueOfOutputFromCoriander>
+        <districts:ValueOfOutputFromDryChillies rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2691.0</districts:ValueOfOutputFromDryChillies>
+        <districts:ValueOfOutputFromDryGinger rdf:datatype="http://www.w3.org/2001/XMLSchema#float">92.0</districts:ValueOfOutputFromDryGinger>
+        <districts:ValueOfOutputFromGarlic rdf:datatype="http://www.w3.org/2001/XMLSchema#float">46.0</districts:ValueOfOutputFromGarlic>
+        <districts:ValueOfOutputFromTurmeric rdf:datatype="http://www.w3.org/2001/XMLSchema#float">26816.0</districts:ValueOfOutputFromTurmeric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_DrugsandNarcotics_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_DrugsandNarcotics_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#DrugsandNarcotics"/>
+        <districts:ValueOfOutputFromTobacco rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</districts:ValueOfOutputFromTobacco>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Fibres_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Fibres_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Fibres"/>
+        <districts:ValueOfOutputFromMesta rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</districts:ValueOfOutputFromMesta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_FruitsandVegetables_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_FruitsandVegetables_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#FruitsandVegetables"/>
+        <districts:ValueOfOutputFromBanana rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</districts:ValueOfOutputFromBanana>
+        <districts:ValueOfOutputFromDryFruits rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</districts:ValueOfOutputFromDryFruits>
+        <districts:ValueOfOutputFromFloriculture rdf:datatype="http://www.w3.org/2001/XMLSchema#float">37493.0</districts:ValueOfOutputFromFloriculture>
+        <districts:ValueOfOutputFromOnion rdf:datatype="http://www.w3.org/2001/XMLSchema#float">460784.0</districts:ValueOfOutputFromOnion>
+        <districts:ValueOfOutputFromPotato rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48.0</districts:ValueOfOutputFromPotato>
+        <districts:ValueOfOutputFromSweetpotato rdf:datatype="http://www.w3.org/2001/XMLSchema#float">116.0</districts:ValueOfOutputFromSweetpotato>
+        <districts:ValueOfOutputFromTapioca rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</districts:ValueOfOutputFromTapioca>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Indigo_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Indigo_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Indigo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Livestock_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Livestock_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Livestock"/>
+        <districts:ValueOfOutputFromLivestock rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3187688.0</districts:ValueOfOutputFromLivestock>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Oilseeds_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Oilseeds_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Oilseeds"/>
+        <districts:ValueOfOutputFromCastor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</districts:ValueOfOutputFromCastor>
+        <districts:ValueOfOutputFromCoconut rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2557000.0</districts:ValueOfOutputFromCoconut>
+        <districts:ValueOfOutputFromGroundnut rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30390.0</districts:ValueOfOutputFromGroundnut>
+        <districts:ValueOfOutputFromLinseed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">70.0</districts:ValueOfOutputFromLinseed>
+        <districts:ValueOfOutputFromNigerseed rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</districts:ValueOfOutputFromNigerseed>
+        <districts:ValueOfOutputFromRapeseedAndMustard rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</districts:ValueOfOutputFromRapeseedAndMustard>
+        <districts:ValueOfOutputFromSafflower rdf:datatype="http://www.w3.org/2001/XMLSchema#float">70.0</districts:ValueOfOutputFromSafflower>
+        <districts:ValueOfOutputFromSesamum rdf:datatype="http://www.w3.org/2001/XMLSchema#float">165.0</districts:ValueOfOutputFromSesamum>
+        <districts:ValueOfOutputFromSoyabean rdf:datatype="http://www.w3.org/2001/XMLSchema#float">974.0</districts:ValueOfOutputFromSoyabean>
+        <districts:ValueOfOutputFromSunflower rdf:datatype="http://www.w3.org/2001/XMLSchema#float">37423.0</districts:ValueOfOutputFromSunflower>
+        <districts:Year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2018</districts:Year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Others_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Others_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Others"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Pulses_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Pulses_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Pulses"/>
+        <districts:ValueOfOutputFromArhar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19329.0</districts:ValueOfOutputFromArhar>
+        <districts:ValueOfOutputFromGram rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45253.0</districts:ValueOfOutputFromGram>
+        <districts:ValueOfOutputFromHorsegram rdf:datatype="http://www.w3.org/2001/XMLSchema#float">487.0</districts:ValueOfOutputFromHorsegram>
+        <districts:ValueOfOutputFromMoong rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8534.0</districts:ValueOfOutputFromMoong>
+        <districts:ValueOfOutputFromUrad rdf:datatype="http://www.w3.org/2001/XMLSchema#float">883.0</districts:ValueOfOutputFromUrad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Sugar_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bagalkot_Sugar_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Sugar"/>
+        <districts:ValueOfOutputFromSugarcaneAndGur rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7843052.0</districts:ValueOfOutputFromSugarcaneAndGur>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bengaluru -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Bengaluru">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#District"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_Air_Quality"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_noise_pollution"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_other_air_quality_facts"/>
+        <districts:has rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_solidwaste"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_Air_Quality -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_Air_Quality">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#AmbientAirQualityAndAverageConcentration"/>
+        <districts:Air_Quality_index rdf:datatype="http://www.w3.org/2001/XMLSchema#int">74</districts:Air_Quality_index>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_noise_pollution -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_noise_pollution">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#NoisePollution"/>
+        <districts:db_avg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">58.5</districts:db_avg>
+        <districts:db_max rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">115</districts:db_max>
+        <districts:db_min rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.5</districts:db_min>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_other_air_quality_facts -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_other_air_quality_facts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#//OtherFactsAboutAirPollution"/>
+        <districts:PM10 rdf:datatype="http://www.w3.org/2001/XMLSchema#int">67</districts:PM10>
+        <districts:PM2.5 rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21</districts:PM2.5>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_solidwaste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#Blr_solidwaste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/osurihimeshkrishna/ontologies/2021/8/districts#SolidWaste"/>
+        <districts:solid_waste_tonnes_per_day rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3700.0</districts:solid_waste_tonnes_per_day>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
