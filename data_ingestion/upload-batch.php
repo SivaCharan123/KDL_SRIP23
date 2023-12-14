@@ -28,6 +28,7 @@
 
                 include 'helper.php';
                 chdir(dirname(__FILE__));
+                $allowedExtensions = array('csv' , 'xlsx' , 'xls');
 
                 if (isFileArrayEmpty("batch_files")) {
                     error("No file selected.");
@@ -63,6 +64,9 @@
                             shell_exec("echo " . escapeshellarg($DATA_DUMP_SDG) . " >> tmp.meta");
                             success("Uploaded  " . $filename);
                         }
+                } else {
+                    error("File " . $filename . " has an invalid extension and will not be uploaded.");
+                }
                         $count = $count + 1;
                     }
                     notify("Files uploaded successfully!");
