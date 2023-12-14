@@ -76,4 +76,17 @@ function isFileArrayEmpty($name)
     }
     return true;
 }
+
+function validateFileExtensions($files, $allowedExtensions)
+{
+        foreach ($files['name'] as $filename) {
+            if (!empty($filename)) {
+                $fileExtension = pathinfo($filename, PATHINFO_EXTENSION);
+                if (!in_array(strtolower($fileExtension), $allowedExtensions)){
+                    return false; // Invalid file extension found
+                }
+            }
+        }
+        return true; // All files have valid extensions
+}
 ?>
