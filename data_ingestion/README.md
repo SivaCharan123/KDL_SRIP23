@@ -9,6 +9,7 @@ This folder contains the following files and directories,
 | File Name | Purpose |
 |---|---|
 | `form-upload.php` | The page which contains an upload form that takes CSV/XLSX files, written in PHP, HTML and Bootstrap 5.|
+| `helper.php`  | Contains code for performing relevant checks
 | `upload-batch.php` | The backend code for batch (multiple file) upload. |
 | `upload.php` | The backend code for single upload files. |
 | `upload_single_druid.py` | The Python code for Druid ingestion (single file). |
