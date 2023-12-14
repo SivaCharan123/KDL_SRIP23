@@ -53,9 +53,9 @@ The form meta data is stored in the file `dataset-catalog.csv`. Most of the colu
 
 ## TODO
 
-- [X] Add SDG goals in the form. 
+- [X] Check for file extension in batch upload
 
-- [X] Sanity checks in the form.
+- [X] Checks needed to be performed before sending file to druid
 
 - [X] Upload sheets of a single XLSX file
 
